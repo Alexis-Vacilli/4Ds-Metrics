@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wizard</title>
+  <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+  <div class="wizard">
+    <div class="wizard-wrapper">
+      <div class="step-indicator-wrapper">
+        <div class="step-indicator">
+          <div class="step-circle">
+            <i class="fas fa-check"></i>
+            <span>1</span>
+          </div>
+          <p class="label-step">Define</p>
+        </div>
+  
+        <div class="step-indicator-separator"></div>
+  
+        <div class="step-indicator">
+          <div class="step-circle">
+            <i class="fas fa-check"></i>
+            <span>2</span>        
+          </div>
+          <p class="label-step">Design</p>
+        </div>
+
+        <div class="step-indicator-separator"></div>
+  
+        <div class="step-indicator">
+          <div class="step-circle">
+            <i class="fas fa-check"></i>
+            <span>3</span>        
+          </div>
+          <p class="label-step">Develop</p>
+        </div>
+
+        <div class="step-indicator-separator"></div>
+  
+        <div class="step-indicator">
+          <div class="step-circle">
+            <i class="fas fa-check"></i>
+            <span>4</span>        
+          </div>
+          <p class="label-step">Deploy</p>
+        </div>
+      </div>
+  
+      <div class="query-container">
+        <div class="actions-wrapper">
+          <button class="btn-previous" id="btn-previous">
+            <i class="fas fa-arrow-left"></i>
+            <span>Previous</span>
+          </button>
+    
+          <!-- <p class="progress" id="progress">4/5</p> -->
+          <div class="circular-progress progress">
+            <div class="value-container" id="progress">4/4</div>
+          </div>
+        </div>
+  
+        <div class="query-form">
+          <form method="post">
+            <!-- step define -->
+            <div class="step-query delay-right-0/2">
+              <div class="form-group">
+                <label for="innovative">
+                  By rating, how is your proposed solution innovative enough to not just address the customers' needs but excite them too?
+                </label>
+                <div class="slider-wrapper">
+                  <input type="range" min="0" max="100" class="slider">
+                  <button type="button" class="rate">70%</button>
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <label for="status">Status</label>
+                <select name="status" id="status" class="select">
+                  <option value="1">Positive</option>
+                  <option value="2">Fair</option>
+                  <option value="2">Negative</option>
+                </select>
+              </div>
+      
+              <div class="form-group">
+                <label for="feelings">
+                  Latent or unmet needs through observing the customers' behaviour or feelings?</label>
+                <div class="slider-wrapper">
+                  <input type="range" min="0" max="100" class="slider">
+                  <button type="button" class="rate">70%</button>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- step design -->
+            <div class="step-query delay-right-0/2">
+              <div class="form-group">
+                <label for="innovative">
+                  By rating, how is your proposed solution innovative enough to not just address the customers' needs but excite them too?
+                </label>
+                <div class="slider-wrapper">
+                  <input type="range" min="0" max="100" class="slider">
+                  <button type="button" class="rate">70%</button>
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                  <option value="1">Positive</option>
+                  <option value="2">Negative</option>
+                </select>
+              </div>
+      
+              <div class="form-group">
+                <label for="feelings">
+                  Feelings?</label>
+                <div class="slider-wrapper">
+                  <input type="range" min="0" max="100" class="slider">
+                  <button type="button" class="rate">70%</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- step develop -->
+            <div class="step-query delay-right-0/2">
+              <div class="form-group">
+                <label for="innovative">
+                  Enough to not just address the customers' needs but excite them too?
+                </label>
+                <div class="slider-wrapper">
+                  <input type="range" min="0" max="100" class="slider">
+                  <button type="button" class="rate">70%</button>
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <label for="status">Position</label>
+                <select name="status" id="status">
+                  <option value="1">Okay</option>
+                  <option value="2">Nope</option>
+                  <option value="3">Positive</option>
+                  <option value="4">Negative</option>
+                </select>
+              </div>
+      
+              <div class="form-group">
+                <label for="feelings">
+                  At which rate did you identify latent</label>
+                <div class="slider-wrapper">
+                  <input type="range" min="0" max="100" class="slider">
+                  <button type="button" class="rate">70%</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- step deploy -->
+            <div class="step-query delay-right-0/2">
+              <div class="form-group">
+                <label for="innovative">
+                  Needs but excite them too?
+                </label>
+                <div class="slider-wrapper">
+                  <input type="range" min="0" max="100" class="slider">
+                  <button type="button" class="rate">70%</button>
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <label for="status">Next Status</label>
+                <select name="status" id="status">
+                  <option value="1">Positive</option>
+                  <option value="2">Negative</option>
+                </select>
+              </div>
+      
+              <div class="form-group">
+                <label for="feelings">In publishing and graphic design, Lorem ipsum is a</label>
+                <div class="slider-wrapper">
+                  <input type="range" min="0" max="100" class="slider">
+                  <button type="button" class="rate">70%</button>
+                </div>
+              </div>
+            </div>
+    
+            <button type="button" id="btn-next">Next</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/assets/js/index.js" ></script>
+</body>
+</html>
