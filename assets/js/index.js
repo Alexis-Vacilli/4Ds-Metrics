@@ -2,6 +2,8 @@ const tabs = document.querySelector(".tabs");
 const card = document.querySelector(".card");
 const cardContent = document.querySelector(".card-content");
 
+
+
 const menuIcon = document.querySelector(".menu-icon");
 menuIcon.addEventListener("mouseover", () => {
   tabs.style.display = "block";
