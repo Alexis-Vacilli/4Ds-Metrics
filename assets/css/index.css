@@ -90,15 +90,6 @@ nav {
   letter-spacing: 2px;
 }
 
-/* header nav a:hover,
-header nav a.active {
-  background: #00c2cb;
-  color: #42455a;
-  transition: 0.5s ease-out;
-  letter-spacing: 2px;
-} */
-
-
 .sign-in {
   position: relative;
   right: -105px;
@@ -749,8 +740,8 @@ footer {
 .reveal {
     position: relative;
     transform: translateY(150px);
-    opacity: 0;
-    transition: 2s all ease;
+    opacity: .5;
+    transition: 1.5s all ease;
   }
   
   .reveal.active {
