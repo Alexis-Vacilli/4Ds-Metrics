@@ -38,6 +38,12 @@ body {
   .card-header .menu-icon {
       height: 35px;
   }
+  .card-header .menu-icon:hover + .tabs {
+    display: block;
+    z-index: 10;
+}
+
+
   .tabs {
     position: absolute;
     right: 9px;
@@ -47,9 +53,11 @@ body {
     height: 36px;
     background: #000;
     padding: 20px;
-    /* display: none; */
+    display: none;
   }
-
+  .tabs:hover { 
+   display: block; 
+  }
   .tabs li {
     list-style: none;
     padding: 5px;
