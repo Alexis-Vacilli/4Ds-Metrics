@@ -7,10 +7,6 @@
     <title>Landing page</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800;900&display=swap"
       rel="stylesheet"
     />
@@ -18,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800;900&family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/6c84b701ee.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Navigation bar -->
@@ -97,11 +93,10 @@
     </main>
     <!-- Section about -->
     <section class="section-about" id="about">
+      <h4 class="title" style="text-align: center;">About us</h4>
+      <h5 class="sub-title">Lorem ipsum dolor sit amet.</h5>
       <div class="about-container reveal">
         <div class="content-section">
-            <div class="about-title">
-                <h1>About us</h1>  
-            </div>
             <div class="about-content">
                 <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quidem.</h3>
                 <p>
@@ -128,8 +123,8 @@
         </div>
       </div>
     </section>
-    <section class="section-services reveal" id="services">
-        <div class="max-width">
+    <section class="section-services" id="services">
+        <div class="max-width reveal">
             <h4 class="title">Our Services</h1>
             <h5 class="sub-title" style="margin-bottom: 50px;">Lorem ipsum dolor</h5>
             <div class="service-content">
@@ -412,15 +407,21 @@
         <div class="form-container reveal">
             <h1>Get in toouch</h1>
             <p>Lorem ipsum dolor sit amet.</p>
-            <form>
+            <form id="form">
                <div class="row">
                    <div class="column">
-                       <label for="name">Name:</label>
-                       <input type="text" id="name" placeholder="Enter your name here">
-                       <label for="">Email</label>
-                       <input type="email" id="email" placeholder="Enter your email here">
-                       <label for="">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password">
+                       <label for="name">First name:</label>
+                       <input type="text" id="firstname" placeholder="Enter your first name" class="success">
+                       <small>Error message</small>
+                       <br>
+                       <label for="name">Last name:</label>
+                       <input type="text" id="lastname" placeholder="Enter your last name" class="error">
+                       <small>Error message</small>
+                       <br>
+                       <label for="">Email:</label>
+                       <input type="email" id="email" placeholder="Enter your email here" class="success">
+                       <small>Error message</small>
+                       <br>
                    </div>
                    <div class="column">
                        <label for="email">Message:</label>

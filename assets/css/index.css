@@ -386,9 +386,15 @@ main {
     text-align: center;
 }
 
+.service-content .content p{
+    font-size: 15px;
+}
+
 .service-card{
     padding: 50px 25px;
     width: calc(26% - 20px);
+    margin: 0 0px;
+    height: 45vh;
     border-radius: 5px;
     background: #fff;
     text-align: center;
@@ -415,7 +421,7 @@ main {
 }
 
 .box h3{
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px 0 7px;
 }
 
@@ -434,7 +440,7 @@ main {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10px;
+    bottom: 20px;
    
 }
 
@@ -461,8 +467,8 @@ main {
 .row-cards {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  margin: 3rem;
+  flex-wrap: wrap; 
+  margin: 2rem;
 }
 
 .col-lg-8 {
@@ -856,6 +862,20 @@ form textarea,
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.column small{
+ display: none;
+   
+}
+
+/* .success{
+    border-color: #2ecc71;
+}
+.error{
+    border-color: #e74c3c;
+} */
+
+
 form textarea{
     resize: none;
 }

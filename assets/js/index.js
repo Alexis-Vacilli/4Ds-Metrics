@@ -76,8 +76,30 @@ function reveal() {
 
 //   Form validation
 
-// const formValidation = () => {
+// const form = document.querySelector("#form");
+// const firstName = document.querySelector("#firstname");
+// const lastName = document.querySelector("#lastname");
+// const email = document.querySelector("#email");
 
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     checkInputs();
+// })
+
+// const checkInputs = () => {
+//     const firstNameValue = firstName.value.trim();
+//     const lastNameValue = lastName.value.trim();
+//     const emailValue = email.value.trim();
+
+//     if(firstNameValue === "") {
+//         setErrorFor(firstName, "First name cannot be blank!")
+//     } else {
+//         setSuccessFor(firstName)
+//     }
+// }
+
+// const setError = (input, message) => {
+   
 // }
 
 
