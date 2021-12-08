@@ -219,7 +219,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="status">Position</label>
+                  <label for="status">Status</label>
                   <div class="wrapper">
                     <h6 class="title item">
                       Select Status
@@ -291,22 +291,33 @@
     </div>
 
     <script>
-      const dropdown = document.querySelector(".dropdown");
-      const title = document.querySelector(".title");
-      const option = document.querySelector(".option");
-      title.addEventListener("mouseover", () => {
-        dropdown.style.display = "block";
+      const dropdowns = document.querySelectorAll(".dropdown");
+      const titles = document.querySelectorAll(".title");
+      let selectedTitleIndex = -1;
+
+      titles.forEach((element, key) => {
+        element.addEventListener("mouseover", (event) => {
+          if (event.target === element) {
+            selectedTitleIndex = key;
+            dropdowns[key].style.display = "block";
+          }
+        });
       });
-      window.addEventListener("click", (e) => {
-        if (e.target !== dropdown) {
-          dropdown.style.display = "none";
-        }
+      
+      window.addEventListener("click", (event) => {
+        dropdowns.forEach((element, key) => {
+          if (event.target !== dropdowns[selectedTitleIndex] && event.target !== titles[selectedTitleIndex]) {
+            element.style.display = "none"
+          }
+        })
       });
 
-      option.addEventListener("click", () => {
-        console.log("Option clicked!");
-        title.innerHTML = option.innerHTML;
-      });
+      const options = document.querySelectorAll(".option");
+      options.forEach((element, key) => {
+        element.addEventListener("click", (event) => {
+        titles[selectedTitleIndex].innerHTML = event.target.innerHTML;
+        });
+      })
     </script>
 
     <script type="module" src="/assets/js/index.js"></script>

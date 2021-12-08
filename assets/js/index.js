@@ -83,12 +83,22 @@ const fixStepIndicator = () => {
 
 showStep();
 
-document.querySelector("#btn-next").addEventListener("click", nextOrPrevious.bind(this, 1));
+document.querySelector("#btn-next").addEventListener("click", (event) => {
+  event.preventDefault();
+  nextOrPrevious(1);
+});
+
+document.addEventListener("keyup", (event) => {
+  if (event.key === 'Enter') {
+    document.querySelector("#btn-next").click()
+  } 
+});
+
 document.querySelector("#btn-previous").addEventListener("click", nextOrPrevious.bind(this, -1));
 
 const sliders = document.querySelectorAll('input[type="range"]');
 for (const slider of sliders) {
-  slider.addEventListener("change", event => {
+  slider.addEventListener("input", event => {
     if (slider.nextElementSibling) {
       slider.nextElementSibling.innerHTML = `${event.target.value}%`
     }
