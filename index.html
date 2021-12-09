@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wizard</title>
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
-      rel="stylesheet"
-    />
-    <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
     />
@@ -21,6 +17,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <link rel="stylesheet" href="/assets/css/index.css" />
+    <script src="https://kit.fontawesome.com/6c84b701ee.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="wizard">
@@ -89,8 +86,8 @@
                     too?
                   </label>
                   <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">70%</button>
+                    <input type="range" min="0" max="100" value="0" class="slider" />
+                    <button type="button" class="rate">0%</button>
                   </div>
                 </div>
                 <div class="form-group">
@@ -114,8 +111,8 @@
                     behaviour or feelings?</label
                   >
                   <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">70%</button>
+                    <input type="range" min="0" max="100" value="0" class="slider" />
+                    <button type="button" class="rate">0%</button>
                   </div>
                 </div>
               </div>
@@ -129,8 +126,8 @@
                     too?
                   </label>
                   <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">70%</button>
+                    <input type="range" min="0" max="100" value="0" class="slider" />
+                    <button type="button" class="rate">0%</button>
                   </div>
                 </div>
               </div>
@@ -151,8 +148,8 @@
                 <div class="form-group">
                   <label for="feelings"> Feelings?</label>
                   <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">70%</button>
+                    <input type="range" min="0" max="100" value="0" class="slider" />
+                    <button type="button" class="rate">0%</button>
                   </div>
                 </div>
               </div>
@@ -167,7 +164,7 @@
                   </label>
                   <div class="slider-wrapper">
                     <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">70%</button>
+                    <button type="button" class="rate">0%</button>
                   </div>
                 </div>
               </div>
@@ -196,8 +193,8 @@
                   <div class="form-group">
                     <label for="feelings"> Feelings?</label>
                     <div class="slider-wrapper">
-                      <input type="range" min="0" max="100" class="slider" />
-                      <button type="button" class="rate">70%</button>
+                      <input type="range" min="0" max="100" value="0" class="slider" />
+                      <button type="button" class="rate">0%</button>
                     </div>
                   </div>
               </div>
@@ -213,8 +210,8 @@
                     them too?
                   </label>
                   <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">70%</button>
+                    <input type="range" min="0" max="100" value="0" class="slider" />
+                    <button type="button" class="rate">0%</button>
                   </div>
                 </div>
 
@@ -238,8 +235,8 @@
                     At which rate did you identify latent</label
                   >
                   <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">70%</button>
+                    <input type="range" min="0" max="100" value="0" class="slider" />
+                    <button type="button" class="rate">0%</button>
                   </div>
                 </div>
               </div>
@@ -252,8 +249,8 @@
                 <div class="form-group">
                   <label for="innovative"> Needs but excite them too? </label>
                   <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">70%</button>
+                    <input type="range" min="0" max="100" value="0" class="slider" />
+                    <button type="button" class="rate">0%</button>
                   </div>
                 </div>
 
@@ -277,8 +274,8 @@
                     >In publishing and graphic design, Lorem ipsum is a</label
                   >
                   <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">70%</button>
+                    <input type="range" min="0" max="100" value="0" class="slider" />
+                    <button type="button" class="rate">0%</button>
                   </div>
                 </div>
               </div>
@@ -289,37 +286,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      const dropdowns = document.querySelectorAll(".dropdown");
-      const titles = document.querySelectorAll(".title");
-      let selectedTitleIndex = -1;
-
-      titles.forEach((element, key) => {
-        element.addEventListener("mouseover", (event) => {
-          if (event.target === element) {
-            selectedTitleIndex = key;
-            dropdowns[key].style.display = "block";
-          }
-        });
-      });
-      
-      window.addEventListener("click", (event) => {
-        dropdowns.forEach((element, key) => {
-          if (event.target !== dropdowns[selectedTitleIndex] && event.target !== titles[selectedTitleIndex]) {
-            element.style.display = "none"
-          }
-        })
-      });
-
-      const options = document.querySelectorAll(".option");
-      options.forEach((element, key) => {
-        element.addEventListener("click", (event) => {
-        titles[selectedTitleIndex].innerHTML = event.target.innerHTML;
-        });
-      })
-    </script>
-
     <script type="module" src="/assets/js/index.js"></script>
   </body>
 </html>

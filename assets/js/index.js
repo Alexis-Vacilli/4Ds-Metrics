@@ -10,7 +10,7 @@ const fromValidation = () => {
     if (inputField.value === "") {
       inputField.className += " invalid";
       isValid = false;
-    }
+      alert("input must not be blank!")}
   }
 
   if (isValid && stepQueries[currentStep] && (innerStep === innerNodes.length-1)) {
@@ -104,6 +104,36 @@ for (const slider of sliders) {
     }
   });
 }
+
+
+// dropdown
+const dropdowns = document.querySelectorAll(".dropdown");
+const titles = document.querySelectorAll(".title");
+let selectedTitleIndex = -1;
+
+titles.forEach((element, key) => {
+  element.addEventListener("mouseover", (event) => {
+    if (event.target === element) {
+      selectedTitleIndex = key;
+      dropdowns[key].style.display = "block";
+    }
+  });
+});
+
+window.addEventListener("click", (event) => {
+  dropdowns.forEach((element, key) => {
+    if (event.target !== dropdowns[selectedTitleIndex] && event.target !== titles[selectedTitleIndex]) {
+      element.style.display = "none"
+    }
+  })
+});
+
+const options = document.querySelectorAll(".option");
+options.forEach((element, key) => {
+  element.addEventListener("click", (event) => {
+  titles[selectedTitleIndex].innerHTML = event.target.innerHTML;
+  });
+})
 
 
 

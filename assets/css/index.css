@@ -12,6 +12,11 @@ input[type="text"] {
   border: 2px solid #c4c4c4;
 }
 
+input[type="text"]:focus{
+  outline: none;
+  border-color: #1d85fb;
+}
+
 .wizard {
   width: 100%;
   height: 100vh;
@@ -250,7 +255,7 @@ select {
     cursor: pointer;
     background: #1d85fb;
     border-radius: 50%;
-    box-shadow: -100vh 10px 10px 95vh #1d85fb;
+    box-shadow: -100vh 10px 10px 97vh #1d85fb;
   }
 }
 /** FF*/
@@ -286,7 +291,6 @@ select {
 .title:hover {
   background-color: #1d85fb;
   font-weight: 700;
-  border: none;
   filter: drop-shadow(0 0 4px #0007);
 }
 .item {
@@ -330,7 +334,7 @@ select {
 .dropdown li:hover {
   background-color: rgba(0, 0, 0, 0.2);
   color: #fff;
-  font-size: 13.5px;
+  transform: scale(1.01);
 }
 .dropdown li:last-child {
   border: none;
