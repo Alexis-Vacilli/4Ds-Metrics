@@ -18,79 +18,55 @@
   </head>
   <body>
     <!-- Navigation bar -->
-    <nav class="nav-bar">
-      <div class="logo">
-        <img src="./assets/images/logo.png" alt="" style="width: 200px;"/>
-      </div>
-      <ul class="nav-links">
-        <li>
-          <a href="#home" class="links active-link">Home</a>
-        </li>
-        <li>
-          <a href="#about" class="links">About</a>
-        </li>
-        <li>
-          <a href="#services" class="links">Services</a>
-        </li>
-        <li>
-          <a href="#pricing" class="links">Pricing</a>
-        </li>
-        <li>
-          <a href="#contact-us" class="links">Contact Us</a>
-        </li>
-      </ul>
-      <div class="sign-in" id="show-sign-in">
-        <button>Sign in</button>
-      </div>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line2"></div>
-      </div>
-      <div class="sign-in"></div>
-    </nav>
-    <!-- Sign-in-pop-up -->
-    <div class="popup">
-       <div class="close-btn">&times;</div>
-       <div class="form">
-           <h2>Sign in</h2>
-           <div class="form-element">
-               <label for="email">Email</label>
-               <input type="email" id="email" placeholder="Enter your email here">
-           </div>
-           <div class="form-element">
-                <label for="email">Password</label>
-                <input type="password" id="password" placeholder="Enter your password here">
-            </div>
-            <div class="form-element checkbox">
-                <input type="checkbox" id="remember-me" placeholder="Enter your password here">
-                <label for="remember-me">Remember me</label>
-            </div>
-            <div class="form-element">
-                <button>Sign in</button>
-            </div>
-            <div class="form-element">
-                <a href="#" class="forgot-password-link">Forgot password?</a>
-                <a href="#" class="sign-up-link">Sign Up</a>
-            </div>
-       </div>
+      <nav class="nav-bar">
+        <div class="logo">
+          <img src="./assets/images/logo.png" alt="" style="width: 200px;"/>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#home" class="links active-link">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="links">About</a>
+          </li>
+          <li>
+            <a href="#services" class="links">Services</a>
+          </li>
+          <li>
+            <a href="#pricing" class="links">Pricing</a>
+          </li>
+          <li>
+            <a href="#contact-us" class="links">Contact Us</a>
+          </li>
+        </ul>
+        <div class="sign-in" id="show-sign-in">
+          <button>Sign in</button>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line2"></div>
+        </div>
+        <div class="sign-in"></div>
+      </nav>
+      <div class="header">
+      <main class="home">
+          <section class="presentation" id="home">
+              <div class="introduction">
+                  <div class="intro-text">
+                      <h1>Define, Design, Develop and Deploy</h1>
+                      <p>A process of developing a new business to a fully functional and viable business</p>
+                  </div>
+                  <div class="button">
+                      <button class="get-started">GET STARTED</button>
+                  </div>
+              </div>
+              <div class="cover">
+                  <!-- <img src="./assets//images/home-image.svg" alt=""> -->
+              </div>
+          </section>
+      </main>
     </div>
-    <main class="home">
-        <section class="presentation" id="home">
-            <div class="introduction">
-                <div class="intro-text">
-                    <h1>Define, Design, Develop and Deploy</h1>
-                    <p>A process of developing a new business to a fully functional and viable business</p>
-                </div>
-                <div class="button">
-                    <button class="get-started">GET STARTED</button>
-                </div>
-            </div>
-            <div class="cover">
-                <img src="./assets//images/home-image.svg" alt="">
-            </div>
-        </section>
-    </main>
     <!-- Section about -->
     <section class="section-about" id="about">
       <h4 class="title" style="text-align: center;">About us</h4>
@@ -117,9 +93,9 @@
                 </div>
             </div>
         </div>
-        <div class="image-section">
-            <img src="./assets/images/about-us.jpg" alt="">
-        </div>
+        <video class="video-section" controls muted  autoplay loop>
+            <source src="./assets/videos/4Ds Metrics - Story Promotion_720p.mp4">
+        </video>
         </div>
       </div>
     </section>
