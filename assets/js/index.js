@@ -103,7 +103,8 @@ function reveal() {
 // }
 
 
-document.querySelector("#show-sign-in").addEventListener("click", () => {
+document.querySelector(".show-pop-up").addEventListener("click", () => {
+  alert("button clicked!")
   document.querySelector('.nav-bar').style.visibility = "hidden";
   document.querySelector('.header').style.visibility = "hidden";
   document.querySelector(".popup").classList.add("active-popup");
