@@ -103,3 +103,14 @@ function reveal() {
 // }
 
 
+document.querySelector("#show-sign-in").addEventListener("click", () => {
+  document.querySelector('.nav-bar').style.visibility = "hidden";
+  document.querySelector('.header').style.visibility = "hidden";
+  document.querySelector(".popup").classList.add("active-popup");
+  document.querySelector(".popup .close-btn").addEventListener("click", () => {
+      document.querySelector('.nav-bar').style.visibility = "show";
+      document.querySelector('.home').style.visibility = "show";
+      document.querySelector(".popup").classList.remove("active-popup");
+  })
+})
+

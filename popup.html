@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="https://kit.fontawesome.com/6c84b701ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Sign-in-pop-up -->
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <i class="fas fa-clipboard-list"></i>
+        <div class="form">
+            <h2>Define</h2>
+            <p>To understand the customer's needs, so as to find possible solutions; while considering the entire solution space.</p>
+            <div class="content">
+                <h4>Activities covered under Define Stage</h4>
+                <ul>
+                    <li>Business Model Hypotheses, Mapping and Team Building</li>
+                    <li>Market research and customer needs analysis</li>
+                    <li>Solution Concept Development</li>
+                </ul>
+                <h4>Key objectives of the above mentioned activities</h4>
+                <ul>
+                    <li>Making sure the team is well organised and skilled enough to develop the business.</li>
+                    <li>Being strategic to choose where, how and who is going to be interviewed during the market research and consider different demographics among the target market.</li>
+                    <li>Building a good relationship with some of the customers during the market research in order to engage them throughout the process till deployment.</li>
+                </ul>
+            </div>
+         </div>
+   </div>
+   <style>
+       /* Sign in pop-up */
+.popup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+      -50%, -50%
+  ) scale(1.25);
+  opacity: 1;
+  width: 50%;
+  padding: 20px 30px;
+  background: #f4f6f9;
+  box-shadow: 2px 2px 5px rgb(34, 34, 34, .5);
+  border-radius: 10px;
+  transition: top .5s ease-in-out .5s,
+              opacity 200ms ease-in-out 0ms,
+              transform 20ms ease-in-out 0ms;
+}
+
+.popup.active-popup{
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0s ease-in-out 0ms,
+              opacity .1s ease-in-out .1s,
+              transform 20ms ease-in-out 0ms;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  background: #222222;
+  color: #fff;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.popup .close-btn:hover{
+  transform: scale(1.2);
+  color: #feb74a;
+}
+.popup .form h2{
+  text-align: center;
+  color: #222222;
+  margin: 10px 0 20px;
+  font-size: 25px;
+}
+
+.popup .form p{
+    padding: 0 0 20px 15px;
+    color: rgb(34, 34, 34, .8);
+}
+
+.popup .form h4{
+    padding: 0 0 20px 15px;
+    font-size: 18px;
+}
+
+.popup .form ul{
+    padding: 0 0 0px 20px;
+}
+
+.popup .form li{
+    margin: 10px;
+    font-size: 14px;
+}
+
+.popup .form li::before{
+    content: "";
+    height: 50px;
+    width: 50px;
+    border: 1px solid #222222;
+    margin-right: 15px;
+}
+
+   </style>
+</body>
+</html>

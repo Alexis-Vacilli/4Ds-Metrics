@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing page</title>
+    <title>4Ds Metrics</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel = "icon" href = 
+    "./assets/images/logo-2.png">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800;900&display=swap"
       rel="stylesheet"
@@ -39,7 +41,7 @@
             <a href="#contact-us" class="links">Contact Us</a>
           </li>
         </ul>
-        <div class="sign-in" id="show-sign-in">
+        <div class="sign-in">
           <button>Sign in</button>
         </div>
         <div class="burger">
@@ -49,6 +51,7 @@
         </div>
         <div class="sign-in"></div>
       </nav>
+      
       <div class="header">
       <main class="home">
           <section class="presentation" id="home">
@@ -102,7 +105,7 @@
     <section class="section-services" id="services">
         <div class="max-width reveal">
             <h4 class="title">Our Services</h1>
-            <h5 class="sub-title" style="margin-bottom: 50px;">Lorem ipsum dolor</h5>
+            <h5 class="sub-title" style="margin-bottom: 50px;">Define, Design, Develop and Deploy</h5>
             <div class="service-content">
                 <div class="content">
                     <p>We help innovators, startups and companies to turn their ideas into desirable, feasible and viable products by using the 4Ds Metrics, an automated tool that diagnose a product to identify gaps and provide guidance to filling the gaps. The 4Ds metrics are define, design, develop and Deploy respectively. Below are the objects of each.</p>
@@ -112,7 +115,7 @@
                         <i class="fas fa-clipboard-list"></i>
                         <h3>Define</h3>
                         <p> To understand the customer's needs, so as to find possiblesolutions; while considering...</p>
-                        <button>Learn more</button>
+                        <button class="show-pop-up">Learn more</button>
                     </div>
                 </div>
                 <div class="service-card">
@@ -120,7 +123,7 @@
                         <i class="fab fa-artstation"></i>
                         <h3>Design</h3>
                         <p> a detailed design of the proposed solution and shape the product’s or service’s desirability and feasibility.</p>
-                        <button>Learn more</button>
+                        <button class="show-pop-up">Learn more</button>
                     </div>
                 </div>
                 <div class="service-card">
@@ -128,7 +131,7 @@
                         <i class="fab fa-connectdevelop"></i>
                         <h3>Develop</h3>
                         <p> the product or service that serves the identified needs ensuring viability and sustainability of the business,...</p>
-                        <button>Learn more</button>
+                        <button class="show-pop-up">Learn more</button>
                     </div>
                 </div>
                 <div class="service-card">
@@ -137,7 +140,7 @@
                         <h3>Deploy</h3>
                         <p> the minimum viable product (MVP) for customer validation,
                             traction building and go-to market strategy testing.</p>
-                        <button>Learn more</button>
+                        <button class="show-pop-up">Learn more</button>
                     </div>
                 </div>
             </div>
@@ -163,17 +166,17 @@
               <div class="card-body p-4 m-1">
                 <ul class="list-unstyled mb-2">
                   <li class="border-bottom text-muted py-3">
-                    <i class="far fa-square"></i> Recommended Activities List
+                    <i class="fas fa-check"></i> Recommended Activities List
                   </li>
                   <li class="border-bottom text-muted py-3">
-                    <i class="far fa-square"></i> Summary Report on the
+                    <i class="fas fa-check"></i> Summary Report on the
                     identified gaps
                   </li>
                   <li class="border-bottom text-muted py-3">
-                    <i class="far fa-square"></i> Business parameters list
+                    <i class="fas fa-check"></i> Business parameters list
                   </li>
                   <li class="text-muted py-3">
-                    <i class="far fa-square"></i> Summary Report on the
+                    <i class="fas fa-check"></i> Summary Report on the
                     Sensitive Parameters
                   </li>
                 </ul>
@@ -200,18 +203,23 @@
               <div class="card-body p-4 m-1">
                 <ul class="list-unstyled mb-2">
                   <li class="border-bottom text-muted py-3">
-                    <i class="far fa-square"></i> Recommended Activities List
+                    <i class="fas fa-check"></i> Recommended Activities List
                   </li>
                   <li class="border-bottom text-muted py-3">
-                    <i class="far fa-square"></i> Summary Report on the
+                    <i class="fas fa-check"></i> Summary Report on the
                     identified gaps
                   </li>
                   <li class="border-bottom text-muted py-3">
-                    <i class="far fa-square"></i> Business parameters list
+                    <i class="fas fa-check"></i> Detailed Report on the identified gaps
+                  </li>
+                  <li class="border-bottom text-muted py-3">
+                    <i class="fas fa-check"></i> Business parameters list
+                  </li>
+                  <li class="border-bottom text-muted py-3">
+                    <i class="fas fa-check"></i> Summary Report on the Sensitive Parameters
                   </li>
                   <li class="text-muted py-3">
-                    <i class="far fa-square"></i> Summary Report on the
-                    Sensitive Parameters
+                    <i class="fas fa-check"></i> Detailed Report on the Sensitive Parameters
                   </li>
                 </ul>
                 <div class="mt-3">
@@ -240,18 +248,31 @@
               <div class="card-body p-4 m-1">
                 <ul class="list-unstyled mb-2">
                   <li class="border-bottom text-muted py-3">
-                    <i class="far fa-square"></i> Recommended Activities List
+                    <i class="fas fa-check"></i> Recommended Activities List
                   </li>
                   <li class="border-bottom text-muted py-3">
-                    <i class="far fa-square"></i> Detailed Report on the
-                    identified gaps
+                    <i class="fas fa-check"></i> Summary Report on the identified gaps
                   </li>
                   <li class="border-bottom text-muted py-3">
-                    <i class="far fa-square"></i> Access to Business
-                    facilitators
+                    <i class="fas fa-check"></i> Detailed Report on the identified gaps
+                  </li>
+                  <li class="border-bottom text-muted py-3">
+                    <i class="fas fa-check"></i> Gaps filling wizard
+                  </li>
+                  <li class="border-bottom text-muted py-3">
+                    <i class="fas fa-check"></i> Access to Business facilitators
+                  </li>
+                  <li class="border-bottom text-muted py-3">
+                    <i class="fas fa-check"></i> Business parameters list
+                  </li>
+                  <li class="border-bottom text-muted py-3">
+                    <i class="fas fa-check"></i> Summary Report on the Sensitive Parameters
+                  </li>
+                  <li class="border-bottom text-muted py-3">
+                    <i class="fas fa-check"></i> Detailed Report on the Sensitive Parameters
                   </li>
                   <li class="text-muted py-3">
-                    <i class="far fa-square"></i> Business parameters list
+                    <i class="fas fa-check"></i> Access to Business facilitators
                   </li>
                 </ul>
                 <div class="mt-3">
@@ -268,7 +289,7 @@
     <!-- Section-partner -->
     <section class="section-partner" id="partner">
       <div class="container-partners reveal">
-        <h4 class="title" style="text-align: center">Our partners</h4>
+        <h4 class="title" style="text-align: center">Our clients</h4>
         <h5 class="sub-title">Lorem ipsum dolor</h5>
         <div class="bg-overlay-2"></div>
         <div class="partner-card-container">
@@ -288,14 +309,13 @@
                   <div class="details">
                     <div class="name">Leapr Labs</div>
                     <div class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Libero, sint.
+                      4Ds Metrics model has been used by Leapr Labs since 2019 in the incubation of startups at Leapr Labs.
                     </div>
                   </div>
                   <div class="media-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fas fa-globe"></i></a>
+                    <a href="https://twitter.com/leaprlabs"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/leapr-labs/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://leaprlabs.rw/"><i class="fas fa-globe"></i></a>
                   </div>
                 </div>
               </div>
@@ -310,16 +330,15 @@
                     />
                   </div>
                   <div class="details">
-                    <div class="name">France expertise</div>
+                    <div class="name">Expertise France</div>
                     <div class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aperiam, dolorum?
+                      In partnership with Expertise France, the IPRC Tumba is using the 4Ds Metrics Model to incubate student’s projects turning them into viable products.
                     </div>
                   </div>
                   <div class="media-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fas fa-globe"></i></a>
+                    <a href="https://twitter.com/expertisefrance?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/expertise-france/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.expertisefrance.fr/"><i class="fas fa-globe"></i></a>
                   </div>
                 </div>
               </div>
@@ -335,14 +354,14 @@
                   <div class="details">
                     <div class="name">Earth University</div>
                     <div class="description">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Voluptatibus, labore.
+                      4Ds Metrics Model is used by the Fellows from Mastercard Foundation-EARTH University Fellowship Program to incubate their projects through Leapr Labs.
+
                     </div>
                   </div>
                   <div class="media-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fas fa-globe"></i></a>
+                    <a href="https://twitter.com/EARTH_Uni"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/school/universidad-earth/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.earth.ac.cr/en/"><i class="fas fa-globe"></i></a>
                   </div>
                 </div>
               </div>
@@ -358,23 +377,22 @@
                   <div class="details">
                     <div class="name">NCST</div>
                     <div class="description">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Voluptatibus, labore.
+                      In partnership with Rwanda's National Council for Science and Technology, 4Ds Metrics Model has been used to incubate 18 Projects that won the Rwanda Innovation Challenge 2019.
                     </div>
                   </div>
                   <div class="media-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#https://twitter.com/ncstrwanda"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fas fa-globe"></i></a>
+                    <a href="https://www.ncst.gov.rw/"><i class="fas fa-globe"></i></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="dots">
+          <!-- <div class="dots">
             <label for="one" class="one active"></label>
             <label for="two" class="two"></label>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -418,14 +436,13 @@
           <div class="footer-col">
             <h4>4Ds Metrics</h4>
             <ul>
-              <li><a href="#">about us</a></li>
-              <li><a href="#">our services</a></li>
+              <li><a href="#about">about us</a></li>
+              <li><a href="#services">our services</a></li>
               <li><a href="#">privacy policy</a></li>
-              <li><a href="#">affiliate program</a></li>
             </ul>
           </div>
           <!-- Start col-2 -->
-          <div class="footer-col">
+          <!-- <div class="footer-col">
             <h4>Get help</h4>
             <ul>
               <li><a href="#">about us</a></li>
@@ -433,9 +450,9 @@
               <li><a href="#">privacy policy</a></li>
               <li><a href="#">affiliate program</a></li>
             </ul>
-          </div>
+          </div> -->
           <!-- Start col-3 -->
-          <div class="footer-col">
+          <!-- <div class="footer-col">
             <h4>Whatever</h4>
             <ul>
               <li><a href="">FAQ</a></li>
@@ -443,7 +460,7 @@
               <li><a href="#">privacy policy</a></li>
               <li><a href="#">affiliate program</a></li>
             </ul>
-          </div>
+          </div> -->
           <!-- Start col-4 -->
           <div class="footer-col">
             <h4>follow us</h4>
@@ -457,6 +474,7 @@
           </div>
         </div>
       </div>
+      <h4 class="copyrights">&copy; 2021 All rights reserved by 4Ds Metrics Ltd</h4>
     </footer>
     <script src="./assets/js/index.js"></script>
   </body>
