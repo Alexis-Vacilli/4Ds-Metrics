@@ -103,15 +103,31 @@ function reveal() {
 // }
 
 
-document.querySelector(".show-pop-up").addEventListener("click", () => {
-  alert("button clicked!")
-  document.querySelector('.nav-bar').style.visibility = "hidden";
-  document.querySelector('.header').style.visibility = "hidden";
-  document.querySelector(".popup").classList.add("active-popup");
-  document.querySelector(".popup .close-btn").addEventListener("click", () => {
-      document.querySelector('.nav-bar').style.visibility = "show";
-      document.querySelector('.home').style.visibility = "show";
-      document.querySelector(".popup").classList.remove("active-popup");
+const btnLearn = document.querySelectorAll(".show-pop-up");
+
+Array.from(btnLearn).forEach(el => {
+  el.addEventListener("click", (e) => {
+    const id = e.target.parentNode.parentNode.id;
+    document.querySelector(`#${id}-popup`).classList.add("active-popup");
+    document.querySelector('.page-content').style.display = "none";
   })
 })
 
+
+const buttonClose = document.querySelectorAll(".close-btn");
+console.log(buttonClose);
+Array.from(buttonClose).forEach(el => {
+  el.addEventListener("click", () => {
+    removeActive();
+    document.querySelector('.page-content').style.display = "block";
+  })
+})
+
+
+const removeActive = () => {
+  const a = document.querySelectorAll('.active-popup');
+
+  Array.from(a).forEach(el => {
+    el.classList.remove("active-popup");
+  })
+}
