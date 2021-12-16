@@ -7,7 +7,7 @@
     <title>4Ds Metrics</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel = "icon" href = 
-    "./assets/images/logo-title.png">
+    "./assets/images/4DS.png">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800;900&display=swap"
       rel="stylesheet"
@@ -17,50 +17,66 @@
       rel="stylesheet"
     />
     <script src="https://kit.fontawesome.com/6c84b701ee.js" crossorigin="anonymous"></script>
-  </head>
-   <!-- Services-pop-up -->
-   <div class="popup" id="define-popup">
-    <div class="close-btn">&times;</div>
-    <i class="fas fa-clipboard-list"></i>
-    <div class="form">
-        <h2>Define:</h2>
-        <p>To understand the customer's needs, so as to find possible solutions; while considering the entire solution space.</p>
-        <div class="content">
-            <h4>Activities covered under Define Stage</h4>
-            <ul>
-                <li>
-                    <i class="far fa-dot-circle"></i>
-                    Business Model Hypotheses, Mapping and Team Building
-                </li>
-                <li>
-                    <i class="far fa-dot-circle"></i>
-                    Market research and customer needs analysis</li>
-                <li>
-                    <i class="far fa-dot-circle"></i>
-                    Solution Concept Development</li>
-            </ul>
-            <h4>Key objectives of the above mentioned activities</h4>
-            <ul>
-                <li>
-                    <i class="far fa-dot-circle"></i>
-                    Making sure the team is well organised and skilled enough to develop the business.</li>
-                <li>
-                    <i class="far fa-dot-circle"></i>
-                    Being strategic to choose where, how and who is going to be interviewed during the market research and consider different demographics among the target market.</li>
-                <li>
-                    <i class="far fa-dot-circle"></i>
-                    Building a good relationship with some of the customers during the market research in order to engage them throughout the process till deployment.</li>
-            </ul>
-        </div>
-     </div>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
+  </head>
+    <!-- Design pop up -->
+    <div class="popup" id="sign-in-popup">
+      <div class="close-btn">&times;</div>
+      <div class="form-title">Subscribe to our news channel!</div>
+      <form id="form">
+        <div class="row">
+          <div class="column">
+              <label for="">Email:</label>
+              <input type="email" id="email" placeholder="Enter your email here" class="success">
+              <br>
+          </div>
+      </div>
+      <button>Subscribe</button>
+      </form>
+    </div>
+   <!-- Services-pop-up -->
+     <div class="popup" id="define-popup">
+      <div class="close-btn">&times;</div>
+      <i class="fas fa-clipboard-list"></i>
+      <div class="form">
+          <h2>Define</h2>
+          <p>To understand the customer's needs, so as to find possible solutions; while considering the entire solution space.</p>
+          <div class="content">
+              <h4>Activities covered under Define Stage</h4>
+              <ul>
+                  <li>
+                      <i class="far fa-dot-circle"></i>
+                      Business Model Hypotheses, Mapping and Team Building
+                  </li>
+                  <li>
+                      <i class="far fa-dot-circle"></i>
+                      Market research and customer needs analysis</li>
+                  <li>
+                      <i class="far fa-dot-circle"></i>
+                      Solution Concept Development</li>
+              </ul>
+              <h4>Key objectives of the above mentioned activities</h4>
+              <ul>
+                  <li>
+                      <i class="far fa-dot-circle"></i>
+                      Making sure the team is well organised and skilled enough to develop the business.</li>
+                  <li>
+                      <i class="far fa-dot-circle"></i>
+                      Being strategic to choose where, how and who is going to be interviewed during the market research and consider different demographics among the target market.</li>
+                  <li>
+                      <i class="far fa-dot-circle"></i>
+                      Building a good relationship with some of the customers during the market research in order to engage them throughout the process till deployment.</li>
+              </ul>
+          </div>
+       </div>
+  </div>
 <!-- Services-pop-up -->
 <div class="popup" id="design-popup">
   <div class="close-btn">&times;</div>
   <i class="fab fa-artstation"></i>
   <div class="form">
-      <h2>Design:</h2>
+      <h2>Design</h2>
       <p>a detailed design of the proposed solution and shape the product’s or service’s desirability and feasibility.</p>
       <div class="content">
           <h4>Activities covered under Design Stage</h4>
@@ -98,7 +114,7 @@
   <div class="close-btn">&times;</div>
   <i class="fab fa-connectdevelop"></i>
   <div class="form">
-      <h2>Develop:</h2>
+      <h2>Develop</h2>
       <p>The product or service that serves the identified needs ensuring viability and sustainability of the business, as well as it’s impact on the environment.</p>
       <div class="content">
           <h4>Activities covered under Develop Stage</h4>
@@ -135,7 +151,7 @@
   <div class="close-btn">&times;</div>
   <i class="fas fa-rocket"></i>
   <div class="form">
-      <h2>Deploy:</h2>
+      <h2>Deploy</h2>
       <p>The minimum viable product (MVP) for customer validation, traction building and go-to market strategy testing.</p>
       <div class="content">
           <h4>Activities covered under Deploy Stage</h4>
@@ -161,10 +177,45 @@
                   Documenting everything and focusing on the story, traction and testimonies from the early customers to have a concrete reason for investment to scale.</li>
               <li>
                   <i class="far fa-dot-circle"></i>
-                  Looking for strategic Partnerships and mentorship to help scale your business.</li>
+                  Looking for strategic Partnerships and mentorship to help scale the business.</li>
           </ul>
       </div>
    </div>
+</div>
+<div class="blurry-body">
+  <nav class="nav-bar" style="opacity: .08;">
+    <div class="logo">
+      <a href="#home">
+        <img src="./assets/images/logo.png" alt="" style="width: 200px; cursor: pointer;"/>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#home" class="links active-link" >Home</a>
+      </li>
+      <li>
+        <a href="#about" class="links" >About</a>
+      </li>
+      <li>
+        <a href="#services" class="links">Services</a>
+      </li>
+      <li>
+        <a href="#pricing" class="links">Pricing</a>
+      </li>
+      <li>
+        <a href="#contact-us" class="links">Contact Us</a>
+      </li>
+    </ul>
+    <div>
+      <button class="sign-in">Sign in</button>
+    </div>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line2"></div>
+    </div>
+    <div class="sign-in"></div>
+  </nav>
 </div>
   <body>
     <div class="page-content">
@@ -172,23 +223,28 @@
       <!-- Navigation bar -->
         <nav class="nav-bar">
           <div class="logo">
-            <img src="./assets/images/logo.png" alt="" style="width: 200px;"/>
+            <a href="#home">
+              <img src="./assets/images/logo.png" alt="" style="width: 200px; cursor: pointer;"/>
+            </a>
           </div>
           <ul class="nav-links">
             <li>
-              <a href="#home" class="links active-link">Home</a>
+              <a href="#home" class="links active-link" id="nav-home">Home</a>
             </li>
             <li>
-              <a href="#about" class="links">About</a>
+              <a href="#about" class="links" id="nav-about">About</a>
             </li>
             <li>
-              <a href="#services" class="links">Services</a>
+              <a href="#services" class="links" id="nav-services">Services</a>
             </li>
             <li>
-              <a href="#pricing" class="links">Pricing</a>
+              <a href="#pricing" class="links" id="nav-pricing">Pricing</a>
             </li>
             <li>
-              <a href="#contact-us" class="links">Contact Us</a>
+              <a href="#partner" class="links" id="nav-partner">Clients</a>
+            </li>
+            <li>
+              <a href="#contact-us" class="links" id="nav-contact-us">Contact Us</a>
             </li>
           </ul>
           <div class="sign-in">
@@ -204,14 +260,14 @@
         
         <div class="header">
         <main class="home">
-            <section class="presentation" id="home">
+            <section class="presentation section" id="home">
                 <div class="introduction">
                     <div class="intro-text">
-                        <h1>Define, Design, Develop and Deploy</h1>
-                        <p>A process of developing a new business to a fully functional and viable business</p>
+                        <h1><span class="auto-input"></span></h1>
+                        <p>A process of developing a desirable and feasible product <br> to a profitable,  scalable and sustainable business.</p>
                     </div>
                     <div class="button">
-                        <button class="get-started">GET STARTED</button>
+                        <button id="get-started">GET STARTED</button>
                     </div>
                 </div>
                 <div class="cover">
@@ -221,23 +277,20 @@
         </main>
       </div>
       <!-- Section about -->
-      <section class="section-about" id="about">
+      <section class="section-about section" id="about">
         <h4 class="title" style="text-align: center;">About us</h4>
-        <!-- <h5 class="sub-title">Lorem ipsum dolor sit amet.</h5> -->
+        <h5 class="sub-title">From Idea to Business</h5>
         <div class="about-container reveal">
           <div class="content-section">
               <div class="about-content">
-                  <h3>A process of developing a desirable and feasible product to a profitable, scalable and sustainable business.</h3>
                   <p>
                       The 4Ds Metrics model is an approach designed for the rapid and
-        efficient development of desirable and feasible products or services,
-        as well as viable business models. This is achieved by applying a
-        combination of the iterative 4Ds namely: Define, Design, Develop, and
-        Deploy; as well as bringing into play design thinking. In simple
+        efficient development of desirable and feasible product or service to
+        a viable business model. This is achieved by applying a
+        combination of the iterative 4Ds namely; Define, Design, Develop and
+        Deploy as well as bringing into play design thinking. In simple
         words, 4Ds Metrics represent a process of developing a new business
-        idea to a fully functional business. The 4Ds Metrics approach was
-        founded and designed by TUYIHIMBAZE Serge, Founder and CEO of 4Ds
-        Metrics Ltd. and Co-founder and CEO of LEAPR LABS Ltd. Kigali-Rwanda.
+        idea to a viable business.
                   </p>
                   <div class="about-button">
                       <button>
@@ -253,13 +306,13 @@
         <!-- </div> -->
       </section>
       <!-- Section services -->
-      <section class="section-services" id="services">
+      <section class="section-services section" id="services">
           <div class="max-width reveal">
               <h4 class="title">Our Services</h1>
-              <h5 class="sub-title" style="margin-bottom: 50px;">Define, Design, Develop and Deploy</h5>
+              <h5 class="sub-title" style="margin-bottom: 50px;">Business Diagnostics & Development</h5>
               <div class="service-content">
                   <div class="content">
-                      <p>We help innovators, startups and companies to turn their ideas into desirable, feasible and viable products by using the 4Ds Metrics, an automated tool that diagnose a product to identify gaps and provide guidance to filling the gaps. The 4Ds metrics are define, design, develop and Deploy respectively. Below are the objects of each.</p>
+                      <p>We help innovators, startups and companies to turn their ideas into desirable, feasible and viable products by using the 4Ds Metrics, an automated tool that diagnose a product to identify gaps and guide the team to fill identified gaps. The 4Ds metrics are define, design, develop and Deploy respectively. Below are the objectives of each.</p>
                   </div>
                   <div class="service-card" id="define">
                       <div class="box">
@@ -298,7 +351,7 @@
           </div>
       </section>
       <!-- Section pricing -->
-      <section class="sections-pricing" id="pricing">
+      <section class="sections-pricing section" id="pricing">
         <div class="container-pricing reveal">
           <h4 class="title">Get the best plan</h4>
           <h5 class="sub-title">Payment methods</h5>
@@ -324,7 +377,7 @@
                       identified gaps
                     </li>
                     <li class="border-bottom text-muted py-3">
-                      <i class="fas fa-check"></i> Business parameters list
+                      <i class="fas fa-check"></i> Business sensitive parameters list
                     </li>
                     <li class="text-muted py-3">
                       <i class="fas fa-check"></i> Summary Report on the
@@ -364,7 +417,7 @@
                       <i class="fas fa-check"></i> Detailed Report on the identified gaps
                     </li>
                     <li class="border-bottom text-muted py-3">
-                      <i class="fas fa-check"></i> Business parameters list
+                      <i class="fas fa-check"></i> Business sensitive parameters list
                     </li>
                     <li class="border-bottom text-muted py-3">
                       <i class="fas fa-check"></i> Summary Report on the Sensitive Parameters
@@ -414,7 +467,7 @@
                       <i class="fas fa-check"></i> Access to Business facilitators
                     </li>
                     <li class="border-bottom text-muted py-3">
-                      <i class="fas fa-check"></i> Business parameters list
+                      <i class="fas fa-check"></i> Business sensitive parameters list
                     </li>
                     <li class="border-bottom text-muted py-3">
                       <i class="fas fa-check"></i> Summary Report on the Sensitive Parameters
@@ -438,10 +491,10 @@
         </div>
       </section>
       <!-- Section-partner -->
-      <section class="section-partner" id="partner">
+      <section class="section-partner section" id="partner">
         <div class="container-partners reveal">
           <h4 class="title" style="text-align: center">Our clients</h4>
-          <h5 class="sub-title">Lorem ipsum dolor</h5>
+          <h5 class="sub-title">Served with Passion!</h5>
           <div class="bg-overlay-2"></div>
           <div class="partner-card-container">
             <input type="radio" name="dot" id="one" />
@@ -483,7 +536,7 @@
                     <div class="details">
                       <div class="name">Expertise France</div>
                       <div class="description">
-                        In partnership with Expertise France, the IPRC Tumba is using the 4Ds Metrics Model to incubate student’s projects turning them into viable products.
+                        In partnership with Expertize France, the IPRC Tumba is using the 4Ds Metrics Model to incubate student’s projects turning them into viable products.
                       </div>
                     </div>
                     <div class="media-icons">
@@ -528,7 +581,7 @@
                     <div class="details">
                       <div class="name">NCST</div>
                       <div class="description">
-                        In partnership with Rwanda's National Council for Science and Technology, 4Ds Metrics Model has been used to incubate 18 Projects that won the Rwanda Innovation Challenge 2019.
+                        In partnership with Rwanda's National Council for Science and Technology, 4Ds Metrics Model has been used to incubate 18 Projects that won the Rwanda Innovation Challenge 2019 Award.
                       </div>
                     </div>
                     <div class="media-icons">
@@ -548,9 +601,9 @@
         </div>
       </section>
       <!-- Section contact-us -->
-      <section class="section-contact-us" id="contact-us">
+      <section class="section-contact-us section" id="contact-us">
           <div class="form-container reveal">
-              <h1>Get in toouch</h1>
+              <h1>Get in touch!</h1>
               <form id="form">
                  <div class="row">
                      <div class="column">
@@ -586,9 +639,8 @@
             <div class="footer-col">
               <h4>4Ds Metrics</h4>
               <ul>
-                <li><a href="#about">about us</a></li>
-                <li><a href="#services">our services</a></li>
-                <li><a href="#">privacy policy</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#services">Our services</a></li>
               </ul>
             </div>
             <!-- Start col-2 -->
@@ -613,7 +665,7 @@
             </div> -->
             <!-- Start col-4 -->
             <div class="footer-col">
-              <h4>follow us</h4>
+              <h4>Follow us</h4>
               <div class="social-links">
                 <a href=""><i class="fab fa-facebook-f"></i></a>
       

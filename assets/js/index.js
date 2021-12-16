@@ -42,7 +42,8 @@ window.onscroll = () => {
     let offset = i.offsetTop - 150;
     let height = i.offsetHeight;
     let id = i.getAttribute("id");
-
+    console.log(id)
+    
     if (top >= offset && top < offset + height) {
       menu.forEach((link) => {
         link.classList.remove("active");
@@ -54,25 +55,37 @@ window.onscroll = () => {
   });
 };
 
+const setActive = (id) =>{
+    const links = document.querySelectorAll(".active-link")
+    
+    links.forEach(link =>{
+        link.classList.remove("active-link");
+    })
+    const active = document.getElementById(`nav-${id}`);
+    active.classList.add("active-link")
+}
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
-  
+    const sections = document.querySelectorAll(".section");
+    let y = 0
     for (let i = 0; i < reveals.length; i++) {
-    //   console.log(reveals[i].getBoundingClientRect());
       const windowHeight = window.innerHeight;
       const elementTop = reveals[i].getBoundingClientRect().top;
-      console.log(windowHeight);
       const elementVisible = 150;
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
+        console.log(i)
+        setActive(sections[i+1].id)
       } else {
         reveals[i].classList.remove("active");
       }
     }
   }
 
-  window.addEventListener("scroll", reveal);
+  window.addEventListener("scroll", () =>{
+      reveal()
+  });
 
 //   Form validation
 
@@ -104,12 +117,32 @@ function reveal() {
 
 
 const btnLearn = document.querySelectorAll(".show-pop-up");
+const signInBtn = document.querySelector(".sign-in");
+console.log(signInBtn);
+const getStartedButton = document.querySelector("#get-started");
+
+
+getStartedButton.addEventListener("click", () => {
+
+  document.querySelector("#sign-in-popup").classList.add("active-popup");
+  document.querySelector('.page-content').style.display = 'none';
+
+});
+
+signInBtn.addEventListener("click", () => {
+  alert("Button clicked")
+  // document.querySelector("#sign-in-popup").classList.add("active-popup");
+  // document.querySelector('.page-content').style.display = 'none';
+
+});
 
 Array.from(btnLearn).forEach(el => {
   el.addEventListener("click", (e) => {
     const id = e.target.parentNode.parentNode.id;
     document.querySelector(`#${id}-popup`).classList.add("active-popup");
     document.querySelector('.page-content').style.display = "none";
+    // document.querySelector(".blurry-body").style.display = "block";
+
   })
 })
 
@@ -120,6 +153,7 @@ Array.from(buttonClose).forEach(el => {
   el.addEventListener("click", () => {
     removeActive();
     document.querySelector('.page-content').style.display = "block";
+    // document.querySelector(".blurry-body").style.display = "none";
   })
 })
 
@@ -131,3 +165,13 @@ const removeActive = () => {
     el.classList.remove("active-popup");
   })
 }
+
+
+// Header text animations script
+
+const typed = new Typed(".auto-input", {
+  strings: ["Define", "Design", "Develop", "and Deploy", "Define, Design, Develop and Deploy"],
+  typeSpeed: 100,
+  backSpeed: 50,
+  loop: true
+})
