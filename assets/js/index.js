@@ -119,7 +119,14 @@ function reveal() {
 const btnLearn = document.querySelectorAll(".show-pop-up");
 const signIn = document.querySelector("#signin-button");
 const getStartedButton = document.querySelector("#get-started");
+const readMore = document.querySelector(".read-more");
 
+readMore.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("#sign-in-popup").classList.add("active-popup");
+  document.querySelector('.page-content').style.display = 'none';
+
+});
 
 getStartedButton.addEventListener("click", () => {
 
@@ -129,9 +136,8 @@ getStartedButton.addEventListener("click", () => {
 });
 
 signIn.addEventListener("click", () => {
-  alert("Button clicked")
-  // document.querySelector("#sign-in-popup").classList.add("active-popup");
-  // document.querySelector('.page-content').style.display = 'none';
+  document.querySelector("#sign-in-popup").classList.add("active-popup");
+  document.querySelector('.page-content').style.display = 'none';
 
 });
 
