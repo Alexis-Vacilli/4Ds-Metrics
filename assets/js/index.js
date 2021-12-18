@@ -33,13 +33,15 @@ const showStep = () => {
   }
 
   if (currentStep === 0 && innerStep === 0) {
-    document.querySelector("#btn-previous").style.visibility = "hidden";
+    document.querySelector("#btn-prev").style.visibility = "hidden";
   } else {
-    document.querySelector("#btn-previous").style.visibility = "visible";
+    document.querySelector("#btn-prev").style.visibility = "visible";
   }
 
   if (currentStep === (stepQueries.length - 1)) {
     document.querySelector("#btn-next").innerHTML = "Submit";
+    document.querySelector("#btn-prev").style.visibility = "hidden";
+    document.querySelector("#btn-exit").style.visibility = "hidden";
   } else {
     document.querySelector("#btn-next").innerHTML = "Next";
   }
@@ -94,7 +96,7 @@ document.addEventListener("keyup", (event) => {
   } 
 });
 
-document.querySelector("#btn-previous").addEventListener("click", nextOrPrevious.bind(this, -1));
+document.querySelector("#btn-prev").addEventListener("click", nextOrPrevious.bind(this, -1));
 
 const sliders = document.querySelectorAll('input[type="range"]');
 for (const slider of sliders) {

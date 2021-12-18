@@ -21,12 +21,39 @@
   </head>
   <body>
     <div class="wizard">
+      <style>
+        .headers{
+          position: relative;
+          left: -13rem;
+          padding: 10px 0;
+        }
+        .headers h1{
+          font-size: 21px;
+          color: #222;
+        }
+        .headers h3{
+          margin-top: 20px;
+          font-size: 18px;
+          color: #222;
+        }
+        .headers h4{
+          font-size: 16px;
+          opacity: 40%;
+          margin-bottom: 20px;
+          color: #222;
+        }
+      </style>
       <div class="wizard-wrapper">
+        <div class="headers">
+          <h1>4Ds Metrics</h1>
+          <h3>Business diagnostics</h3>
+          <h4>Identify Gaps in your Business by going through the diagnosis steps below!</h4>
+        </div>
         <div class="step-indicator-wrapper">
           <div class="step-indicator">
             <div class="step-circle">
               <i class="fas fa-check"></i>
-              <span>1</span>
+              <span class="span-step">1</span>
             </div>
             <p class="label-step">Define</p>
           </div>
@@ -36,7 +63,7 @@
           <div class="step-indicator">
             <div class="step-circle">
               <i class="fas fa-check"></i>
-              <span>2</span>
+              <span class="span-step">2</span>
             </div>
             <p class="label-step">Design</p>
           </div>
@@ -46,7 +73,7 @@
           <div class="step-indicator">
             <div class="step-circle">
               <i class="fas fa-check"></i>
-              <span>3</span>
+              <span class="span-step">3</span>
             </div>
             <p class="label-step">Develop</p>
           </div>
@@ -56,133 +83,101 @@
           <div class="step-indicator">
             <div class="step-circle">
               <i class="fas fa-check"></i>
-              <span>4</span>
+              <span class="span-step">4</span>
             </div>
             <p class="label-step">Deploy</p>
           </div>
         </div>
-
-        <div class="query-container">
-          <div class="actions-wrapper">
-            <button class="btn-previous" id="btn-previous">
-              <i class="fas fa-arrow-left"></i>
-              <span>Previous</span>
-            </button>
-
+        <div class="form-container">
+          <div class="query-container">
+            <div class="actions-wrapper">
             <div class="circular-progress progress">
-              <div class="value-container" id="progress">4/4</div>
-            </div>
-          </div>
-
-          <form class="query-form" method="post">
-            <!-- step define -->
-            <div class="step-query delay-right-0/2">
-              <!-- first inner form of define -->
-              <div class="inner-form">
-                <div class="form-group">
-                  <label for="innovative">
-                    By rating, how is your proposed solution innovative enough
-                    to not just address the customers' needs but excite them
-                    too?
-                  </label>
-                  <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" value="0" class="slider" />
-                    <button type="button" class="rate">0%</button>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="status">Status</label>
-                  <div class="wrapper">
-                    <h6 class="title item">
-                      Select Status
-                      <i class="fas fa-caret-down"></i>
-                    </h6>
-                    <ul class="dropdown">
-                      <li class="item option">Positive</li>
-                      <li class="item option">Fair</li>
-                      <li class="item option">Negative</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="feelings">
-                    Latent or unmet needs through observing the customers'
-                    behaviour or feelings?</label
-                  >
-                  <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" value="0" class="slider" />
-                    <button type="button" class="rate">0%</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- second inner form of define -->
-              <div class="inner-form">
-                <div class="form-group">
-                  <label for="innovative">
-                    By rating, how is your proposed solution innovative enough
-                    to not just address the customers' needs but excite them
-                    too?
-                  </label>
-                  <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" value="0" class="slider" />
-                    <button type="button" class="rate">0%</button>
-                  </div>
-                </div>
+                <div class="value-container" id="progress">4/4</div>
               </div>
             </div>
-
-            <!-- step design -->
-            <div class="step-query delay-right-0/2">
-              <!-- first inner form of design -->
-              <div class="inner-form">
-                <div class="form-group">
-                  <label for="status">How much money did you make?</label>
-                  <div class="text-wrapper">
-                    <input type="text" class="text" />
-                    <button type="button" class="rate">$</button>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="feelings"> Feelings?</label>
-                  <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" value="0" class="slider" />
-                    <button type="button" class="rate">0%</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- second inner form of design -->
-              <div class="inner-form">
-                <div class="form-group">
-                  <label for="innovative">
-                    By rating, how is your proposed solution innovative enough
-                    to not just address the customers' needs but excite them
-                    too?
-                  </label>
-                  <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" class="slider" />
-                    <button type="button" class="rate">0%</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- third inner form of design -->
-              <div class="inner-form">
-                <div class="form-group">
-                    <label for="status">How much money did you make?</label>
-                    <div class="text-wrapper">
-                      <input type="text" class="text" />
-                      <button type="button" class="rate">$</button>
+  
+            <form class="form query-form" method="post">
+              <!-- step define -->
+              <div class="step-query delay-right-0/2">
+                <!-- first inner form of define -->
+                <div class="inner-form">
+                  <div class="form-group">
+                    <label for="innovative">
+                      By rating, how is your proposed solution innovative enough
+                      to not just address the customers' needs but excite them
+                      too?
+                    </label>
+                    <div class="input-range">
+                      <div class="range">
+                        <div class="field">
+                          <div class="value left">0</div>
+                          <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                          <div class="value right">100</div>
+                        </div>
                     </div>
+                    </div>
+                    <style>
+                      
+                    </style>
+
+                  </div>
+                  <div class="form-group">
+                    <label for="status" style="font-size: 16px;">Status</label>
+                    <div class="wrapper">
+                      <h6 class="title item">
+                        Select Status
+                        <i class="fas fa-caret-down"></i>
+                      </h6>
+                      <ul class="dropdown">
+                        <li class="item option">Positive</li>
+                        <li class="item option">Fair</li>
+                        <li class="item option">Negative</li>
+                      </ul>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="feelings">
+                      At which rate did you identify latent or unmet needs through observing the customers' behaviour or feelings?</label
+                    >
+                    <div class="input-range">
+                      <div class="range">
+                        <div class="field">
+                          <div class="value left">0</div>
+                          <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                          <div class="value right">100</div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- second inner form of define -->
+                <div class="inner-form">
+                  <div class="form-group">
+                    <label for="innovative">
+                      By rating, how is your proposed solution innovative enough
+                      to not just address the customers' needs but excite them
+                      too?
+                    </label>
+                    <div class="input-range">
+                      <div class="range">
+                        <div class="field">
+                          <div class="value left">0</div>
+                          <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                          <div class="value right">100</div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <!-- forth inner form of design -->
-              <div class="inner-form">
-                <div class="form-group">
+  
+              <!-- step design -->
+              <div class="step-query delay-right-0/2">
+                <!-- first inner form of design -->
+                <div class="inner-form">
+                  <div class="form-group">
                     <label for="status">How much money did you make?</label>
                     <div class="text-wrapper">
                       <input type="text" class="text" />
@@ -192,98 +187,193 @@
   
                   <div class="form-group">
                     <label for="feelings"> Feelings?</label>
-                    <div class="slider-wrapper">
-                      <input type="range" min="0" max="100" value="0" class="slider" />
-                      <button type="button" class="rate">0%</button>
+                    <div class="input-range">
+                      <div class="range">
+                        <div class="field">
+                          <div class="value left">0</div>
+                          <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                          <div class="value right">100</div>
+                        </div>
+                    </div>
                     </div>
                   </div>
-              </div>
-            </div>
-
-            <!-- step develop -->
-            <div class="step-query delay-right-0/2">
-              <!-- first inner form of develop -->
-              <div class="inner-form">
-                <div class="form-group">
-                  <label for="innovative">
-                    Enough to not just address the customers' needs but excite
-                    them too?
-                  </label>
-                  <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" value="0" class="slider" />
-                    <button type="button" class="rate">0%</button>
+                </div>
+  
+                <!-- second inner form of design -->
+                <div class="inner-form">
+                  <div class="form-group">
+                    <label for="innovative">
+                      By rating, how is your proposed solution innovative enough
+                      to not just address the customers' needs but excite them
+                      too?
+                    </label>
+                    <div class="input-range">
+                      <div class="range">
+                        <div class="field">
+                          <div class="value left">0</div>
+                          <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                          <div class="value right">100</div>
+                        </div>
+                    </div>
+                    </div>
                   </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="status">Status</label>
-                  <div class="wrapper">
-                    <h6 class="title item">
-                      Select Status
-                      <i class="fas fa-caret-down"></i>
-                    </h6>
-                    <ul class="dropdown">
-                      <li class="item option">Positive</li>
-                      <li class="item option">Fair</li>
-                      <li class="item option">Negative</li>
-                    </ul>
+  
+                <!-- third inner form of design -->
+                <div class="inner-form">
+                  <div class="form-group">
+                      <label for="status">How much money did you make?</label>
+                      <div class="text-wrapper">
+                        <input type="text" class="text" />
+                        <button type="button" class="rate">$</button>
+                      </div>
                   </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="feelings">
-                    At which rate did you identify latent</label
-                  >
-                  <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" value="0" class="slider" />
-                    <button type="button" class="rate">0%</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- step deploy -->
-            <div class="step-query delay-right-0/2">
-              <!-- first inner form of deploy -->
-              <div class="inner-form">
-                <div class="form-group">
-                  <label for="innovative"> Needs but excite them too? </label>
-                  <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" value="0" class="slider" />
-                    <button type="button" class="rate">0%</button>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="status">Next Status</label>
-                  <div class="wrapper">
-                    <h6 class="title item">
-                      Select Status
-                      <i class="fas fa-caret-down"></i>
-                    </h6>
-                    <ul class="dropdown">
-                      <li class="item option">Positive</li>
-                      <li class="item option">Fair</li>
-                      <li class="item option">Negative</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="feelings"
-                    >In publishing and graphic design, Lorem ipsum is a</label
-                  >
-                  <div class="slider-wrapper">
-                    <input type="range" min="0" max="100" value="0" class="slider" />
-                    <button type="button" class="rate">0%</button>
-                  </div>
+  
+                <!-- forth inner form of design -->
+                <div class="inner-form">
+                  <div class="form-group">
+                      <label for="status">How much money did you make?</label>
+                      <div class="text-wrapper">
+                        <input type="text" class="text" />
+                        <button type="button" class="rate">$</button>
+                      </div>
+                    </div>
+    
+                    <div class="form-group">
+                      <label for="feelings"> Feelings?</label>
+                      <div class="input-range">
+                        <div class="range">
+                          <div class="field">
+                            <div class="value left">0</div>
+                            <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                            <div class="value right">100</div>
+                          </div>
+                      </div>
+                      </div>
+                    </div>
                 </div>
               </div>
+  
+              <!-- step develop -->
+              <div class="step-query delay-right-0/2">
+                <!-- first inner form of develop -->
+                <div class="inner-form">
+                  <div class="form-group">
+                    <label for="innovative">
+                      Enough to not just address the customers' needs but excite
+                      them too?
+                    </label>
+                    <div class="input-range">
+                      <div class="range">
+                        <div class="field">
+                          <div class="value left">0</div>
+                          <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                          <div class="value right">100</div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="status">Status</label>
+                    <div class="wrapper">
+                      <h6 class="title item">
+                        Select Status
+                        <i class="fas fa-caret-down"></i>
+                      </h6>
+                      <ul class="dropdown">
+                        <li class="item option">Positive</li>
+                        <li class="item option">Fair</li>
+                        <li class="item option">Negative</li>
+                      </ul>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="feelings">
+                      At which rate did you identify latent</label
+                    >
+                    <div class="input-range">
+                      <div class="range">
+                        <div class="field">
+                          <div class="value left">0</div>
+                          <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                          <div class="value right">100</div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- step deploy -->
+              <div class="step-query delay-right-0/2">
+                <!-- first inner form of deploy -->
+                <div class="inner-form">
+                  <div class="form-group">
+                    <label for="innovative"> Needs but excite them too? </label>
+                    <div class="input-range">
+                      <div class="range">
+                        <div class="field">
+                          <div class="value left">0</div>
+                          <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                          <div class="value right">100</div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="status">Next Status</label>
+                    <div class="wrapper">
+                      <h6 class="title item">
+                        Select Status
+                        <i class="fas fa-caret-down"></i>
+                      </h6>
+                      <ul class="dropdown">
+                        <li class="item option">Positive</li>
+                        <li class="item option">Fair</li>
+                        <li class="item option">Negative</li>
+                      </ul>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="feelings"
+                      >In publishing and graphic design, Lorem ipsum is a</label
+                    >
+                    <div class="input-range">
+                      <div class="range">
+                        <div class="field">
+                          <div class="value left">0</div>
+                          <input type="range" min="0" max="100" value="0" step="1" class="range-input">
+                          <div class="value right">100</div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="buttons-container">
+            <div>
+              <button type="button" id="btn-prev">
+                <i class="fas fa-chevron-double-left"></i>
+                Previous
+              </button>
             </div>
-
-            <button type="button" id="btn-next">Next</button>
-          </form>
+            <div>
+              <button type="button" id="btn-exit">Save & Exit</button>
+            </div>
+            <div>
+              <button type="button" id="btn-next">Next</button>
+              <i class="fad fa-chevron-double-right"></i>
+            </div>
+          </div>
         </div>
+        
       </div>
     </div>
     <script type="module" src="/assets/js/index.js"></script>
