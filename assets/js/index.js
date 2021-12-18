@@ -117,8 +117,7 @@ function reveal() {
 
 
 const btnLearn = document.querySelectorAll(".show-pop-up");
-const signInBtn = document.querySelector(".sign-in");
-console.log(signInBtn);
+const signIn = document.querySelector("#signin-button");
 const getStartedButton = document.querySelector("#get-started");
 
 
@@ -129,7 +128,7 @@ getStartedButton.addEventListener("click", () => {
 
 });
 
-signInBtn.addEventListener("click", () => {
+signIn.addEventListener("click", () => {
   alert("Button clicked")
   // document.querySelector("#sign-in-popup").classList.add("active-popup");
   // document.querySelector('.page-content').style.display = 'none';
