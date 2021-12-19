@@ -128,8 +128,9 @@ readMore.addEventListener("click", (e) => {
 
 });
 
-getStartedButton.addEventListener("click", () => {
+console.log(getStartedButton)
 
+getStartedButton.addEventListener("click", () => {
   document.querySelector("#sign-in-popup").classList.add("active-popup");
   document.querySelector('.page-content').style.display = 'none';
 
@@ -137,19 +138,21 @@ getStartedButton.addEventListener("click", () => {
 
 signIn.addEventListener("click", () => {
   document.querySelector("#sign-in-popup").classList.add("active-popup");
-  document.querySelector('.page-content').style.display = 'none';
+  document.querySelector('.page-content').style.filter = "blur(10px)";
 
 });
 
 Array.from(btnLearn).forEach(el => {
   el.addEventListener("click", (e) => {
     const id = e.target.parentNode.parentNode.id;
+    const section = document.querySelector(".max-width");
+    const navBar = document.querySelector(".nav-bar");
+    section.style.filter = "blur(10px)";
+    navBar.style.filter = "blur(10px)";
     document.querySelector(`#${id}-popup`).classList.add("active-popup");
-    document.querySelector('.page-content').style.display = "none";
-    // document.querySelector(".blurry-body").style.display = "block";
-
   })
 })
+
 
 
 const buttonClose = document.querySelectorAll(".close-btn");
@@ -157,10 +160,15 @@ console.log(buttonClose);
 Array.from(buttonClose).forEach(el => {
   el.addEventListener("click", () => {
     removeActive();
-    document.querySelector('.page-content').style.display = "block";
-    // document.querySelector(".blurry-body").style.display = "none";
+    const section = document.querySelector(".max-width");
+    const navBar = document.querySelector(".nav-bar");
+    section.style.filter = "blur(0)";
+    navBar.style.filter = "blur(0)";
+    document.querySelector('.page-content').style.filter = "blur(0)";
+
   })
 })
+
 
 
 const removeActive = () => {
