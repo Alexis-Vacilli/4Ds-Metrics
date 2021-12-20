@@ -5,9 +5,10 @@
 }
 
 input[type="text"] {
-  width: 100%;
-  height: 100%;
-  padding: 3px 2px;
+  width: 15%;
+  margin: 0 5px;
+  border-radius: 5px;
+  padding: 7px 5px;
   background: rgb(228, 231, 232);
   border: 2px solid #c4c4c4;
 }
@@ -15,6 +16,54 @@ input[type="text"] {
 input[type="text"]:focus{
   outline: none;
   border-color: #FEB74A;
+}
+
+.status-container{
+  /* justify-content: space-between;
+  position: relative; */
+}
+.container-status{
+  display: flex;
+  justify-content: center;
+}
+input[type="radio"]{
+  display: none;
+}
+.container-status .positive{
+  margin-right: 30px;
+}
+.container-status .fair{
+  margin-right: 30px;
+}
+.container-status label{
+  position: relative;
+  color: #FEB74A;
+  font-size: 16px;
+  border: 2px solid #FEB74A;
+  border-radius: 5px;
+  padding: 10px 40px;
+  align-items: center;
+  cursor: pointer;
+}
+.container-status label:before{
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  border: 3px solid #FEB74A;
+  border-radius: 50%;
+  top: 10px;
+  left: 12px;
+}
+input[type="radio"]:checked + label{
+   background-color: #FEB74A;
+   color: #fff;
+}
+input[type="radio"]:checked + label:before{
+  height: 5px;
+  width: 5px;
+  border: 5px solid #fff;
+  background-color: #FEB74A;
 }
 
 .wizard {
@@ -98,7 +147,7 @@ input[type="text"]:focus{
 
 .step-indicator .label-step {
   margin-top: 4px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   color: #1c2437;
   font-weight: 900;
@@ -126,6 +175,7 @@ input[type="text"]:focus{
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
 }
 
 .actions-wrapper .btn-previous {
@@ -187,14 +237,15 @@ input[type="text"]:focus{
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+  margin-top: 35px;
 }
 
 .query-form .form-group label {
-  color: #c4c4c4;
-  margin-bottom: 10px;
-  opacity: .7;
-  font-size: 14px;
-  font-weight: 700;
+  color: #fff;
+  margin-bottom: 25px;
+  /* opacity: .7; */
+  font-size: 16px;
+  /* font-weight: 700; */
 }
 
 .query-form .form-group .slider-wrapper,
@@ -221,111 +272,83 @@ select {
   border-radius: 0 2px 2px 0;
 }
 
-/* start slider */
+/* Slider styles */
 
-.input-range{
-  display: grid;
-  text-align: center;
-  width: 100%;
-}
-.range{
-  height: 25px;
-  width: 85%;
-  background: #fff;
-  border-radius: 5px;
-  padding: 0 65px 0 45px;
-}
-.range .sliderValue{
-  position: relative;
-  width: 100%;
-}
-.range .sliderValue span{
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  font-weight: 500;
-  top: -40px;
-  transform: translateX(-50%) scale(0);
-  transform-origin: bottom;
-  transition: transform .3s ease-in-out;
-  z-index: 2;
-}
-.range .sliderValue span.show{
-  transform: translateX(-50%) scale(1);
-}
-/* .range .sliderValue span:after{
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  background: #FEB74A;
-  font-size: 10px;
-  top: -30%;
-  left: 50%;
-  transform: translateX(-50%)  rotate(45deg);
-  border: 3px solid #fff;
-  z-index: -1;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-
-} */
-.range .field{
-  position: relative;
+.container{
+  background-color: #ffff;
+  width: 95%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 5px;
+  height: 20px;
 }
-.range .field .value{
-  position: absolute;
-  font-size: 18px;
-  font-weight: 600;
-  color: #222;  
-}
-.range .field .value.left{
-  left: -22px;
-}
-.range .field .value.right{
+input[type="range"]{
   position: relative;
-  right: -43px;
-
-}
-.range .field input{
   -webkit-appearance: none;
-  height: 5px;
-  width: 100%;
-  background: #ddd;
+  -moz-appearance: none;
+  display: block;
+  width: 80%;
+  height: 20px;
+  background-color: #c4c4c4;
   border-radius: 5px;
   outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    height: 8px;
+}
+input[type="range"]::-moz-track{
+    -moz-appearance: none;
+    height: 20px;
+}
+input[type="range"]::-ms-track{
+    appearance: none;
+    height: 20px;                      }
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  background-color: #FEB74A;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -17px;
   border: none;
 }
-.range .field input::-webkit-slider-thumb{
-  -webkit-appearance: none;
+input[type="range"]::-moz-range-thumb{
+  -moz-appearance: none;
   height: 20px;
   width: 20px;
-  background: #FEB74A;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.query-form .form-group .slider-wrapper {
-  display: flex;
-  width: 100%;
-  padding: 2px;
-  background-color: rgba(228, 231, 232);
-  border-radius: 5px;
-}
-
-.query-form .form-group .slider-wrapper .rate {
-  border: none;
   background-color: #FEB74A;
-  color: #222222;
+  cursor: pointer;
+  margin-top: -6px;
+  border: none;
+}
+input[type="range"]::-ms-thumb{
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #FEB74A;
+  cursor: pointer;
+  margin-top: -6px;
+  border: none;
+}
+input[type="range"]:active::-webkit-slider-thumb{
+  background-color: #fff;
+  border: 3px solid #FEB74A;
+}
+#slider-value{
+  width: 10%;
+  position: relative;
+  background-color: #FEB74A;
+  color: #222;
   font-weight: 900;
-  margin: -2px -2px -2px 0px;
-  padding: 0px 2px;
-  width: 50px;
-  border-radius: 0px 5px 5px 0px;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 0 5px 5px 0;
+  margin-right: -52px;
 }
 
 /*Chrome*/
@@ -442,7 +465,6 @@ select {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  /* background: red; */
 }
 
 .buttons-container div{
@@ -452,8 +474,8 @@ select {
 .buttons-container button{
   margin-top: 28px;
   border: none;
-  border-radius: 2px;
-  padding: 8px 32px;
+  border-radius: 5px;
+  padding: 12px 32px;
   color: white;
   cursor: pointer;
   
@@ -468,7 +490,7 @@ select {
 }
 
 .buttons-container #btn-prev{
-  border: 1px solid #FEB74A;
+  background: #FEB74A;
   color: #222222;
   margin-right: 30px;
 }
