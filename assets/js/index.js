@@ -6,11 +6,30 @@ const fromValidation = () => {
   const stepQueries = document.querySelectorAll(".step-query");
   const innerNodes = stepQueries[currentStep].querySelectorAll(":scope > .inner-form");
   const inputs = innerNodes[innerStep] ? innerNodes[innerStep].getElementsByTagName("input") : [];
-  for (const inputField of inputs) {
-    if (inputField.value === "") {
-      inputField.className += " invalid";
+  const errors = innerNodes[innerStep] ? innerNodes[innerStep].querySelectorAll("span.error") : [];
+  const errorSelectors = innerNodes[innerStep] ? innerNodes[innerStep].querySelectorAll("h6.error") : [];
+  for (let i = 0; i < inputs.length; i++) {
+    if (inputs[i].value === "") {
+      inputs[i].className += " invalid";
       isValid = false;
-      alert("input must not be blank!")}
+      if (errors[i]) {
+        errors[i].innerHTML = "*This field can not be empty"
+        errors[i].style.display = "block"
+      }
+    } 
+    if (inputs[i].type === "range" && inputs[i].value <= 0) {
+      isValid = false;
+      inputs[i].style.borderWidth = "1px"
+      inputs[i].className += " invalid";
+      if (errors[i]) {
+        errors[i].innerHTML = "*Range is required"
+        errors[i].style.display = "block"
+      }
+    }
+    // if (errorSelectors[i] && errorSelectors[i].innerHTML.toLowerCase().includes("select")) {
+    //   errorSelectors[i].innerHTML = "*Hover to select an option"
+    //   errorSelectors[i].style.display = "block"
+    // }
   }
 
   if (isValid && stepQueries[currentStep] && (innerStep === innerNodes.length-1)) {
@@ -57,7 +76,6 @@ export const nextOrPrevious = step => {
 
   innerStep += step;
   const innerNodes = stepQueries[currentStep].querySelectorAll(":scope > .inner-form");
-  console.log(innerNodes);
   if (stepQueries[currentStep] && (innerStep >= innerNodes.length || innerStep < 0)) {
     if (currentStep === -1) {
       const stepIndicators = document.querySelectorAll(".step-indicator");

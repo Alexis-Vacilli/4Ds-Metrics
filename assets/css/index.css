@@ -13,7 +13,7 @@ input[type="text"] {
   border: 2px solid #c4c4c4;
 }
 
-input[type="text"]:focus{
+input[type="text"]:focus {
   outline: none;
   border-color: #FEB74A;
 }
@@ -251,6 +251,16 @@ input[type="radio"]:checked + label:before{
 .query-form .form-group .slider-wrapper,
 select {
   margin-top: 3px;
+}
+
+input.invalid {
+  border-color: red;
+}
+span.error,
+h6.error {
+  display: none;
+  color: red;
+  font-size: 11px;
 }
 
 .query-form .form-group .slider:hover {
