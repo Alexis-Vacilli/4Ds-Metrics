@@ -121,6 +121,9 @@ const signIn = document.querySelector("#signin-button");
 const getStartedButton = document.querySelector("#get-started");
 const readMore = document.querySelector(".read-more");
 
+
+
+
 readMore.addEventListener("click", (e) => {
   e.preventDefault();
   document.querySelector("#sign-in-popup").classList.add("active-popup");
@@ -128,11 +131,13 @@ readMore.addEventListener("click", (e) => {
 
 });
 
-console.log(getStartedButton)
+
+
 
 getStartedButton.addEventListener("click", () => {
-  document.querySelector("#sign-in-popup").classList.add("active-popup");
-  document.querySelector('.page-content').style.display = 'none';
+  console.log("button clicked!")
+  // document.querySelector("#sign-in-popup").classList.add("active-popup");
+  // document.querySelector('.page-content').style.display = 'none';
 
 });
 
