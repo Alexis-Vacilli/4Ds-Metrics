@@ -16,15 +16,6 @@ const fromValidation = () => {
         errors[i].innerHTML = "*This field can not be empty"
         errors[i].style.display = "block"
       }
-    } 
-    if (inputs[i].type === "range" && inputs[i].value <= 0) {
-      isValid = false;
-      inputs[i].style.borderWidth = "1px"
-      inputs[i].className += " invalid";
-      if (errors[i]) {
-        errors[i].innerHTML = "*Range is required"
-        errors[i].style.display = "block"
-      }
     }
     // if (errorSelectors[i] && errorSelectors[i].innerHTML.toLowerCase().includes("select")) {
     //   errorSelectors[i].innerHTML = "*Hover to select an option"
