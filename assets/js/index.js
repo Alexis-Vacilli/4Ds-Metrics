@@ -3,18 +3,47 @@ let innerStep = 0;
 
 const fromValidation = () => {
   let isValid = true;
+  let count = 0;
   const stepQueries = document.querySelectorAll(".step-query");
   const innerNodes = stepQueries[currentStep].querySelectorAll(":scope > .inner-form");
-  const inputs = innerNodes[innerStep] ? innerNodes[innerStep].getElementsByTagName("input") : [];
-  const errors = innerNodes[innerStep] ? innerNodes[innerStep].querySelectorAll("span.error") : [];
-  for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value === "") {
-      inputs[i].className += " invalid";
+  const inputsNumber = innerNodes[innerStep] ? innerNodes[innerStep].querySelectorAll('input[type=number]') : [];
+  const inputsRadio = innerNodes[innerStep] ? innerNodes[innerStep].querySelectorAll('input[type=radio]') : [];
+  const errors = innerNodes[innerStep] ? innerNodes[innerStep].querySelectorAll('span.error') : [];
+  
+  for (let i = 0; i < inputsNumber.length; i++) {
+    inputsNumber[i].onchange = () => {
+      errors[i].style.visibility = "hidden";
+      errors[i].innerHTML = '';
+      inputsNumber[i].style.border = 'none';
+    }
+    if (inputsNumber[i].value === '') {
+      errors[i].style.visibility = "visible";
+      errors[i].innerHTML = 'This field is required';
+      inputsNumber[i].style.border = '1px solid red';
       isValid = false;
-      if (errors[i]) {
-        errors[i].innerHTML = "*This field can not be empty"
-        errors[i].style.display = "block"
-      }
+    } else if (inputsNumber[i].value < 0) {
+      errors[i].style.visibility = "visible";
+      isValid = false;
+      errors[i].innerHTML = "Negative values are not allowed.";
+      inputsNumber[i].style.border = '1px solid red';
+    }
+    count += i;
+  }
+
+  let isSelected = false;
+  for (let i = 0; i < inputsRadio.length; i++) {
+    if (inputsRadio[i].checked) {
+      isSelected = true;
+    }
+    if ((i === inputsRadio.length -1) && !isSelected) {
+      count += 1;
+      isValid = false;
+      errors[count].innerHTML = 'Select status, please.';
+      errors[count].style.visibility = "visible";
+    } else if ((i === inputsRadio.length -1) && isSelected) {
+      count += 1;
+      errors[count].innerHTML = ''
+      errors[count].style.visibility = "hidden";
     }
   }
 
@@ -51,7 +80,6 @@ const showStep = () => {
   document.querySelector("#progress").innerHTML = `${innerStep+1}/${innerNodes.length}`
 
   if (currentStep === (stepQueries.length - 1)) {
-    document.querySelector("#progress").innerHTML = "Done"
     document.querySelector("#btn-next").innerHTML = "Submit";
     document.querySelector("#btn-prev").style.visibility = "hidden";
     document.querySelector("#btn-exit").style.visibility = "hidden";

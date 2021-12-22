@@ -261,9 +261,8 @@ select {
 input.invalid {
   border-color: red;
 }
-span.error,
-h6.error {
-  display: none;
+span.error {
+  visibility: hidden;
   color: red;
   font-size: 11px;
 }
