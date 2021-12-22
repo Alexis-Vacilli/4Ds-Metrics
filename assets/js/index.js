@@ -121,23 +121,19 @@ const signIn = document.querySelector("#signin-button");
 const getStartedButton = document.querySelector("#get-started");
 const readMore = document.querySelector(".read-more");
 
+const startButtons = document.querySelectorAll(".start");
 
-
-
-readMore.addEventListener("click", (e) => {
-  e.preventDefault();
-  document.querySelector("#sign-in-popup").classList.add("active-popup");
-  document.querySelector('.page-content').style.display = 'none';
-
-});
-
-
-
+startButtons.forEach(el => {
+  el.addEventListener("click", () => {
+    document.querySelector("#sign-in-popup").classList.add("active-popup");
+    document.querySelector('.page-content').style.display = 'none';
+  })
+})
 
 getStartedButton.addEventListener("click", () => {
   console.log("button clicked!")
-  // document.querySelector("#sign-in-popup").classList.add("active-popup");
-  // document.querySelector('.page-content').style.display = 'none';
+  document.querySelector("#get-started-popup").classList.add("active-popup");
+  document.querySelector('.page-content').style.filter = "blur(10px)";
 
 });
 

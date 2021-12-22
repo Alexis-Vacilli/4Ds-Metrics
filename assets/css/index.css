@@ -159,11 +159,8 @@ main {
 }
 
 .introduction{
+    position: relative;
     flex: 1;
-}
-
-.intro-text{
-
 }
 
 .intro-text h1{
@@ -177,13 +174,12 @@ main {
     background: linear-gradient(to right, var(--secondary-font-color), var(--lighter-bg-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* transform: translateY(-50%); */
-    /* border-right: 3px solid #fff; */
-    /* 
-    
-    overflow: hidden;
-    white-space: nowrap; */
+}
 
+.introduction .button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @keyframes type{
@@ -404,12 +400,12 @@ main {
        /* Sign in pop-up */
        .popup{
         position: absolute;
-        top: -150%;
+        top: 0%;
         left: 50%;
         transform: translate(
             -50%, -50%
         ) scale(1.25);
-        opacity: 0;
+        opacity: 1;
         width: 50%;
         padding: 20px 30px;
         background: #f4f6f9;
