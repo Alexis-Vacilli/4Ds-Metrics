@@ -188,12 +188,17 @@ input[type="radio"]:checked + label:before {
   cursor: pointer;
 }
 
+.done {
+  color: #feb74a;
+}
+
 .circular-progress {
   position: absolute;
   height: 70px;
   width: 70px;
   margin: auto;
-  background-color: #feb74a;
+  background: linear-gradient(0deg, #feb74a 50%, transparent 50%),
+    linear-gradient(90deg, #feb74a 50%, lightgray 50%);
   border-radius: 50%;
   display: grid;
   place-items: center;

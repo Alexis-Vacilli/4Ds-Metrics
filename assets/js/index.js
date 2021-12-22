@@ -7,7 +7,6 @@ const fromValidation = () => {
   const innerNodes = stepQueries[currentStep].querySelectorAll(":scope > .inner-form");
   const inputs = innerNodes[innerStep] ? innerNodes[innerStep].getElementsByTagName("input") : [];
   const errors = innerNodes[innerStep] ? innerNodes[innerStep].querySelectorAll("span.error") : [];
-  const errorSelectors = innerNodes[innerStep] ? innerNodes[innerStep].querySelectorAll("h6.error") : [];
   for (let i = 0; i < inputs.length; i++) {
     if (inputs[i].value === "") {
       inputs[i].className += " invalid";
@@ -17,10 +16,6 @@ const fromValidation = () => {
         errors[i].style.display = "block"
       }
     }
-    // if (errorSelectors[i] && errorSelectors[i].innerHTML.toLowerCase().includes("select")) {
-    //   errorSelectors[i].innerHTML = "*Hover to select an option"
-    //   errorSelectors[i].style.display = "block"
-    // }
   }
 
   if (isValid && stepQueries[currentStep] && (innerStep === innerNodes.length-1)) {
@@ -48,7 +43,11 @@ const showStep = () => {
     document.querySelector("#btn-prev").style.visibility = "visible";
   }
 
+  const rate = getRate(innerStep+1, innerNodes.length);
+  document.querySelector("#progress").innerHTML = `${innerStep+1}/${innerNodes.length}`
+
   if (currentStep === (stepQueries.length - 1)) {
+    document.querySelector("#progress").innerHTML = "Done"
     document.querySelector("#btn-next").innerHTML = "Submit";
     document.querySelector("#btn-prev").style.visibility = "hidden";
     document.querySelector("#btn-exit").style.visibility = "hidden";
@@ -56,7 +55,6 @@ const showStep = () => {
     document.querySelector("#btn-next").innerHTML = "Next";
   }
   fixStepIndicator();
-  document.querySelector("#progress").innerHTML = `${innerStep+1}/${innerNodes.length}`
 }
 
 export const nextOrPrevious = step => {
@@ -117,7 +115,7 @@ for (const slider of sliders) {
 }
 
 
-// dropdown
+//dropdown
 const dropdowns = document.querySelectorAll(".dropdown");
 const titles = document.querySelectorAll(".title");
 let selectedTitleIndex = -1;
@@ -139,12 +137,12 @@ window.addEventListener("click", (event) => {
   })
 });
 
-const options = document.querySelectorAll(".option");
-options.forEach((element, key) => {
-  element.addEventListener("click", (event) => {
-  titles[selectedTitleIndex].innerHTML = event.target.innerHTML;
-  });
-})
+// const options = document.querySelectorAll(".option");
+// options.forEach((element, key) => {
+//   element.addEventListener("click", (event) => {
+//   titles[selectedTitleIndex].innerHTML = event.target.innerHTML;
+//   });
+// })
 
 
 
