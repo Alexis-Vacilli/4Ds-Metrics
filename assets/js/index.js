@@ -91,6 +91,9 @@ const showStep = () => {
 
 export const nextOrPrevious = step => {
   const stepQueries = document.querySelectorAll(".step-query");
+  if (stepQueries[currentStep] === undefined) {
+    return false;
+  }
   if (step === 1 && !fromValidation()) {
     return false;
   }
@@ -109,6 +112,7 @@ export const nextOrPrevious = step => {
   
   if (currentStep >= stepQueries.length) {
     // submitting here
+    alert('Submitting...')
     return false;
   }
   showStep();
@@ -145,36 +149,3 @@ for (const slider of sliders) {
     }
   });
 }
-
-
-//dropdown
-const dropdowns = document.querySelectorAll(".dropdown");
-const titles = document.querySelectorAll(".title");
-let selectedTitleIndex = -1;
-
-titles.forEach((element, key) => {
-  element.addEventListener("mouseover", (event) => {
-    if (event.target === element) {
-      selectedTitleIndex = key;
-      dropdowns[key].style.display = "block";
-    }
-  });
-});
-
-window.addEventListener("click", (event) => {
-  dropdowns.forEach((element, key) => {
-    if (event.target !== dropdowns[selectedTitleIndex] && event.target !== titles[selectedTitleIndex]) {
-      element.style.display = "none"
-    }
-  })
-});
-
-// const options = document.querySelectorAll(".option");
-// options.forEach((element, key) => {
-//   element.addEventListener("click", (event) => {
-//   titles[selectedTitleIndex].innerHTML = event.target.innerHTML;
-//   });
-// })
-
-
-
