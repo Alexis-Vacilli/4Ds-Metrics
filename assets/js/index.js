@@ -43,6 +43,11 @@ const showStep = () => {
     document.querySelector("#btn-prev").style.visibility = "visible";
   }
 
+  const circularBar = document.querySelector(".circular-progress");
+  const rate = (innerStep+1)*180/innerNodes.length
+  circularBar.style.background = `linear-gradient(${rate}deg, #feb74a 50%, transparent 50%),
+  linear-gradient(0deg, #feb74a 50%, lightgray 50%)`
+
   document.querySelector("#progress").innerHTML = `${innerStep+1}/${innerNodes.length}`
 
   if (currentStep === (stepQueries.length - 1)) {

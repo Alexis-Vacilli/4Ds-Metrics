@@ -197,8 +197,8 @@ input[type="radio"]:checked + label:before {
   height: 70px;
   width: 70px;
   margin: auto;
-  background: linear-gradient(0deg, #feb74a 50%, transparent 50%),
-    linear-gradient(90deg, #feb74a 50%, lightgray 50%);
+  background: linear-gradient(180deg, #feb74a 50%, transparent 50%),
+    linear-gradient(0deg, #feb74a 50%, lightgray 50%);
   border-radius: 50%;
   display: grid;
   place-items: center;
