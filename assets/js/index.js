@@ -43,7 +43,6 @@ const showStep = () => {
     document.querySelector("#btn-prev").style.visibility = "visible";
   }
 
-  const rate = getRate(innerStep+1, innerNodes.length);
   document.querySelector("#progress").innerHTML = `${innerStep+1}/${innerNodes.length}`
 
   if (currentStep === (stepQueries.length - 1)) {
