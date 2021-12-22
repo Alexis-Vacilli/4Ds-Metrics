@@ -22,7 +22,7 @@
   <body>
     <div class="wizard">
       <div class="wizard-wrapper">
-        <div class="step-indicator-wrapper">
+        <div id="step-indicator" class="step-indicator-wrapper">
           <div class="step-indicator">
             <div class="step-circle">
               <i class="fas fa-check"></i>
@@ -61,7 +61,7 @@
             <p class="label-step">Deploy</p>
           </div>
         </div>
-        <div class="form-container">
+        <div id="form-container" class="form-container">
           <div class="query-container">
             <div class="actions-wrapper">
               <div class="circular-progress progress">
@@ -286,6 +286,10 @@
           </div>
         </div>
         
+        <div id="thank-you">
+          <h3>Thank you for responding</h3>
+          <button id="btn-edit">Edit response</button>
+        </div>
       </div>
     </div>
     <script>

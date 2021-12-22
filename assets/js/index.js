@@ -92,6 +92,9 @@ const showStep = () => {
 export const nextOrPrevious = step => {
   const stepQueries = document.querySelectorAll(".step-query");
   if (stepQueries[currentStep] === undefined) {
+    document.querySelector("#step-indicator").style.display = "none";
+    document.querySelector("#form-container").style.display = "none";
+    document.querySelector("#thank-you").style.display = "block";
     return false;
   }
   if (step === 1 && !fromValidation()) {
@@ -148,4 +151,16 @@ for (const slider of sliders) {
       slider.nextElementSibling.innerHTML = `${event.target.value}%`
     }
   });
+}
+
+const btnEdit = document.querySelector('#btn-edit');
+
+if (btnEdit != null) {
+  btnEdit.onclick = () => {
+    document.querySelector("#step-indicator").style.display = "flex";
+    document.querySelector("#form-container").style.display = "block";
+    document.querySelector("#thank-you").style.display = "none";
+    currentStep = 1;
+    showStep();
+  }
 }

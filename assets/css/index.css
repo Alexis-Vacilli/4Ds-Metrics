@@ -191,7 +191,16 @@ input[type="radio"]:checked + label:before {
 .done {
   color: #feb74a;
 }
-
+#thank-you {
+  display: none;
+}
+#btn-edit {
+  color: blue;
+  border: none;
+  outline: none;
+  margin-top: 12px;
+  cursor: pointer;
+}
 .circular-progress {
   position: absolute;
   height: 70px;
