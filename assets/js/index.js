@@ -72,10 +72,9 @@ const showStep = () => {
     document.querySelector("#btn-prev").style.visibility = "visible";
   }
 
-  const circularBar = document.querySelector(".circular-progress");
-  const rate = (innerStep+1)*180/innerNodes.length
-  circularBar.style.background = `linear-gradient(${rate}deg, #feb74a 50%, transparent 50%),
-  linear-gradient(0deg, #feb74a 50%, lightgray 50%)`
+  const rate = ((innerStep+1) * 180) / innerNodes.length;
+  document.querySelectorAll('.mask.full').forEach(element => element.style.transform = `rotate(${rate}deg)`)
+  document.querySelectorAll('.circle .fill').forEach(element => element.style.transform = `rotate(${rate}deg)`);
 
   document.querySelector("#progress").innerHTML = `${innerStep+1}/${innerNodes.length}`
 
