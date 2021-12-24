@@ -399,16 +399,16 @@ main {
 /* Pop up services */
        /* Sign in pop-up */
        .popup{
-        position: absolute;
+        position: fixed;
         top: 0%;
         left: 50%;
         transform: translate(
             -50%, -50%
         ) scale(1.25);
-        opacity: 1;
-        width: 50%;
-        padding: 20px 30px;
-        background: #f4f6f9;
+        opacity: 0;
+        width: 55%;
+        padding: 50px 70px;
+        background: white;
         box-shadow: 20px 20px 50px rgb(34, 34, 34, .2);
         border-radius: 10px;
         transition: top .5s ease-in-out .5s,
@@ -419,7 +419,7 @@ main {
       .popup.active-popup{
         top: 50%;
         opacity: 1;
-        z-index: 9;
+        z-index: 100;
         transform: translate(-50%, -50%) scale(1);
         transition: top 0s ease-in 0ms,
                     opacity .1s ease-in-out .1s,
@@ -439,6 +439,20 @@ main {
         border-radius: 15px;
         cursor: pointer;
       }
+
+      .popup .description{
+        color: #222222;
+        margin: 10px 0 20px 0;
+        text-align: justify;
+        font-size: 12px;
+        width: 80%;
+        
+        
+
+      }
+      /* .popup #sign-in-popup{
+        display: none;
+      } */
       .popup .fa-clipboard-list{
         position: absolute;
         top: 10px;
@@ -453,21 +467,25 @@ main {
         text-align: center;
         color: #222222;
         margin: 10px 0 20px;
-        font-size: 25px;
+        font-size: 20px;
       }
       
       .popup .form p{
           padding: 0 0 20px 15px;
           color: rgb(34, 34, 34, .8);
+          font-size: 15px;
       }
       
       .popup .form h4{
           padding: 0 0 20px 15px;
-          font-size: 18px;
+          font-size: 15px;
+          margin: 0 0 -15px 0
       }
       
       .popup .form ul{
           padding: 0 0 0px 20px;
+          font-size: 13px;
+
       }
       
       .popup .form li{
@@ -479,8 +497,8 @@ main {
       
       .popup .form li i{
          margin: 1px 20px;
-          height: 5px;
-          width: 5px;
+          height: 10px;
+          width: 10px;
       }
       
 /* Section-pricing */
@@ -899,13 +917,6 @@ form textarea,
    
 }
 
-/* .success{
-    border-color: #2ecc71;
-}
-.error{
-    border-color: #e74c3c;
-} */
-
 
 form textarea{
     resize: none;
@@ -1048,9 +1059,23 @@ form input:focus{
   body {
     overflow-x: hidden;
   }
-
+  .popup{
+    width: 100vw;
+    height: 80vh;
+    padding: 0;
+    
+  }
   .presentation{
-    display: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-120%);
+  }
+
+  .introduction p{
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .nav-links {
@@ -1080,7 +1105,6 @@ form input:focus{
 .about-container{
     width: 80%;
     display: block;
-    margin: auto 82px;
     padding-top: 50px;
 }
 
@@ -1090,6 +1114,7 @@ form input:focus{
     display: block;
     margin: auto;
 }
+
 .about-content h3{
    font-size: 15px;
 }
@@ -1130,9 +1155,17 @@ form input:focus{
   
 /* Partner section */
 
+.main-card .partner-cards{
+  display: flex;
+  flex-direction: column;
+}
+
 .main-card .partner-cards .partner-card{
-    width: calc(100% / 2 - 10px);
+    width: 60%;
     margin: 20px 0 10px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
   /* Footer */
@@ -1180,6 +1213,8 @@ form input:focus{
 
   .section-about{
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .section-about .content {

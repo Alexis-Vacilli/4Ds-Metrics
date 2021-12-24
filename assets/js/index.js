@@ -6,6 +6,11 @@ const navSlide = () => {
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
     });
+    navLinks.forEach(el => {
+      el.addEventListener("click", () => {
+        nav.classList.remove('nav-active');
+      })
+    })
     // Animate Links
     navLinks.forEach((link, index) => {
         if (link.getElementsByClassName.animation){
@@ -116,17 +121,18 @@ function reveal() {
 // }
 
 
-const btnLearn = document.querySelectorAll(".show-pop-up");
+const serviceCard = document.querySelectorAll(".service-card");
+const box = document.querySelectorAll(".box");
 const signIn = document.querySelector("#signin-button");
 const getStartedButton = document.querySelector("#get-started");
 const readMore = document.querySelector(".read-more");
-
 const startButtons = document.querySelectorAll(".start");
+
 
 startButtons.forEach(el => {
   el.addEventListener("click", () => {
-    document.querySelector("#sign-in-popup").classList.add("active-popup");
-    document.querySelector('.page-content').style.display = 'none';
+    document.querySelector("#get-started-popup").classList.add("active-popup");
+    document.querySelector('.page-content').style.display = "none";
   })
 })
 
@@ -143,16 +149,30 @@ signIn.addEventListener("click", () => {
 
 });
 
-Array.from(btnLearn).forEach(el => {
+Array.from(serviceCard).forEach(el => {
   el.addEventListener("click", (e) => {
-    const id = e.target.parentNode.parentNode.id;
-    const section = document.querySelector(".max-width");
-    const navBar = document.querySelector(".nav-bar");
-    section.style.filter = "blur(10px)";
-    navBar.style.filter = "blur(10px)";
+    const id = e.target.id;
+    document.querySelector('.page-content').style.filter = "blur(10px)";
     document.querySelector(`#${id}-popup`).classList.add("active-popup");
   })
 })
+
+Array.from(box).forEach(el => {
+  el.addEventListener("click", (e) => {
+    const id = e.target.parentNode.id;
+    document.querySelector('.page-content').style.filter = "blur(10px)";
+    document.querySelector(`#${id}-popup`).classList.add("active-popup");
+  })
+})
+
+Array.from(serviceCard).forEach(el => {
+  el.addEventListener("click", (e) => {
+    const id = e.target.parentNode.parentNode.id;
+    document.querySelector('.page-content').style.filter = "blur(10px)";
+    document.querySelector(`#${id}-popup`).classList.add("active-popup");
+  })
+})
+
 
 
 
@@ -166,6 +186,7 @@ Array.from(buttonClose).forEach(el => {
     section.style.filter = "blur(0)";
     navBar.style.filter = "blur(0)";
     document.querySelector('.page-content').style.filter = "blur(0)";
+    document.querySelector('.page-content').style.display = "block";
 
   })
 })
