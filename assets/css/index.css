@@ -46,6 +46,7 @@ body{
     
 }
 
+
 .step-indicators > div p{
     color: #fff;
     font-weight: 900;
@@ -58,19 +59,34 @@ body{
     background: #2222222a;
     border-radius: 5px;
     justify-content: space-around;
-    padding: 40px 30px;
+    padding: 50px 30px;
+    flex-wrap: wrap;
 }
 
 .card-container .card{
-    width: 30%;
+    width: 28%;
+    height: 55vh;
     background: #222222ec;
     border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.card-container .card:hover{
+    transform: scale(1.01);
+    box-shadow: 10px 5px 10px 0px #222;
 }
 
 .card .up-side{
     position: relative;
     height: 150px;
     background: rgba(0, 0, 0, 0.29);
+}
+
+.card .up-side i{
+    color: rgba(255, 255, 255, 0.817);
+    float: right;
+    margin: 15px 10px;
 }
 .card .up-side .circle{
     position: absolute;
@@ -82,7 +98,17 @@ body{
     transform: translateX(-50%);
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.502);
+    text-align: center;
 }
+
+.card .up-side .circle h5{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.502);
+}
+
 
 .card .down-side{
     padding: 20px 40px;
@@ -93,5 +119,15 @@ body{
     color: #fff;
     font-size: 20px;
     font-weight: 600;
-    margin: 30px 0 5px 0;
+    margin: 30px 0 0px 0;
+}
+
+.card .down-side .subtitle{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.502)
+}
+
+.card .down-side .body{
+    padding: 20px 0;
+    color: #fff;
 }
