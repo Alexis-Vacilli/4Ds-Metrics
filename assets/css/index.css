@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+body{
+}
+
+.wizard{
+    position: absolute;
+    width: 80%;
+    max-height: 60vh;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wizard-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.step-indicators{
+    width: 100%;
+    background-color: #222222;
+    display: flex;
+    height: 60px;
+    border-radius: 8px;
+    
+}
+.step-indicators > div{
+    width: 30%;
+    text-align: center;
+    border-right: 2px solid #000;
+    cursor: pointer;
+}
+
+.step-indicators #step-4{
+    border-right: none;
+}
+
+.step-indicators > div:hover{
+    background: #FEB74A;
+    
+}
+
+.step-indicators > div p{
+    color: #fff;
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+.card-container{
+    margin-top: 30px;
+    display: flex;
+    background: #2222222a;
+    border-radius: 5px;
+    justify-content: space-around;
+    padding: 40px 30px;
+}
+
+.card-container .card{
+    width: 30%;
+    background: #222222ec;
+    border-radius: 5px;
+}
+
+.card .up-side{
+    position: relative;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.29);
+}
+.card .up-side .circle{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #222222;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.502);
+}
+
+.card .down-side{
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.card .down-side .title{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 30px 0 5px 0;
+}
