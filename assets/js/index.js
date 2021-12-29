@@ -17,7 +17,7 @@ const navSlide = () => {
             link.getElementsByClassName.animation = '';
         } else {
             link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + .3}s`;
-            console.log(index / 7);
+            // console.log(index / 7);
         }
     })
 }
@@ -47,7 +47,7 @@ window.onscroll = () => {
     let offset = i.offsetTop - 150;
     let height = i.offsetHeight;
     let id = i.getAttribute("id");
-    console.log(id)
+    // console.log(id)
     
     if (top >= offset && top < offset + height) {
       menu.forEach((link) => {
@@ -80,8 +80,8 @@ function reveal() {
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
-        console.log(i)
-        setActive(sections[i+1].id)
+        // console.log(i)
+        setActive(sections[i].id)
       } else {
         reveals[i].classList.remove("active");
       }
@@ -94,32 +94,24 @@ function reveal() {
 
 //   Form validation
 
-// const form = document.querySelector("#form");
-// const firstName = document.querySelector("#firstname");
-// const lastName = document.querySelector("#lastname");
-// const email = document.querySelector("#email");
+const submitForm = (event) => {
+    
+    event.preventDefault();
+    // Get input values
+    console.log('2332242')
+    const firstName = document.querySelector("#firstname").value;
+    const lastName = document.querySelector("#lastname").value;
+    const email = document.querySelector("#contact-email").value;
+    const message = document.querySelector("#message").value;
 
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     checkInputs();
-// })
+    console.log(firstName,lastName, email, message );
+}
 
-// const checkInputs = () => {
-//     const firstNameValue = firstName.value.trim();
-//     const lastNameValue = lastName.value.trim();
-//     const emailValue = email.value.trim();
+const contactForm = document.querySelector("#contact-form").addEventListener("submit", submitForm);
 
-//     if(firstNameValue === "") {
-//         setErrorFor(firstName, "First name cannot be blank!")
-//     } else {
-//         setSuccessFor(firstName)
-//     }
-// }
 
-// const setError = (input, message) => {
-   
-// }
 
+// Pop ups
 
 const serviceCard = document.querySelectorAll(".service-card");
 const box = document.querySelectorAll(".box");
@@ -130,14 +122,14 @@ const startButtons = document.querySelectorAll(".start");
 
 
 startButtons.forEach(el => {
-  el.addEventListener("click", () => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
     document.querySelector("#get-started-popup").classList.add("active-popup");
-    document.querySelector('.page-content').style.display = "none";
+    document.querySelector('.page-content').style.filter = "blur(10px)";
   })
 })
 
 getStartedButton.addEventListener("click", () => {
-  console.log("button clicked!")
   document.querySelector("#get-started-popup").classList.add("active-popup");
   document.querySelector('.page-content').style.filter = "blur(10px)";
 
@@ -177,7 +169,6 @@ Array.from(serviceCard).forEach(el => {
 
 
 const buttonClose = document.querySelectorAll(".close-btn");
-console.log(buttonClose);
 Array.from(buttonClose).forEach(el => {
   el.addEventListener("click", () => {
     removeActive();

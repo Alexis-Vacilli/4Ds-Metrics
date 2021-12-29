@@ -442,13 +442,13 @@ main {
 
       .popup .description{
         color: #222222;
-        margin: 1px 0 20px 16px;
         text-align: justify;
         font-size: 12px;
-        width: 72%;
-        
-        
-
+        width: 75%;
+        margin:20px 0 -35px 7px;
+      }
+      .popup .form-inputs{
+          margin: 50px 0 0 5px;
       }
       /* .popup #sign-in-popup{
         display: none;
@@ -505,6 +505,7 @@ main {
 
 
 .sections-pricing {
+  position: relative;
   min-height: 90vh;
   background: var(--secondary-bg-color);
   padding: 20px;
