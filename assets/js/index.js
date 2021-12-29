@@ -92,22 +92,43 @@ function reveal() {
       reveal()
   });
 
-//   Form validation
+//   Form data & validations
 
-const submitForm = (event) => {
-    
-    event.preventDefault();
-    // Get input values
-    console.log('2332242')
-    const firstName = document.querySelector("#firstname").value;
-    const lastName = document.querySelector("#lastname").value;
-    const email = document.querySelector("#contact-email").value;
-    const message = document.querySelector("#message").value;
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyzHU2NuPBIHCCiLnZfHsaKNsgjKxhEG-8D_AFOIMymmr9O4RQnlyua4jKowJ4DHSOoCg/exec';
 
-    console.log(firstName,lastName, email, message );
+const form = document.forms['google-sheet'];
+const success = document.querySelector(".success");
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    formValidations();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+
+const formValidations = () => {
+    const name = document.querySelector("#name");
+    const email = document.querySelector("#contact-email");
+    const message = document.querySelector("#message");
+    const failure = document.querySelector(".failure")
+
+    if(name.value == "") {
+        failure.innerHTML = "Invalid input!"
+    }
+
 }
 
-const contactForm = document.querySelector("#contact-form").addEventListener("submit", submitForm);
+// const submitForm = (event) => {
+    
+//     event.preventDefault();
+//     // Get input values
+//     console.log('2332242')
+//     const email = document.querySelector("#contact-email").value;
+//     const message = document.querySelector("#message").value;
+// }
+
+// const contactForm = document.querySelector("#contact-form").addEventListener("submit", submitForm);
 
 
 

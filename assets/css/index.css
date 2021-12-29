@@ -902,7 +902,7 @@ form label{
 }
 
 form textarea,
- input{
+ input, select{
     background: var(--lighter-bg-color);
     width: 100%;
     font-weight: 500;

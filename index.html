@@ -19,39 +19,7 @@
     <script src="https://kit.fontawesome.com/6c84b701ee.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-  </head>
-    <!-- sign in pop-up -->
-    <div class="popup" id="sign-in-popup" style="height: 75vh; width: 35%; padding: 40px 70px; background: #fff;" >
-      <div class="close-btn">&times;</div>
-      <img src="./assets/images/logo.png" style="width: 200px; position: relative; left: 50%; transform: translateX(-50%); margin:40px 0 10px 0" alt="">
-      <form id="form">
-        <div class="row">
-          <div class="column">
-            <div style="position: relative; left: 50%; transform: translateX(-40%);">
-              <div style="margin-top: -50px;">
-                <div class="form-title" style="font-size: 14px; position: relative; left: 50%; transform: translateX(-60%); margin: 50px 0 0 0px;">Grow your business using 4Ds Metrics!</div>
-  
-                <p class="description">Subscribe here to get notified about release of the 4Ds Metrics automated platform. It's coming soon!</p>
-              </div>
-              <div class="form-inputs">
-                  <select style="width: 77%; padding: 10px 5px; cursor: pointer; border-radius: 5px; color: rgb(133, 133, 133); margin: 10px 0 20px 0; border: 1.2px solid #c4c4c4;">
-                    <option>Student</option>
-                    <option>Member of Business Staff</option>
-                    <option>Business Executive/Director</option>
-                    <option>Business Owner/Co-founder</option>
-                    <option>Innovator/Researcher</option>
-                    <option>Business Consultant</option>
-                    <option>Other occupation</optio>
-                  </select>
-                  <input type="email" id="email" placeholder="Email..." style="width: 77%; background: #fff">
-                  <button style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
-              </div>
-            </div>
-          </div>
-      </div>
-      </form>
-    </div>
-     <!-- Get started in pop-up -->
+  </head>     <!-- Get started in pop-up -->
      <div class="popup" id="get-started-popup" style="height: 75vh; width: 35%; padding: 40px 70px; background: #fff;" >
         <div class="close-btn">&times;</div>
         <img src="./assets/images/logo.png" style="width: 200px; position: relative; left: 50%; transform: translateX(-50%); margin:40px 0 10px 0" alt="">
@@ -227,6 +195,38 @@
 </div>
 </div>
   <body>
+     <!-- sign in pop-up -->
+     <div class="popup" id="sign-in-popup" style="height: 75vh; width: 35%; padding: 40px 70px; background: #fff;" >
+        <div class="close-btn">&times;</div>
+        <img src="./assets/images/logo.png" style="width: 200px; position: relative; left: 50%; transform: translateX(-50%); margin:40px 0 10px 0" alt="">
+        <form id="sign-in-form">
+          <div class="row">
+            <div class="column">
+              <div style="position: relative; left: 50%; transform: translateX(-40%);">
+                <div style="margin-top: -50px;">
+                  <div class="form-title" style="font-size: 14px; position: relative; left: 50%; transform: translateX(-60%); margin: 50px 0 0 0px;">Grow your business using 4Ds Metrics!</div>
+    
+                  <p class="description">Subscribe here to get notified about release of the 4Ds Metrics automated platform. It's coming soon!</p>
+                </div>
+                <div class="form-inputs">
+                    <select name="Occupation" style="width: 77%; padding: 10px 5px; cursor: pointer; border-radius: 5px; color: rgb(133, 133, 133); margin: 10px 0 20px 0; border: 1.2px solid #c4c4c4;">
+                      <option>Student</option>
+                      <option>Member of Business Staff</option>
+                      <option>Business Executive/Director</option>
+                      <option>Business Owner/Co-founder</option>
+                      <option>Innovator/Researcher</option>
+                      <option>Business Consultant</option>
+                      <option>Other occupation</optio>
+                    </select>
+                    <input name="Email" type="email" id="email" placeholder="Email..." style="width: 77%; background: #fff">
+                    <button style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
+  
     <div class="page-content">
 
       <!-- Navigation bar -->
@@ -612,19 +612,56 @@
       <section class="section-contact-us section" id="contact-us">
           <div class="form-container reveal">
               <h1>Get in touch!</h1>
+              <div class="success">
+                  Message successfully sent!
+              </div>
+              <div class="failure">
+                Message successfully sent!
+              </div>
+              <style>
+                  .success{
+                      display: none;
+                      width: 40%;
+                      border: 1px solid #4BB543;
+                      color: #4BB543;
+                      background-color: #4bb5432c;
+                      padding: 10px;
+                      border-radius: 2px;
+                      margin-top: 30px;
+                  }
+
+                  .failure{
+                      display: none;
+                      width: 40%;
+                      border: 1px solid #a82e2e;
+                      color: #a82e2e;
+                      background-color: #a82e2e22;
+                      padding: 10px;
+                      border-radius: 2px;
+                      margin-top: 30px;
+                  }
+              </style>
               <form name="google-sheet" id="contact-form">
                  <div class="row">
                      <div class="column">
-                         <label for="name">First name:</label>
-                         <input type="text" id="firstname" name="First-Name" placeholder="Enter your first name" class="success">
-                         <label for="name">Last name:</label>
-                         <input type="text" id="lastname" name="Last-Name" placeholder="Enter your last name" class="error">
+                         <label for="name">Occupation:</label>
+                         <select name="Occupation" style="padding: 8px 5px; cursor: pointer; border-radius: 5px; color: rgb(133, 133, 133); margin: 10px 0 20px 0; border: 1.2px solid #c4c4c4;">
+                            <option>Student</option>
+                            <option>Member of Business Staff</option>
+                            <option>Business Executive/Director</option>
+                            <option>Business Owner/Co-founder</option>
+                            <option>Innovator/Researcher</option>
+                            <option>Business Consultant</option>
+                            <option>Other occupation</optio>
+                          </select>
+                         <label for="name">Name:</label>
+                         <input name="Name" type="text" id="name" placeholder="e.g: John Doe">
                          <label for="">Email:</label>
-                         <input type="email" id="contact-email" name="Email" placeholder="Enter your email here" class="success">
+                         <input type="email" id="contact-email" name="Email" placeholder="e.g: john@gmail.com">
                      </div>
                      <div class="column">
                          <label for="message">Message:</label>
-                         <textarea id="message" name="Message" placeholder="" rows="12">
+                         <textarea name="Message" id="message" placeholder="" rows="12">
                          </textarea>
                      </div>
                  </div>
@@ -680,12 +717,14 @@
     </div>
     <script src="./assets/js/index.js"></script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyoDfsPvCh_tTgvgHUzIsJtHRU-t45zYxKJd67dfCpswC_gUqH3Yypi5v03Vx7XMYRv/exec'
-        const form = document.forms['google-sheet']
-      
-        form.addEventListener('submit', e => {
+        
+        const scriptURLTwo = 'https://script.google.com/macros/s/AKfycbwTq1qLwVtA3r2guibuEQntmRa5phpbvSNoq3sTAoT9I7w8pK-9l2cbkkbFGAYe7ifq/exec';
+    
+        const signInForm = document.getElementById("sign-in-form");
+
+        signInForm.addEventListener('submit', e => {
           e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          fetch(scriptURLTwo, { method: 'POST', body: new FormData(signInForm)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
         })
