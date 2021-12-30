@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Report</th>
+                    <th>Workplan</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">BD_1001</a></td>
+                    <td>11/12/2021</td>
+                    <td><p class="status status-pending">pending</p></td>
+                    <td>View Report</td>
+                    <td>Work plan</td>
+                    <td>
+                        <div class="resume-button dropdown-btn">
+                            <div>
+                                Resume <i class="fas fa-caret-down"></i>
+                            </div>
+                            <div class="dropdown-content">
+                                <span>Edit</span>
+                                <span>Resume</span>
+                                <span>Delete</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">BD_1002</a></td>
+                    <td>11/12/2021</td>
+                    <td><p class="status status-completed">completed</p></td>
+                    <td>View Report</td>
+                    <td>Work plan</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="#">BD_1003</a></td>
+                    <td>11/12/2021</td>
+                    <td><p class="status status-pending">pending</p></td>
+                    <td>View Report</td>
+                    <td>Work plan</td>
+                    <td>
+                        <div class="resume-button dropdown-btn">
+                            <div>
+                                Resume <i class="fas fa-caret-down"></i>
+                            </div>
+                            <div class="dropdown-content">
+                                <span>Edit</span>
+                                <span>Resume</span>
+                                <span>Delete</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">BD_1004</a></td>
+                    <td>11/12/2021</td>
+                    <td><p class="status status-completed">completed</p></td>
+                    <td>View Report</td>
+                    <td>Work plan</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+<style>
+    .container{
+        font-family: "poppins", sans-serif;
+        height: 90vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: #64707E;
+        font-size: 0.9rem;
+        background-color: #c4c4c446;
+    }
+    table{
+        border-collapse:collapse;
+        box-shadow: 0 5px 10px #c4c4c446;
+        background-color: #F4F6F9;
+        text-align: left;
+        overflow: hidden;
+    }
+    thead{
+        box-shadow: 0 5px 10px rgba(128, 128, 128, 0.253);
+    }
+    th{
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        font-size: .7rem;
+        font-weight: 700;
+    }
+    td{
+        padding: .5rem 2rem;
+    }
+    a{
+        text-decoration: none;
+        color: #017AFB;
+    }
+    .resume-button{
+        cursor: pointer;
+        padding: .2rem 1rem;
+        color: #fff;
+        background-color: #222222;
+        border-radius: 3px;
+    }
+    .resume-button .fa-caret-down{
+        margin-left: 5px;
+    }
+    .dropdown-btn{
+        position: relative;
+    }     
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 30px;
+        background-color: #F4F6F9;
+        min-width: 107px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content span{
+        cursor: pointer;
+        padding: .2rem 1rem;
+        display: block;
+        text-align: left;
+        color: #64707E;
+    }
+    .dropdown-content span:hover{
+        background-color: #f1f1f1;
+    }
+    .dropdown-btn:hover .dropdown-content{
+        display: block;
+    }
+    .status{
+        border-radius: 3px;
+        background-color: #017AFB;
+        padding: .2rem 1rem;
+        text-align: center;
+    }
+
+    .status-pending{
+        background-color: #fff0c2;
+        color: #a68b00;
+    }
+
+    .status-completed{
+        background-color: #c8e6c9;
+        color: #388e3c;
+    }
+
+    tr:nth-child(even){
+        background-color: #eef1f6;
+    }
+</style>
+</html>
+
+<!-- 
+    completed: #c8e6c9
+    color: #388e3c
+ -->
