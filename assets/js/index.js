@@ -94,6 +94,7 @@ function reveal() {
 
 //   Form data & validations
 
+// Contact us
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyzHU2NuPBIHCCiLnZfHsaKNsgjKxhEG-8D_AFOIMymmr9O4RQnlyua4jKowJ4DHSOoCg/exec';
 
 const form = document.forms['google-sheet'];
@@ -119,16 +120,53 @@ const formValidations = () => {
 
 }
 
-// const submitForm = (event) => {
+// Free plan form
+const scriptURLThree = 'https://script.google.com/macros/s/AKfycbzk9Acpze9JSLcZ3rvok2kvXjwbLyoXHv-ZLmHskK3iibWrdayuALdQHYeSQTcGtdf6Vw/exec';
     
-//     event.preventDefault();
-//     // Get input values
-//     console.log('2332242')
-//     const email = document.querySelector("#contact-email").value;
-//     const message = document.querySelector("#message").value;
-// }
+const freePlanForm = document.getElementById("free-plan-form");
 
-// const contactForm = document.querySelector("#contact-form").addEventListener("submit", submitForm);
+freePlanForm.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURLThree, { method: 'POST', body: new FormData(freePlanForm)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})
+
+// Standard plan form
+
+const scriptURLFour = 'https://script.google.com/macros/s/AKfycbxCuc8r5TC-5AlYOUxa4hy0EIFk-kKisio7H6ajhoudxq0l6qIHfcUpy5P9Sn3Ubq4J/exec';
+
+const standardPlanForm = document.getElementById("standard-plan-form");
+standardPlanForm.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURLFour, { method: 'POST', body: new FormData(standardPlanForm)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})
+
+// Standard plan form
+
+const scriptURLFive = 'https://script.google.com/macros/s/AKfycbxVoK53l3koSHLzC5K6loggIiC0OCfde1CQYw-ZOQnltIbHYPRGTO6DqO6U1SUKYqxZ/exec';
+
+const premiumPlanForm = document.getElementById("premium-plan-form");
+premiumPlanForm.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURLFive, { method: 'POST', body: new FormData(premiumPlanForm)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})
+
+// Get started 
+
+const scriptURLSix = 'https://script.google.com/macros/s/AKfycby-tx3T8k5Vel9SylbhlnRMK0ZxYmcLy5Am_qJNFy6JEB9xPl5Sje3GQ6UgMBMUvxbOmA/exec';
+
+const getStartedForm = document.getElementById("get-started-form");
+getStartedForm.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURLSix, { method: 'POST', body: new FormData(getStartedForm)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})
 
 
 
@@ -139,15 +177,38 @@ const box = document.querySelectorAll(".box");
 const signIn = document.querySelector("#signin-button");
 const getStartedButton = document.querySelector("#get-started");
 const readMore = document.querySelector(".read-more");
-const startButtons = document.querySelectorAll(".start");
+const freeStart = document.querySelector(".free")
+const standardStart = document.querySelector(".standard")
+const premiumStart = document.querySelector(".premium")
 
 
-startButtons.forEach(el => {
-  el.addEventListener("click", (e) => {
+
+// startButtons.forEach(el => {
+//   el.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     document.querySelector("#get-started-popup").classList.add("active-popup");
+//     document.querySelector('.page-content').style.filter = "blur(10px)";
+//   })
+// })
+
+freeStart.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector("#get-started-popup").classList.add("active-popup");
+    document.querySelector("#start-popup-free").classList.add("active-popup");
     document.querySelector('.page-content').style.filter = "blur(10px)";
-  })
+});
+
+standardStart.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector("#start-popup-standard").classList.add("active-popup");
+    document.querySelector('.page-content').style.filter = "blur(10px)";
+})
+
+
+
+premiumStart.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector("#start-popup-premium").classList.add("active-popup");
+    document.querySelector('.page-content').style.filter = "blur(10px)";
 })
 
 getStartedButton.addEventListener("click", () => {

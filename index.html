@@ -19,37 +19,7 @@
     <script src="https://kit.fontawesome.com/6c84b701ee.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-  </head>     <!-- Get started in pop-up -->
-     <div class="popup" id="get-started-popup" style="height: 75vh; width: 35%; padding: 40px 70px; background: #fff;" >
-        <div class="close-btn">&times;</div>
-        <img src="./assets/images/logo.png" style="width: 200px; position: relative; left: 50%; transform: translateX(-50%); margin:40px 0 10px 0" alt="">
-        <form id="form">
-          <div class="row">
-            <div class="column">
-              <div style="position: relative; left: 50%; transform: translateX(-40%);">
-                <div style="margin-top: -50px;">
-                  <div class="form-title" style="font-size: 14px; position: relative; left: 50%; transform: translateX(-60%); margin: 50px 0 0 0px;">Grow your business using 4Ds Metrics!</div>
-    
-                  <p class="description">Subscribe here to get notified about release of the 4Ds Metrics automated platform. It's coming soon!</p>
-                </div>
-                <div class="form-inputs">
-                    <select style="width: 77%; padding: 10px 5px; cursor: pointer; border-radius: 5px; color: rgb(133, 133, 133); margin: 10px 0 20px 0; border: 1.2px solid #c4c4c4;">
-                      <option>Student</option>
-                      <option>Member of Business Staff</option>
-                      <option>Business Executive/Director</option>
-                      <option>Business Owner/Co-founder</option>
-                      <option>Innovator/Researcher</option>
-                      <option>Business Consultant</option>
-                      <option>Other occupation</optio>
-                    </select>
-                    <input type="email" id="email" placeholder="Email..." style="width: 77%; background: #fff">
-                    <button style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
-                </div>
-              </div>
-            </div>
-        </div>
-        </form>
-      </div>
+  </head>     
    <!-- Services-pop-up -->
      <!-- Define pop up -->
      <div class="popup" id="define-popup">
@@ -226,7 +196,129 @@
         </div>
         </form>
       </div>
-  
+      <div class="popup" id="get-started-popup" style="height: 75vh; width: 35%; padding: 40px 70px; background: #fff;" >
+        <div class="close-btn">&times;</div>
+        <img src="./assets/images/logo.png" style="width: 200px; position: relative; left: 50%; transform: translateX(-50%); margin:40px 0 10px 0" alt="">
+        <form id="get-started-form">
+          <div class="row">
+            <div class="column">
+              <div style="position: relative; left: 50%; transform: translateX(-40%);">
+                <div style="margin-top: -50px;">
+                  <div class="form-title" style="font-size: 14px; position: relative; left: 50%; transform: translateX(-60%); margin: 50px 0 0 0px;">Grow your business using 4Ds Metrics!</div>
+    
+                  <p class="description">Subscribe here to get notified about release of the 4Ds Metrics automated platform. It's coming soon!</p>
+                </div>
+                <div class="form-inputs">
+                    <select name="Occupation" style="width: 77%; padding: 10px 5px; cursor: pointer; border-radius: 5px; color: rgb(133, 133, 133); margin: 10px 0 20px 0; border: 1.2px solid #c4c4c4;">
+                      <option>Student</option>
+                      <option>Member of Business Staff</option>
+                      <option>Business Executive/Director</option>
+                      <option>Business Owner/Co-founder</option>
+                      <option>Innovator/Researcher</option>
+                      <option>Business Consultant</option>
+                      <option>Other occupation</optio>
+                    </select>
+                    <input name="Email" type="email" id="email" placeholder="Email..." style="width: 77%; background: #fff">
+                    <button style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
+      <!-- Free -->
+      <div class="popup" id="start-popup-free" style="height: 75vh; width: 35%; padding: 40px 70px; background: #fff;" >
+        <div class="close-btn">&times;</div>
+        <img src="./assets/images/logo.png" style="width: 200px; position: relative; left: 50%; transform: translateX(-50%); margin:40px 0 10px 0" alt="">
+        <form id="free-plan-form">
+          <div class="row">
+            <div class="column">
+              <div style="position: relative; left: 50%; transform: translateX(-40%);">
+                <div style="margin-top: -50px;">
+                  <div class="form-title" style="font-size: 14px; position: relative; left: 50%; transform: translateX(-60%); margin: 50px 0 0 0px;">Grow your business using 4Ds Metrics!</div>
+    
+                  <p class="description">Subscribe here to get notified about release of the 4Ds Metrics automated platform. It's coming soon!</p>
+                </div>
+                <div class="form-inputs">
+                    <select name="Occupation" style="width: 77%; padding: 10px 5px; cursor: pointer; border-radius: 5px; color: rgb(133, 133, 133); margin: 10px 0 20px 0; border: 1.2px solid #c4c4c4;">
+                      <option>Student</option>
+                      <option>Member of Business Staff</option>
+                      <option>Business Executive/Director</option>
+                      <option>Business Owner/Co-founder</option>
+                      <option>Innovator/Researcher</option>
+                      <option>Business Consultant</option>
+                      <option>Other occupation</optio>
+                    </select>
+                    <input name="Email" type="email" id="free-email" placeholder="Email..." style="width: 77%; background: #fff">
+                    <button type="submit" style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
+      <!-- Standard -->
+      <div class="popup" id="start-popup-standard" style="height: 75vh; width: 35%; padding: 40px 70px; background: #fff;" >
+        <div class="close-btn">&times;</div>
+        <img src="./assets/images/logo.png" style="width: 200px; position: relative; left: 50%; transform: translateX(-50%); margin:40px 0 10px 0" alt="">
+        <form id="standard-plan-form">
+          <div class="row">
+            <div class="column">
+              <div style="position: relative; left: 50%; transform: translateX(-40%);">
+                <div style="margin-top: -50px;">
+                  <div class="form-title" style="font-size: 14px; position: relative; left: 50%; transform: translateX(-60%); margin: 50px 0 0 0px;">Grow your business using 4Ds Metrics!</div>
+    
+                  <p class="description">Subscribe here to get notified about release of the 4Ds Metrics automated platform. It's coming soon!</p>
+                </div>
+                <div class="form-inputs">
+                    <select name="Occupation" style="width: 77%; padding: 10px 5px; cursor: pointer; border-radius: 5px; color: rgb(133, 133, 133); margin: 10px 0 20px 0; border: 1.2px solid #c4c4c4;">
+                      <option>Student</option>
+                      <option>Member of Business Staff</option>
+                      <option>Business Executive/Director</option>
+                      <option>Business Owner/Co-founder</option>
+                      <option>Innovator/Researcher</option>
+                      <option>Business Consultant</option>
+                      <option>Other occupation</optio>
+                    </select>
+                    <input name="Email" type="email" id="standard-email" placeholder="Email..." style="width: 77%; background: #fff">
+                    <button style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
+      <!-- Premium -->
+      <div class="popup" id="start-popup-premium" style="height: 75vh; width: 35%; padding: 40px 70px; background: #fff;" >
+        <div class="close-btn">&times;</div>
+        <img src="./assets/images/logo.png" style="width: 200px; position: relative; left: 50%; transform: translateX(-50%); margin:40px 0 10px 0" alt="">
+        <form id="premium-plan-form">
+          <div class="row">
+            <div class="column">
+              <div style="position: relative; left: 50%; transform: translateX(-40%);">
+                <div style="margin-top: -50px;">
+                  <div class="form-title" style="font-size: 14px; position: relative; left: 50%; transform: translateX(-60%); margin: 50px 0 0 0px;">Grow your business using 4Ds Metrics!</div>
+    
+                  <p class="description">Subscribe here to get notified about release of the 4Ds Metrics automated platform. It's coming soon!</p>
+                </div>
+                <div class="form-inputs">
+                    <select name="Occupation" style="width: 77%; padding: 10px 5px; cursor: pointer; border-radius: 5px; color: rgb(133, 133, 133); margin: 10px 0 20px 0; border: 1.2px solid #c4c4c4;">
+                      <option>Student</option>
+                      <option>Member of Business Staff</option>
+                      <option>Business Executive/Director</option>
+                      <option>Business Owner/Co-founder</option>
+                      <option>Innovator/Researcher</option>
+                      <option>Business Consultant</option>
+                      <option>Other occupation</optio>
+                    </select>
+                    <input name="Email" type="email" id="premium-email" placeholder="Email..." style="width: 77%; background: #fff">
+                    <button style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
     <div class="page-content">
 
       <!-- Navigation bar -->
@@ -393,7 +485,7 @@
                     </li>
                   </ul>
                   <div class="mt-3">
-                    <a class="text-uppercase font-weight-semiboldpricing-link start" href="#"
+                    <a class="text-uppercase font-weight-semiboldpricing-link free" href="#"
                       >Start 10 Day Trial</a
                     >
                   </div>
@@ -435,7 +527,7 @@
                     </li>
                   </ul>
                   <div class="mt-3">
-                    <a class="text-uppercase font-weight-semiboldpricing-link start" href="#"
+                    <a class="text-uppercase font-weight-semiboldpricing-link standard" href="#"
                       >Start 10 Day Trial</a
                     >
                   </div>
@@ -488,7 +580,7 @@
                     </li>
                   </ul>
                   <div class="mt-3">
-                    <a class="text-uppercase font-weight-semibold pricing-link start" href="#"
+                    <a class="text-uppercase font-weight-semibold pricing-link premium" href="#"
                       >Start 15 Day Trial</a
                     >
                   </div>
@@ -718,7 +810,7 @@
     <script src="./assets/js/index.js"></script>
     <script>
         
-        const scriptURLTwo = 'https://script.google.com/macros/s/AKfycbwTq1qLwVtA3r2guibuEQntmRa5phpbvSNoq3sTAoT9I7w8pK-9l2cbkkbFGAYe7ifq/exec';
+        const scriptURLTwo = 'https://script.google.com/macros/s/AKfycbxRzMpURbs2EN3tRDCS9A91VvQNaiyXToPzUcdSOUGYpQwCdiTx-K4gM5DCvArZCTpB/exec';
     
         const signInForm = document.getElementById("sign-in-form");
 
