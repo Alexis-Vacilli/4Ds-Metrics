@@ -114,9 +114,13 @@ const formValidations = () => {
     const message = document.querySelector("#message");
     const failure = document.querySelector(".failure")
 
-    if(name.value == "") {
-        failure.innerHTML = "Invalid input!"
+    if(name.value == "" || email == "" || message == "") {
+        failure.style.display = "block";
+        failure.innerHTML = "Some text fields are blank!"
     }
+    // setTimeout(() => {
+    //   failure.style.display = "none";
+    // }, 5000);
 
 }
 
