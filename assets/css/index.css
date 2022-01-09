@@ -93,18 +93,19 @@ input[type="radio"]:checked + label:before {
 .wizard-wrapper .step-indicator-wrapper {
   display: flex;
   align-items: center;
+  width: 60%;
 }
 
 .step-indicator-wrapper .step-indicator {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .step-indicator-wrapper .step-indicator-separator {
   height: 2px;
-  margin-top: -16px;
-  width: 150px;
+  width: 30%;
   background-color: rgba(196, 196, 196, 0.9);
 }
 
@@ -148,16 +149,18 @@ input[type="radio"]:checked + label:before {
 }
 
 .step-indicator .label-step {
-  margin-top: 4px;
-  font-size: 12px;
+  font-size: 18px;
   text-align: center;
   color: #1c2437;
   font-weight: 900;
+  bottom: -28px;
+  position: absolute;
 }
 /* end step-indicator */
 
 /* start query */
 .form-container {
+  margin-top: 2rem;
   width: 70%;
   /* background-color: blue; */
 }
@@ -186,7 +189,6 @@ input[type="radio"]:checked + label:before {
   background-color: transparent;
   border: none;
   cursor: pointer;
-
 }
 
 .done {
@@ -536,7 +538,14 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 @media (max-width: 768px) {
+  .step-indicator .label-step {
+    font-size: 14px;
+    bottom: -22px;
+  }
+  .step-indicator-wrapper {
+    width: 100%;
+  }
   .step-indicator-wrapper .step-indicator-separator {
-    width: 50px;
+    width: 30%;
   }
 }
