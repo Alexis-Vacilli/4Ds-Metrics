@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wizard</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <script src="https://kit.fontawesome.com/6c84b701ee.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="wizard">
+      <div class="wizard-wrapper">
+        <div class="step-indicator-wrapper">
+          <div class="step-indicator">
+            <div class="step-circle">
+              <i class="fas fa-check"></i>
+              <span class="span-step">1</span>
+            </div>
+            <p class="label-step">Define</p>
+          </div>
+
+          <div class="step-indicator-separator"></div>
+
+          <div class="step-indicator">
+            <div class="step-circle">
+              <i class="fas fa-check"></i>
+              <span class="span-step">2</span>
+            </div>
+            <p class="label-step">Design</p>
+          </div>
+
+          <div class="step-indicator-separator"></div>
+
+          <div class="step-indicator">
+            <div class="step-circle">
+              <i class="fas fa-check"></i>
+              <span class="span-step">3</span>
+            </div>
+            <p class="label-step">Develop</p>
+          </div>
+
+          <div class="step-indicator-separator"></div>
+
+          <div class="step-indicator">
+            <div class="step-circle">
+              <i class="fas fa-check"></i>
+              <span class="span-step">4</span>
+            </div>
+            <p class="label-step">Deploy</p>
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="query-container">
+            <div class="actions-wrapper">
+              <div class="circular-progress progress">
+                <div class="value-container" id="progress">4/4</div>
+              </div>
+            </div>
+  
+            <form class="form query-form" method="post">
+              <!-- step define -->
+              <div class="step-query delay-right-0/2">
+                <!-- first inner form of define -->
+                <div class="inner-form">
+                  <div class="title-form" style="text-align: center; color: #ffff; font-weight: 900; font-size: 18px;">Team performance</div>
+                  <div class="form-group">
+                    <label for="innovative">
+                      <span style="font-weight: 900;">Strength</span> (How would you rate your team strength in terms of time dedicated to your work, motivation, creativity & innovation, and teamwork?)
+                    </label>
+                    <div class="container">
+                      <input type="range" id="my-slider" min="0"
+                      max="100" value="0">
+                      <div id="slider-value">0</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="feelings">
+                      <span style="font-weight: 900;">Strength Impact</span> (At which rate can your team influence your business success if they have their full strength?)</label>
+                      <div class="container">
+                        <input type="range" id="my-slider" min="0"
+                        max="100" value="0">
+                        <div id="slider-value">0</div>
+                      </div>
+                  </div>
+                </div>
+  
+                <!-- second inner form of define -->
+                <div class="inner-form">
+                  <div class="title-form" style="text-align: center; color: #ffff; font-weight: 900; font-size: 18px;">Customer Discovery</div>
+                  <div class="form-group">
+                    <label for="innovative">
+                      <span style="font-weight: 900;">Market size in numbers</span>  (How many total customers who can buy your product?   <input type="number" class="text" />  and is that number Positive, Fair or Negative for your business profitability & sustainability?)
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label for="innovative">
+                     Select status:
+                    </label>
+                    <div class="container-status">
+                      <div class="positive">
+                        <input type="radio" name="status" id="first-positive">
+                        <label for="first-positive">Positive</label>
+                      </div>
+                      <div class="fair">
+                        <input type="radio" name="status" id="first-fair">
+                        <label for="first-fair">Fair</label>
+                      </div>
+                      <div class="negative">
+                        <input type="radio" name="status" id="first-negative">
+                        <label for="first-negative">Negative</label>
+                      </div>
+                    </div>  
+                  </div>
+                  </style>
+                </div>
+              </div>
+  
+              <!-- step design -->
+              <div class="step-query delay-right-0/2">
+                <!-- first inner form of design -->
+                <div class="inner-form">
+                  <div class="title-form" style="text-align: center; color: #ffff; font-weight: 900; font-size: 18px;">Team performance</div>
+                  <div class="form-group">
+                    <label for="innovative">
+                      <span style="font-weight: 900;">Strength</span> (How would you rate your team strength in terms of time dedicated to your work, motivation, creativity & innovation, and teamwork?)
+                    </label>
+                    <div class="container">
+                      <input type="range" id="my-slider" min="0"
+                      max="100" value="0">
+                      <div id="slider-value">0</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="feelings">
+                      <span style="font-weight: 900;">Strength Impact</span> (At which rate can your team influence your business success if they have their full strength?)</label>
+                      <div class="container">
+                        <input type="range" id="my-slider" min="0"
+                        max="100" value="0">
+                        <div id="slider-value">0</div>
+                      </div>
+                  </div>
+                </div>
+  
+                <!-- second inner form of design -->
+                <div class="inner-form">
+                  <div class="title-form" style="text-align: center; color: #ffff; font-weight: 900; font-size: 18px;">Customer Discovery</div>
+                  <div class="form-group">
+                    <label for="innovative">
+                      <span style="font-weight: 900;">Market size in numbers</span>  (How many total customers who can buy your product?   <input type="number" class="text" />  and is that number Positive, Fair or Negative for your business profitability & sustainability?)
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label for="innovative">
+                     Select status:
+                    </label>
+                    <div class="container-status">
+                      <div class="positive">
+                        <input type="radio" name="status" id="second-positive">
+                        <label for="second-positive">Positive</label>
+                      </div>
+                      <div class="fair">
+                        <input type="radio" name="status" id="second-fair">
+                        <label for="second-fair">Fair</label>
+                      </div>
+                      <div class="negative">
+                        <input type="radio" name="status" id="second-negative">
+                        <label for="second-negative">Negative</label>
+                      </div>
+                    </div>
+                  </div>
+                  </style>
+                </div>
+  
+                <!-- third inner form of design -->
+                <div class="inner-form">
+                  <div class="title-form" style="text-align: center; color: #ffff; font-weight: 900; font-size: 18px;">Team performance</div>
+                  <div class="form-group">
+                    <label for="innovative">
+                      <span style="font-weight: 900;">Strength</span> (How would you rate your team strength in terms of time dedicated to your work, motivation, creativity & innovation, and teamwork?)
+                    </label>
+                    <div class="container">
+                      <input type="range" id="my-slider" min="0"
+                      max="100" value="0">
+                      <div id="slider-value">0</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="feelings">
+                      <span style="font-weight: 900;">Strength Impact</span> (At which rate can your team influence your business success if they have their full strength?)</label>
+                      <div class="container">
+                        <input type="range" id="my-slider" min="0"
+                        max="100" value="0">
+                        <div id="slider-value">0</div>
+                      </div>
+                  </div>
+                </div>  
+              </div>
+  
+              <!-- step develop -->
+              <div class="step-query delay-right-0/2">
+                <!-- first inner form of develop -->
+                <div class="inner-form">
+                  <div class="title-form" style="text-align: center; color: #ffff; font-weight: 900; font-size: 18px;">Team performance</div>
+                  <div class="form-group">
+                    <label for="innovative">
+                      <span style="font-weight: 900;">Strength</span> (How would you rate your team strength in terms of time dedicated to your work, motivation, creativity & innovation, and teamwork?)
+                    </label>
+                    <div class="container">
+                      <input type="range" id="my-slider" min="0"
+                      max="100" value="0">
+                      <div id="slider-value">0</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="feelings">
+                      <span style="font-weight: 900;">Strength Impact</span> (At which rate can your team influence your business success if they have their full strength?)</label>
+                      <div class="container">
+                        <input type="range" id="my-slider" min="0"
+                        max="100" value="0">
+                        <div id="slider-value">0</div>
+                      </div>
+                  </div>
+                </div>  
+              </div>
+  
+              <!-- step deploy -->
+              <div class="step-query delay-right-0/2">
+                <!-- first inner form of deploy -->
+                <div class="inner-form">
+                  <div class="title-form" style="text-align: center; color: #ffff; font-weight: 900; font-size: 18px;">Customer Discovery</div>
+                  <div class="form-group">
+                    <label for="innovative">
+                      <span style="font-weight: 900;">Market size in numbers</span>  (How many total customers who can buy your product?   <input type="number" class="text" />  and is that number Positive, Fair or Negative for your business profitability & sustainability?)
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label for="innovative">
+                     Select status:
+                    </label>
+                    <div class="container-status">
+                      <div class="positive">
+                        <input type="radio" name="status" id="third_positive">
+                        <label for="third_positive">Positive</label>
+                      </div>
+                      <div class="fair">
+                        <input type="radio" name="status" id="third_fair">
+                        <label for="third_fair">Fair</label>
+                      </div>
+                      <div class="negative">
+                        <input type="radio" name="status" id="third_negative">
+                        <label for="third_negative">Negative</label>
+                      </div>
+                    </div>   
+                  </div>
+                  </style>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="buttons-container">
+            <div>
+              <button type="button" id="btn-prev">
+                <i class="fas fa-chevron-double-left"></i>
+                Previous
+              </button>
+            </div>
+            <div>
+              <button type="button" id="btn-exit">Save & Exit</button>
+            </div>
+            <div>
+              <button type="button" id="btn-next">Next</button>
+              <i class="fad fa-chevron-double-right"></i>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <script>
+      
+      // const mySlider = document.getElementById("my-slider");
+      // const sliderValue = document.getElementById("slider-value");
+
+      // const slider = () => {
+      //   valPercent = (mySlider.value / mySlider.max) * 100;
+      //   mySlider.style.background = `linear-gradient(to right, #FEB74A ${valPercent}%, #d5d5d5 ${valPercent}%)`
+      // }
+      const mySliders= document.querySelectorAll("#my-slider");
+      mySliders.forEach(el => {
+        el.addEventListener("input", () => {
+        valPercent = (el.value / el.max) * 100;
+        el.style.background = `linear-gradient(to right, #FEB74A ${valPercent}%, #d5d5d5 ${valPercent}%)`
+      })
+      });      
+    </script>
+    <script type="module" src="/assets/js/index.js"></script>
+  </body>
+</html>
