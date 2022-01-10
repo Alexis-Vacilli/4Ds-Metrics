@@ -5,6 +5,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.links{
+    font-size: 15px;
+    
+}
 
 .container{
     width: 70%;
@@ -237,6 +241,14 @@
     display: none;
 }
 
+.mySlides .text-paragraph.show-more .more-text{
+    display: inline;
+}
+
+.mySlides .text-paragraph.show-more .more{
+    display: none;
+}
+
 .mySlides .descriptions{
     font-size: 17px;
     margin-top: 1rem;
@@ -263,20 +275,6 @@
     color: #4c637f;
 }
 
-
-.buttons-container {
-    position: absolute;
-    top: 80%;
-    left: 63%;
-}
-
-.buttons-container button{
-    cursor: pointer;
-    padding: .5rem 2rem;
-    background-color: #FEB74A;
-    border: 0;
-    border-radius: 5px;
-}
 .label-container{
     display: block;
     position: relative;
@@ -284,7 +282,8 @@
     margin-bottom: 12px;
     margin-top: 25px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

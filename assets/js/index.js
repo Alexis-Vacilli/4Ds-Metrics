@@ -1,17 +1,23 @@
 const component1 = document.getElementById("component-one");
 const component2 = document.getElementById("component-two");
-const next = document.getElementById("next");
+const goToTopics = document.getElementById("next");
 const back = document.getElementById("back");
 const cards = document.querySelectorAll(".card");
 const readMoreBtn = document.querySelector(".read-more-button");
 const text = document.querySelector(".text-paragraph")
 
 
-readMoreBtn.addEventListener("click", () => {
-  console.log("button lickex")
-})
+// Navigating to topics
+goToTopics.onclick = () => {
+  component1.style.left = "-180%";
+  component2.style.left = "50%";
+};
+back.onclick = () => {
+  component1.style.left = "50%";
+  component2.style.left = "180%";
+};
 
-
+// Cards
 cards.forEach( el => {
   el.addEventListener("click", () => {
     document.getElementById("component-one").style.display = "none";
@@ -20,14 +26,7 @@ cards.forEach( el => {
   })
 } )
 
-next.onclick = () => {
-  component1.style.left = "-180%";
-  component2.style.left = "50%";
-};
-back.onclick = () => {
-  component1.style.left = "50%";
-  component2.style.left = "180%";
-};
+// Slider
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -59,3 +58,14 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+// Read more button
+
+readMoreBtn.addEventListener("click", () => {
+  text.classList.toggle('show-more');
+  if(readMoreBtn.innerText === "Read more"){
+    readMoreBtn.innerText = "Read less";
+  } else {
+    readMoreBtn.innerText = "Read more"
+  }
+})
