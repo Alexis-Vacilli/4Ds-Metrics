@@ -2,145 +2,418 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
-body{
+.container{
+    width: 70%;
+    height: 75vh;
+    margin: 8% auto;
+    background: rgba(34, 34, 34, 0.1);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 }
-
-.wizard{
-    position: absolute;
+.title{
+    text-align: center;
+    margin: .5rem 0;
+    font-size: 25px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.5);
+}
+.container .content{
     width: 80%;
-    max-height: 60vh;
+    position: absolute;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
+    color: rgba(34, 34, 34, 0.7);
+    font-weight: 500;
+    font-size: 17px;
+    transition: .7s ease-in;   
+    /* overflow: visible; */
 }
-
-.wizard-wrapper{
-    display: flex;
-    flex-direction: column;
+.content .description{
+   width: 100%;
+   position: relative;
+   left: -2%;
+   padding: 1rem; 
+   margin: .5rem 0;
+   background-color: rgba(255, 255, 255, 0.2);
+   border-radius: 0 0 5px 5px;
+   box-shadow: 9px 10px 10px -15px #222;
+   
 }
-.step-indicators{
+.content .objective{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    margin: 1rem -.9rem; 
     width: 100%;
-    background-color: #222222;
-    display: flex;
-    height: 60px;
-    border-radius: 8px;
-    
-}
-.step-indicators > div{
-    width: 30%;
-    text-align: center;
-    border-right: 2px solid #000;
-    cursor: pointer;
-    position: relative;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 9px 10px 10px -15px #222;
+
 }
 
-.step-indicators #step-4{
-    border-right: none;
+.objective .list{
+   /* width: 100%; */
+   /* padding: 1rem .5rem;  */
+   margin: .5rem 1rem;
+}
+.list .item{
+    display: list-item;
+    list-style-type: circle;
+    margin: .5rem 0;
+}
+.btn-box{
+   width: 100%;
+   margin: 1rem auto; 
+   text-align: start;
 }
 
-.step-indicators > div:hover{
-    background: #FEB74A;
-    
-}
-
-
-.active{
-    background: #FEB74A;
-}
-
-
-
-.step-indicators > div a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 900;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    
-}
-
-.card-container{
-    margin-top: 30px;
-    display: flex;
-    background: #2222222a;
+.btn-box button{
+    width: 120px;
+    height: 35px;
     border-radius: 5px;
-    justify-content: space-around;
-    padding: 50px 30px;
-    flex-wrap: wrap;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: #FEB74A;
 }
-
+.card-container{
+    display: flex; 
+    position: relative;
+    top: 2.5rem;
+}
 .card-container .card{
-    width: 28%;
-    height: 55vh;
+    height: 320px;
+    margin: 0 10px;
     background: #222222ec;
     border-radius: 5px;
     cursor: pointer;
-
-}
-
-.card-container .card:hover{
-    transform: scale(1.01);
-    box-shadow: 10px 5px 10px 0px #222;
 }
 
 .card .up-side{
     position: relative;
-    height: 150px;
+    height: 100px;
     background: rgba(0, 0, 0, 0.29);
 }
 
-.card .up-side i{
-    color: rgba(255, 255, 255, 0.817);
-    float: right;
-    margin: 15px 10px;
-}
 .card .up-side .circle{
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: #222222;
-    top: 75%;
+    top: 65%;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.502);
     text-align: center;
 }
-
 .card .up-side .circle h5{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 30px;
+    font-size: 25px;
     color: rgba(255, 255, 255, 0.502);
 }
-
-
 .card .down-side{
     padding: 20px 40px;
     text-align: center;
 }
-
-.card .down-side .title{
+.card .down-side .card-title{
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
     margin: 30px 0 0px 0;
 }
-
 .card .down-side .subtitle{
     font-size: 15px;
     color: rgba(255, 255, 255, 0.502)
 }
-
 .card .down-side .body{
-    padding: 20px 0;
+    padding: 10px 0;
     color: #fff;
+    font-size: 14px;
+}
+.card-container .card:hover{
+    transform: scale(1.01);
+    box-shadow: 10px 5px 10px 0px #222;
+}
+.btn-box-back{
+    width: 100%;
+    margin: 4rem .6rem; 
+    text-align: start;
+}
+.btn-box-back button{
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: #FEB74A;
+}
+#component-two{
+    left: 180%;
+}
+.step-row{
+    width: 70%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px -1px #000;
+    position: relative;
+    background-color: #222;
+    border-radius: 5px;
+    top: 5rem;
+}
+.step-col{
+    width: calc(100% / 4);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    font-weight: 900;
+    position: relative;
+}
+#progress{
+    position: absolute;
+    height: 100%;
+    width: calc(100% / 4);
+    background: #FEB74A;
+}
+#progress::after{
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #FEB74A;
+}
+
+.slideshow-container{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.slide-title{
+    text-align: center;
+    margin: .5rem 0;
+    font-size: 25px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.5);
+}
+.slide-sub-title{
+    font-size: 17px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.mySlides{
+    width: 70%;
+    height: 70%;
+    position: relative;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2rem 5rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 9px 10px 5px -15px #222;
+    overflow: scroll;
+
+}
+
+.mySlides .text-paragraph{
+    text-align: justify;
+    margin: 1rem auto;
+}
+
+.text-paragraph .more-text{
+    display: none;
+}
+
+.mySlides .descriptions{
+    font-size: 17px;
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.mySlides .list-title{
+    font-size: 16px;
+    margin: 1rem 0;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+}
+.mySlides .element{
+    display: list-item;
+    list-style-type: circle;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0 2rem;
+}
+
+.read-more-button{
+    border-bottom-style: double;
+    cursor: pointer;
+    color: #4c637f;
+}
+
+
+.buttons-container {
+    position: absolute;
+    top: 80%;
+    left: 63%;
+}
+
+.buttons-container button{
+    cursor: pointer;
+    padding: .5rem 2rem;
+    background-color: #FEB74A;
+    border: 0;
+    border-radius: 5px;
+}
+.label-container{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.label-container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgba(34, 34, 34, 0.338);
+}
+
+/* On mouse-over, add a grey background color */
+.label-containerr:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.label-container input:checked ~ .checkmark {
+  background-color: #FEB74A;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.label-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.label-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+/* dots container */
+.dots{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+
+}
+
+ /* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
