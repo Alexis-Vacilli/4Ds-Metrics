@@ -144,7 +144,7 @@ freePlanForm.addEventListener('submit', e => {
 
 // Standard plan form
 
-const scriptURLFour = 'https://script.google.com/macros/s/AKfycbxCuc8r5TC-5AlYOUxa4hy0EIFk-kKisio7H6ajhoudxq0l6qIHfcUpy5P9Sn3Ubq4J/exec';
+const scriptURLFour = 'https://script.google.com/macros/s/AKfycbx0G30dRgr3-db9LYrT5CckIiDMJxlsWeEnbOb7d75NxEcLp71fXQGh-R71tNPDal-n/exec';
 
 const standardPlanForm = document.getElementById("standard-plan-form");
 standardPlanForm.addEventListener('submit', e => {
@@ -194,18 +194,18 @@ const subscribeBtn = document.querySelectorAll(".subscribe-btn");
 
 
 
-subscribeBtn.forEach(el => {
-  el.addEventListener("click", (e) => {
-    e.preventDefault();
-    removeActive();
-    const section = document.querySelector(".max-width");
-    const navBar = document.querySelector(".nav-bar");
-    section.style.filter = "blur(0)";
-    navBar.style.filter = "blur(0)";
-    document.querySelector('.page-content').style.filter = "blur(0)";
-    document.querySelector('.page-content').style.display = "block";
-  })
-})
+// subscribeBtn.forEach(el => {
+//   el.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     removeActive();
+//     const section = document.querySelector(".max-width");
+//     const navBar = document.querySelector(".nav-bar");
+//     section.style.filter = "blur(0)";
+//     navBar.style.filter = "blur(0)";
+//     document.querySelector('.page-content').style.filter = "blur(0)";
+//     document.querySelector('.page-content').style.display = "block";
+//   })
+// })
 
 freeStart.addEventListener("click", (e) => {
     e.preventDefault();
