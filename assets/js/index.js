@@ -112,7 +112,13 @@ const formValidations = () => {
     const name = document.querySelector("#name");
     const email = document.querySelector("#contact-email");
     const message = document.querySelector("#message");
-    const failure = document.querySelector(".failure")
+    const failure = document.querySelector(".failure");
+    const inputs = document.querySelectorAll("input");
+    
+    inputs.forEach(el => {
+      el.value = "";
+    })
+  
 
     if(name.value == "" || email == "" || message == "") {
         failure.style.display = "block";
@@ -184,16 +190,22 @@ const readMore = document.querySelector(".read-more");
 const freeStart = document.querySelector(".free")
 const standardStart = document.querySelector(".standard")
 const premiumStart = document.querySelector(".premium")
+const subscribeBtn = document.querySelectorAll(".subscribe-btn");
 
 
 
-// startButtons.forEach(el => {
-//   el.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     document.querySelector("#get-started-popup").classList.add("active-popup");
-//     document.querySelector('.page-content').style.filter = "blur(10px)";
-//   })
-// })
+subscribeBtn.forEach(el => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    removeActive();
+    const section = document.querySelector(".max-width");
+    const navBar = document.querySelector(".nav-bar");
+    section.style.filter = "blur(0)";
+    navBar.style.filter = "blur(0)";
+    document.querySelector('.page-content').style.filter = "blur(0)";
+    document.querySelector('.page-content').style.display = "block";
+  })
+})
 
 freeStart.addEventListener("click", (e) => {
     e.preventDefault();
