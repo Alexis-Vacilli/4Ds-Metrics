@@ -268,6 +268,19 @@
     color: rgba(0, 0, 0, 0.5);
     margin: 0 2rem;
 }
+.buttons-container{
+    position: relative;
+    left: 58.2%;
+    top: 4rem;   
+}
+
+.buttons-container button{
+   padding: .5rem 2rem; 
+   color: #222;
+   border: 0;
+   background-color: #FEB74A;
+   cursor: pointer;
+}
 
 .read-more-button{
     border-bottom-style: double;
