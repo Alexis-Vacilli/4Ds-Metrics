@@ -9,11 +9,15 @@
     font-size: 15px;
     
 }
+.page-container{
+    position: relative;
+    top: 3.5rem;
+}
 
 .container{
     width: 70%;
     height: 75vh;
-    margin: 8% auto;
+    margin: auto;
     background: rgba(34, 34, 34, 0.1);
     border-radius: 5px;
     position: relative;
@@ -172,7 +176,7 @@
     position: relative;
     background-color: #222;
     border-radius: 5px;
-    top: 5rem;
+    /* top: 5rem; */
 }
 .step-col{
     width: calc(100% / 4);

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <title>Work plan</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="step-row">
+        <div id="progress"></div>
+        <div class="step-col"><small style="color: #222">Define</small></div>
+        <div class="step-col"><small>Design</small></div>
+        <div class="step-col"><small>Develop</small></div>
+        <div class="step-col"><small>Deploy</small></div>
+      </div>
+      <div class="container">
+        <!-- <div class="content" id="component-one">
+          <div class="description">
+            <div class="title">Description</div>
+            <div class="body">
+              Defining and understanding the customer's needs, so as to find
+              possible solutions; while considering the entire solution space.
+            </div>
+          </div>
+          <div class="objective">
+            <div class="title">Objective</div>
+            <div class="list">
+              <span class="item"
+                >Make sure your team is well organised and skilled enough to
+                develop your business.</span
+              >
+              <span class="item"
+                >Be strategic to choose where, how and who you are going to
+                interview during the market research and consider different
+                demographics among the target market.</span
+              >
+              <span class="item"
+                >Build a good relationship with some of the customers you
+                approach during market research in order to engage them
+                throughout the process till deployment.</span
+              >
+            </div>
+          </div>
+          <div class="btn-box">
+            <button type="button" id="next">Go to topics</button>
+          </div>
+        </div>
+        <div class="content" id="component-two">
+          <div class="card-container">
+            <div class="card">
+              <div class="up-side">
+                <i class="fas fa-ellipsis-v"></i>
+                <div class="circle">
+                  <h5>T</h5>
+                </div>
+              </div>
+              <div class="down-side">
+                <div class="card-title">
+                  Business Model Hypotheses & Mapping, and Team Building
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="up-side">
+                <i class="fas fa-ellipsis-v"></i>
+                <div class="circle">
+                  <h5>T</h5>
+                </div>
+              </div>
+              <div class="down-side">
+                <div class="card-title">
+                  Business Model Hypotheses & Mapping, and Team Building
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="up-side">
+                <i class="fas fa-ellipsis-v"></i>
+                <div class="circle">
+                  <h5>T</h5>
+                </div>
+              </div>
+              <div class="down-side">
+                <div class="card-title">
+                  Business Model Hypotheses & Mapping, and Team Building
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-box-back">
+            <button type="button" id="back">Back</button>
+          </div>
+        </div> -->
+        <div class="content" id="component-three">
+
+        </div>
+      </div>
+    </div>
+    <script>
+      const component1 = document.getElementById("component-one");
+      const component2 = document.getElementById("component-two");
+      const goToTopics = document.getElementById("next");
+      const back = document.getElementById("back");
+
+      // Navigating to topics
+      goToTopics.onclick = () => {
+        component1.style.left = "-180%";
+        component2.style.left = "50%";
+      };
+      back.onclick = () => {
+        component1.style.left = "50%";
+        component2.style.left = "180%";
+      };
+    </script>
+  </body>
+</html>
