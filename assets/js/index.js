@@ -119,6 +119,7 @@ form.addEventListener("submit", (e) => {
     .then((response) => {
       console.log("Success!", response);
       clearFields();
+      failure.style.display = "none";
     })
     .catch((error) => console.error("Error!", error.message));
 });
