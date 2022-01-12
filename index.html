@@ -26,7 +26,7 @@
       <div class="close-btn">&times;</div>
       <div class="form">
           <h2>Define</h2>
-          <p>To understand the customer's needs, so as to find possible solutions; while considering the entire solution space.</p>
+          <p> Define to understand the customer's needs, so as to find possible solutions; while considering the entire solution space.</p>
           <div class="content">
               <h4>Activities covered under Define Stage</h4>
               <ul>
@@ -61,7 +61,7 @@
 <div class="close-btn">&times;</div>
 <div class="form">
 <h2>Design</h2>
-<p>a detailed design of the proposed solution and shape the product’s or service’s desirability and feasibility.</p>
+<p>Design a detailed design of the proposed solution and shape the product’s or service’s desirability and feasibility.</p>
 <div class="content">
     <h4>Activities covered under Design Stage</h4>
     <ul>
@@ -98,7 +98,7 @@
 <div class="close-btn">&times;</div>
 <div class="form">
 <h2>Develop</h2>
-<p>The product or service that serves the identified needs ensuring viability and sustainability of the business, as well as it’s impact on the environment.</p>
+<p>Devevelop a product or service that serves the identified needs ensuring viability and sustainability of the business, as well as it’s impact on the environment.</p>
 <div class="content">
     <h4>Activities covered under Develop Stage</h4>
     <ul>
@@ -134,7 +134,7 @@
 <div class="close-btn">&times;</div>
 <div class="form">
 <h2>Deploy</h2>
-<p>The minimum viable product (MVP) for customer validation, traction building and go-to market strategy testing.</p>
+<p>Deploy a minimum viable product (MVP) for customer validation, traction building and go-to market strategy testing.</p>
 <div class="content">
     <h4>Activities covered under Deploy Stage</h4>
     <ul>
@@ -188,8 +188,12 @@
                       <option>Business Consultant</option>
                       <option>Other occupation</optio>
                     </select>
-                    <input name="Email" type="email" id="email" placeholder="Email..." style="width: 77%; background: #fff">
-                    <button class="subscribe-btn" style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                    <input name="Email" id="email-signin" placeholder="Email..." style="width: 77%; background: #fff">
+                    <p id="error-signin-email" class="error"></p>
+                    <p id="success-signin-email" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <button class="subscribe-btn" id="subscribe-signin" style="width: 77%; margin: 20px 0; border-radius: 20px;">
+                        <span class="button-text">Subscribe</span>
+                    </button>
                 </div>
               </div>
             </div>
@@ -218,8 +222,12 @@
                       <option>Business Consultant</option>
                       <option>Other occupation</optio>
                     </select>
-                    <input name="Email" type="email" id="email" placeholder="Email..." style="width: 77%; background: #fff">
-                    <button class="subscribe-btn"  style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                    <input name="Email" id="email-get-started" placeholder="Email..." style="width: 77%; background: #fff">
+                    <p id="error-get-started" class="error"></p>
+                    <p id="success-get-started" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <button class="subscribe-btn-get-started" style="width: 77%; margin: 20px 0; border-radius: 20px;">
+                        <span class="button-text">Subscribe</span>
+                    </button>
                 </div>
               </div>
             </div>
@@ -250,7 +258,11 @@
                       <option>Other occupation</optio>
                     </select>
                     <input name="Email" type="email" id="free-email" placeholder="Email..." style="width: 77%; background: #fff">
-                    <button class="subscribe-btn" type="submit" style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                    <p id="error-free-plan" class="error"></p>
+                    <p id="success-free-plan" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <button class="subscribe-btn-free-plan" style="width: 77%; margin: 20px 0; border-radius: 20px;">
+                        <span class="button-text">Subscribe</span>
+                    </button>
                 </div>
               </div>
             </div>
@@ -281,7 +293,11 @@
                       <option>Other occupation</optio>
                     </select>
                     <input name="Email" type="email" id="standard-email" placeholder="Email..." style="width: 77%; background: #fff">
-                    <button class="subscribe-btn" style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                    <p id="error-standard-plan" class="error"></p>
+                    <p id="success-standard-plan" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <button class="subscribe-btn-standard-plan" style="width: 77%; margin: 20px 0; border-radius: 20px;">
+                        <span class="button-text">Subscribe</span>
+                    </button>
                 </div>
               </div>
             </div>
@@ -312,7 +328,11 @@
                       <option>Other occupation</optio>
                     </select>
                     <input name="Email" type="email" id="premium-email" placeholder="Email..." style="width: 77%; background: #fff">
-                    <button class="subscribe-btn" style="width: 77%; margin: 20px 0; border-radius: 20px;">Subscribe</button>
+                    <p id="error-premium-plan" class="error"></p>
+                    <p id="success-premium-plan" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <button class="subscribe-btn-premium-plan" style="width: 77%; margin: 20px 0; border-radius: 20px;">
+                        <span class="button-text">Subscribe</span>
+                    </button>
                 </div>
               </div>
             </div>
@@ -417,7 +437,7 @@
                       <div class="box">
                           <i class="fas fa-clipboard-list"></i>
                           <h3>Define</h3>
-                          <p> To understand the customer's needs, so as to find possiblesolutions; while considering...</p>
+                          <p>Define to understand the customer's needs, so as to find possiblesolutions; while considering...</p>
                           <button class="show-pop-up" >Learn more</button>
                       </div>
                   </div>
@@ -425,7 +445,7 @@
                       <div class="box">
                           <i class="fab fa-artstation"></i>
                           <h3>Design</h3>
-                          <p> a detailed design of the proposed solution and shape the product’s or service’s desirability and feasibility.</p>
+                          <p>Design a detailed design of the proposed solution and shape the product’s or service’s desirability and feasibility.</p>
                           <button class="show-pop-up">Learn more</button>
                       </div>
                   </div>
@@ -433,7 +453,7 @@
                       <div class="box">
                           <i class="fab fa-connectdevelop"></i>
                           <h3>Develop</h3>
-                          <p> the product or service that serves the identified needs ensuring viability and sustainability of the business,...</p>
+                          <p>Develop a product or service that serves the identified needs ensuring viability and sustainability of the business,...</p>
                           <button class="show-pop-up">Learn more</button>
                       </div>
                   </div>
@@ -441,7 +461,7 @@
                       <div class="box">
                           <i class="fas fa-rocket"></i>
                           <h3>Deploy</h3>
-                          <p> the minimum viable product (MVP) for customer validation,
+                          <p>Deploy a minimum viable product (MVP) for customer validation,
                               traction building and go-to market strategy testing.</p>
                           <button class="show-pop-up">Learn more</button>
                       </div>
@@ -701,10 +721,10 @@
       <section class="section-contact-us section" id="contact-us">
           <div class="form-container reveal">
               <h1>Get in touch!</h1>
-              <div class="success">
-                  Message successfully sent!
+              <div class="success" id="success">
+                  Message successfully sent! <i class="fas fa-check-circle"></i>
               </div>
-              <div class="failure">
+              <div class="failure" id="failure">
                   Invalid input!
               </div>
               <style>
@@ -718,6 +738,10 @@
                       border-radius: 2px;
                       margin-top: 30px;
                   }
+                  .success i{
+                      float: right;
+                      margin-top: 5px;
+                  }
 
                   .failure{
                       display: none;
@@ -728,6 +752,10 @@
                       padding: 10px;
                       border-radius: 2px;
                       margin-top: 30px;
+                  }
+                  .failure i{
+                      float: right;
+                      margin-top: 5px;
                   }
               </style>
               <form name="google-sheet" id="contact-form">
@@ -781,15 +809,15 @@
               </ul>
             </div> -->
             <!-- Start col-3 -->
-            <!-- <div class="footer-col">
-              <h4>Whatever</h4>
+            <div class="footer-col">
+              <h4>Company Address:
+            </h4>
               <ul>
-                <li><a href="">FAQ</a></li>
-                <li><a href="#">our services</a></li>
-                <li><a href="#">privacy policy</a></li>
-                <li><a href="#">affiliate program</a></li>
+                <li><a href="">Kigali - Rwanda</a></li>
+                <li><a href="#">info@4dsmetrics.com</a></li>
+                <li><a href="#">+250787591833</a></li>
               </ul>
-            </div> -->
+            </div>
             <!-- Start col-4 -->
             <div class="footer-col">
               <h4>Follow us</h4>

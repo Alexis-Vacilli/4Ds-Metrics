@@ -25,12 +25,77 @@ button {
   font-weight: 900;
   border-radius: 2px;
   cursor: pointer;
+  position: relative;
 }
 
 button:hover{
     transform: scale(1.05);
     box-shadow: 0 0 10px -10px #feb74a;
     color: #feb74a;
+}
+
+.error{
+    display: none;
+    margin-top: 20px;
+    color: #a82e2e;
+    background-color: #a82e2e41;
+    border: 1px solid #a82e2e;
+    width: 77%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.error i{
+    float: right;
+    margin-top: 5px;
+}
+.success{
+    display: none;
+    margin-top: 20px;
+    color: #4BB543;
+    background-color: #4bb54329;
+    border: 1px solid #4BB543;
+    width: 77%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.success i{
+    float: right;
+    margin-top: 5px;
+}
+
+
+.button-text{
+    font-weight: 900;
+    transition: all .2s;
+}
+.button-loading .button-text{
+    visibility: hidden;
+    opacity: 0;
+}
+.button-loading::after{
+    content: "";
+    height: 16px;
+    width: 16px;
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from{
+        transform: rotate(0turn);
+    }
+
+    to{
+        transform: rotate(1turn);
+    }
 }
 
 ul{
@@ -422,7 +487,7 @@ main {
         z-index: 100;
         transform: translate(-50%, -50%) scale(1);
         transition: top 0s ease-in 0ms,
-                    opacity .1s ease-in-out .1s,
+                    opacity .5s ease-in-out .1s,
                     transform 20ms ease-in-out 0ms;
       }
       
