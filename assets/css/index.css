@@ -48,7 +48,7 @@ button:hover{
     float: right;
     margin-top: 5px;
 }
-.success{
+.success-small-form{
     display: none;
     margin-top: 20px;
     color: #4BB543;
@@ -58,7 +58,7 @@ button:hover{
     padding: 5px 10px;
     border-radius: 5px;
 }
-.success i{
+.success-small-form i{
     float: right;
     margin-top: 5px;
 }

@@ -190,7 +190,7 @@
                     </select>
                     <input name="Email" id="email-signin" placeholder="Email..." style="width: 77%; background: #fff">
                     <p id="error-signin-email" class="error"></p>
-                    <p id="success-signin-email" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <p id="success-signin-email" class="success-small-form">Sent! <i class="fas fa-check-circle"></i></p>
                     <button class="subscribe-btn" id="subscribe-signin" style="width: 77%; margin: 20px 0; border-radius: 20px;">
                         <span class="button-text">Subscribe</span>
                     </button>
@@ -224,7 +224,7 @@
                     </select>
                     <input name="Email" id="email-get-started" placeholder="Email..." style="width: 77%; background: #fff">
                     <p id="error-get-started" class="error"></p>
-                    <p id="success-get-started" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <p id="success-get-started" class="success-small-form">Sent! <i class="fas fa-check-circle"></i></p>
                     <button class="subscribe-btn-get-started" style="width: 77%; margin: 20px 0; border-radius: 20px;">
                         <span class="button-text">Subscribe</span>
                     </button>
@@ -259,7 +259,7 @@
                     </select>
                     <input name="Email" type="email" id="free-email" placeholder="Email..." style="width: 77%; background: #fff">
                     <p id="error-free-plan" class="error"></p>
-                    <p id="success-free-plan" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <p id="success-free-plan" class="success-small-form">Sent! <i class="fas fa-check-circle"></i></p>
                     <button class="subscribe-btn-free-plan" style="width: 77%; margin: 20px 0; border-radius: 20px;">
                         <span class="button-text">Subscribe</span>
                     </button>
@@ -294,7 +294,7 @@
                     </select>
                     <input name="Email" type="email" id="standard-email" placeholder="Email..." style="width: 77%; background: #fff">
                     <p id="error-standard-plan" class="error"></p>
-                    <p id="success-standard-plan" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <p id="success-standard-plan" class="success-small-form">Sent! <i class="fas fa-check-circle"></i></p>
                     <button class="subscribe-btn-standard-plan" style="width: 77%; margin: 20px 0; border-radius: 20px;">
                         <span class="button-text">Subscribe</span>
                     </button>
@@ -329,7 +329,7 @@
                     </select>
                     <input name="Email" type="email" id="premium-email" placeholder="Email..." style="width: 77%; background: #fff">
                     <p id="error-premium-plan" class="error"></p>
-                    <p id="success-premium-plan" class="success">Sent! <i class="fas fa-check-circle"></i></p>
+                    <p id="success-premium-plan" class="success-small-form">Sent! <i class="fas fa-check-circle"></i></p>
                     <button class="subscribe-btn-premium-plan" style="width: 77%; margin: 20px 0; border-radius: 20px;">
                         <span class="button-text">Subscribe</span>
                     </button>
@@ -778,10 +778,13 @@
                      </div>
                      <div class="column">
                          <label for="message">Message:</label>
-                         <textarea rows="12" id="message"></textarea>
+                         <textarea name="Message" rows="12" id="message"></textarea>
                      </div>
                  </div>
-                 <button type="submit" class="submit">Submit</button>
+                 <!-- <button type="submit" class="submit">Submit</button> -->
+                 <button type="submit" class="submit">
+                    <span class="button-text">Submit</span>
+                </button>
               </div>
               </form>
           <!-- </div> -->
@@ -799,7 +802,15 @@
               </ul>
             </div>
             <!-- Start col-2 -->
-            <!-- <div class="footer-col">
+            <div class="footer-col">
+              <h4>Follow us</h4>
+              <div class="social-links">
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fas fa-phone"></i></a>
+              </div>
+            </div>
+            <!-- Start col-3 -->
+            <div class="footer-col" style="visibility: hidden;">
               <h4>Get help</h4>
               <ul>
                 <li><a href="#">about us</a></li>
@@ -807,24 +818,15 @@
                 <li><a href="#">privacy policy</a></li>
                 <li><a href="#">affiliate program</a></li>
               </ul>
-            </div> -->
-            <!-- Start col-3 -->
-            <div class="footer-col">
-              <h4>Company Address:
-            </h4>
-              <ul>
-                <li><a href="">Kigali - Rwanda</a></li>
-                <li><a href="#">info@4dsmetrics.com</a></li>
-                <li><a href="#">+250787591833</a></li>
-              </ul>
-            </div>
+            </div> 
             <!-- Start col-4 -->
             <div class="footer-col">
-              <h4>Follow us</h4>
-              <div class="social-links">
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fas fa-phone"></i></a>
-              </div>
+              <h4>Contacts
+            </h4>
+              <ul>
+                <li style="font-size: 16px; font-weight: 300; color: #bbbbbb;">info@4dsmetrics.com</li>
+                <li style="font-size: 16px; font-weight: 300; color: #bbbbbb;">+250787591833</li>
+              </ul>
             </div>
           </div>
         </div>

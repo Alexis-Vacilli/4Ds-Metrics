@@ -110,13 +110,17 @@ const form = document.forms["google-sheet"];
 
 
 form.addEventListener("submit", (e) => {
+  const submitButton = document.querySelector(".submit");
   e.preventDefault();
+  submitButton.classList.add("button-loading");
   if(!validation()){
+    submitButton.classList.remove("button-loading");
     return false;
   }
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       console.log("Success!", response);
+      submitButton.classList.remove("button-loading");
       success.style.display = "block";  
       setTimeout(() => {
         success.style.display = "none";  
@@ -253,14 +257,14 @@ getStartedForm.addEventListener("submit", (e) => {
       subscribeBtn.style.display = "none"
       subscribeBtn.classList.remove("button-loading");
       clearFields();
-      // setTimeout(() => {
-      //   removeActive();
-      //   removeBlur();
-      //   success.style.display = "none";
-      // }, 1000);
-      // setTimeout(() => {
-      //   subscribeBtn.style.display = "block"
-      // }, 2000);
+      setTimeout(() => {
+        removeActive();
+        removeBlur();
+        success.style.display = "none";
+      }, 1000);
+      setTimeout(() => {
+        subscribeBtn.style.display = "block"
+      }, 2000);
     })
     .catch((error) => console.error("Error!", error.message));
 });
