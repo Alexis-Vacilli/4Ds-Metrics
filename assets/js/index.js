@@ -1,7 +1,6 @@
-// Global varibles 
+// Global varibles
 const failure = document.querySelector("#failure");
 const success = document.querySelector("#success");
-
 
 // Navigation bar
 const navSlide = () => {
@@ -104,16 +103,20 @@ window.addEventListener("scroll", () => {
 
 // Contact us
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbyzHU2NuPBIHCCiLnZfHsaKNsgjKxhEG-8D_AFOIMymmr9O4RQnlyua4jKowJ4DHSOoCg/exec";
+  "https://script.google.com/macros/s/AKfycbw-4H9QV_1HxS8nApSjgWKJ_ntgH3o6wrisg1BCPvSTqBaNlMDqHZQOguGIg-vgtbMdxA/exec";
 
 const form = document.forms["google-sheet"];
-
 
 form.addEventListener("submit", (e) => {
   const submitButton = document.querySelector(".submit");
   e.preventDefault();
+  const now = new Date();
+  let current = now.toISOString();
+  current = current.split("").slice(0, 16).join("");
+  let input = document.getElementById("date-time");
+  input.setAttribute("value", current);
   submitButton.classList.add("button-loading");
-  if(!validation()){
+  if (!validation()) {
     submitButton.classList.remove("button-loading");
     return false;
   }
@@ -121,81 +124,75 @@ form.addEventListener("submit", (e) => {
     .then((response) => {
       console.log("Success!", response);
       submitButton.classList.remove("button-loading");
-      success.style.display = "block";  
+      success.style.display = "block";
       setTimeout(() => {
-        success.style.display = "none";  
+        success.style.display = "none";
       }, 3000);
       clearFields();
     })
     .catch((error) => console.error("Error!", error.message));
 });
 
-
 const validation = () => {
   const name = document.querySelector("#name");
-  const email = document.querySelector("#contact-email")
+  const email = document.querySelector("#contact-email");
   const message = document.querySelector("#message");
   const failure = document.querySelector("#failure");
 
-
   // Validating name
-  if(name.value === ""){
+  if (name.value === "") {
     failure.style.display = "block";
     failure.innerHTML = `Name is required! <i class="fas fa-times-circle"></i>`;
-    return false
+    return false;
   }
   // Validating email
-  if(!emailValidation(email.value, failure)){
+  if (!emailValidation(email.value, failure)) {
     return false;
   }
   // Validating message
-  if(message.value === "") {
+  if (message.value === "") {
     failure.style.display = "block";
     failure.innerHTML = `Message is required! <i class="fas fa-times-circle"></i>`;
-    return false
-  } 
- 
+    return false;
+  }
+
   failure.style.display = "none";
   failure.innerText = "";
-  return true
-}
+  return true;
+};
 
-// Clear fields 
+// Clear fields
 const clearFields = () => {
   const name = document.querySelector("#name");
-  const email = document.querySelector("#contact-email")
+  const email = document.querySelector("#contact-email");
   const message = document.querySelector("#message");
-
 
   name.value = "";
   email.value = "";
-  message.value = ""
-}
-
+  message.value = "";
+};
 
 // Email validation
 const emailValidation = (email, failure) => {
-  const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+  const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
   // Email validations
-  if(regx.test(email)){
-    return true
-  }else if(email === "") {
+  if (regx.test(email)) {
+    return true;
+  } else if (email === "") {
     failure.style.display = "block";
     failure.innerHTML = `Email is required! <i class="fas fa-times-circle"></i>`;
-    return false
-  }
-  else{
+    return false;
+  } else {
     failure.style.display = "block";
     failure.innerHTML = `Invalid email ID! <i class="fas fa-times-circle"></i>`;
-    return false
+    return false;
   }
- 
 };
 
 // Sign in form
 
 const scriptURLTwo =
-  "https://script.google.com/macros/s/AKfycbxRzMpURbs2EN3tRDCS9A91VvQNaiyXToPzUcdSOUGYpQwCdiTx-K4gM5DCvArZCTpB/exec";
+  "https://script.google.com/macros/s/AKfycbzPgn5nbBm_5plZoN5bnmIs9exNP3VpkQsH5ULuvw_Y42BQIA9N2dy2IRwK10CuOayU/exec";
 
 const signInForm = document.getElementById("sign-in-form");
 
@@ -205,28 +202,33 @@ signInForm.addEventListener("submit", (e) => {
   const success = document.querySelector("#success-signin-email");
   const subscribeBtn = document.querySelector(".subscribe-btn");
   e.preventDefault();
+  const now = new Date();
+  let current = now.toISOString();
+  current = current.split("").slice(0, 16).join("");
+  let input = document.getElementById("date-time-signin");
+  input.setAttribute("value", current);
   subscribeBtn.classList.add("button-loading");
-  if(!emailValidation(email.value, failure)){
+  if (!emailValidation(email.value, failure)) {
     subscribeBtn.classList.remove("button-loading");
     return false;
-  } 
+  }
   fetch(scriptURLTwo, { method: "POST", body: new FormData(signInForm) })
     .then((response) => {
       console.log("Success!", response);
       failure.style.display = "none";
       failure.innerText = "";
       success.style.display = "block";
-      subscribeBtn.style.display = "none"
+      subscribeBtn.style.display = "none";
       subscribeBtn.classList.remove("button-loading");
-      clearFields();
       setTimeout(() => {
         removeActive();
         removeBlur();
         success.style.display = "none";
       }, 1000);
       setTimeout(() => {
-        subscribeBtn.style.display = "block"
+        subscribeBtn.style.display = "block";
       }, 2000);
+      clearFields();
     })
     .catch((error) => console.error("Error!", error.message));
 });
@@ -234,7 +236,7 @@ signInForm.addEventListener("submit", (e) => {
 // Get started
 
 const scriptURLSix =
-  "https://script.google.com/macros/s/AKfycby-tx3T8k5Vel9SylbhlnRMK0ZxYmcLy5Am_qJNFy6JEB9xPl5Sje3GQ6UgMBMUvxbOmA/exec";
+  "https://script.google.com/macros/s/AKfycbyvHdv3bwB7DjPZ5vhKG-h0PKT_PctJLqtH0KMUl6DgCSYKEWeLJPOrChm8dDOt941_/exec";
 
 const getStartedForm = document.getElementById("get-started-form");
 getStartedForm.addEventListener("submit", (e) => {
@@ -243,18 +245,23 @@ getStartedForm.addEventListener("submit", (e) => {
   const success = document.querySelector("#success-get-started");
   const subscribeBtn = document.querySelector(".subscribe-btn-get-started");
   e.preventDefault();
+  const now = new Date();
+  let current = now.toISOString();
+  current = current.split("").slice(0, 16).join("");
+  let input = document.getElementById("date-time-get-started");
+  input.setAttribute("value", current);
   subscribeBtn.classList.add("button-loading");
-  if(!emailValidation(email.value, failure)){
+  if (!emailValidation(email.value, failure)) {
     subscribeBtn.classList.remove("button-loading");
     return false;
-  } 
+  }
   fetch(scriptURLSix, { method: "POST", body: new FormData(getStartedForm) })
     .then((response) => {
       console.log("Success!", response);
       failure.style.display = "none";
       failure.innerText = "";
       success.style.display = "block";
-      subscribeBtn.style.display = "none"
+      subscribeBtn.style.display = "none";
       subscribeBtn.classList.remove("button-loading");
       clearFields();
       setTimeout(() => {
@@ -263,7 +270,7 @@ getStartedForm.addEventListener("submit", (e) => {
         success.style.display = "none";
       }, 1000);
       setTimeout(() => {
-        subscribeBtn.style.display = "block"
+        subscribeBtn.style.display = "block";
       }, 2000);
     })
     .catch((error) => console.error("Error!", error.message));
@@ -271,7 +278,7 @@ getStartedForm.addEventListener("submit", (e) => {
 
 // Free plan form
 const scriptURLThree =
-  "https://script.google.com/macros/s/AKfycbzk9Acpze9JSLcZ3rvok2kvXjwbLyoXHv-ZLmHskK3iibWrdayuALdQHYeSQTcGtdf6Vw/exec";
+  "https://script.google.com/macros/s/AKfycbwGlVLpKpHtY_a2qi8xUsw1TnuOV_TcWeREcWMrLtAI4xMB9OA55WkH8lTBrIXAg_PW6Q/exec";
 
 const freePlanForm = document.getElementById("free-plan-form");
 
@@ -281,18 +288,23 @@ freePlanForm.addEventListener("submit", (e) => {
   const success = document.querySelector("#success-free-plan");
   const subscribeBtn = document.querySelector(".subscribe-btn-free-plan");
   e.preventDefault();
+  const now = new Date();
+  let current = now.toISOString();
+  current = current.split("").slice(0, 16).join("");
+  let input = document.getElementById("date-time-free-plan");
+  input.setAttribute("value", current);
   subscribeBtn.classList.add("button-loading");
-  if(!emailValidation(email.value, failure)){
+  if (!emailValidation(email.value, failure)) {
     subscribeBtn.classList.remove("button-loading");
     return false;
-  } 
+  }
   fetch(scriptURLThree, { method: "POST", body: new FormData(freePlanForm) })
     .then((response) => {
       console.log("Success!", response);
       failure.style.display = "none";
       failure.innerText = "";
       success.style.display = "block";
-      subscribeBtn.style.display = "none"
+      subscribeBtn.style.display = "none";
       subscribeBtn.classList.remove("button-loading");
       clearFields();
       setTimeout(() => {
@@ -301,7 +313,7 @@ freePlanForm.addEventListener("submit", (e) => {
         success.style.display = "none";
       }, 1000);
       setTimeout(() => {
-        subscribeBtn.style.display = "block"
+        subscribeBtn.style.display = "block";
       }, 2000);
     })
     .catch((error) => console.error("Error!", error.message));
@@ -310,7 +322,7 @@ freePlanForm.addEventListener("submit", (e) => {
 // Standard plan form
 
 const scriptURLFour =
-  "https://script.google.com/macros/s/AKfycbx0G30dRgr3-db9LYrT5CckIiDMJxlsWeEnbOb7d75NxEcLp71fXQGh-R71tNPDal-n/exec";
+  "https://script.google.com/macros/s/AKfycbxbatlCT0UX7TNhcfTcPw7IbYA75ahStnxniR83WdGYeivruo5saEcR-k3LUGfxBnGC/exec";
 
 const standardPlanForm = document.getElementById("standard-plan-form");
 standardPlanForm.addEventListener("submit", (e) => {
@@ -319,18 +331,23 @@ standardPlanForm.addEventListener("submit", (e) => {
   const success = document.querySelector("#success-standard-plan");
   const subscribeBtn = document.querySelector(".subscribe-btn-standard-plan");
   e.preventDefault();
+  const now = new Date();
+  let current = now.toISOString();
+  current = current.split("").slice(0, 16).join("");
+  let input = document.getElementById("date-time-standard-plan");
+  input.setAttribute("value", current);
   subscribeBtn.classList.add("button-loading");
-  if(!emailValidation(email.value, failure)){
+  if (!emailValidation(email.value, failure)) {
     subscribeBtn.classList.remove("button-loading");
     return false;
-  } 
+  }
   fetch(scriptURLFour, { method: "POST", body: new FormData(standardPlanForm) })
     .then((response) => {
       console.log("Success!", response);
       failure.style.display = "none";
       failure.innerText = "";
       success.style.display = "block";
-      subscribeBtn.style.display = "none"
+      subscribeBtn.style.display = "none";
       subscribeBtn.classList.remove("button-loading");
       clearFields();
       setTimeout(() => {
@@ -339,7 +356,7 @@ standardPlanForm.addEventListener("submit", (e) => {
         success.style.display = "none";
       }, 1000);
       setTimeout(() => {
-        subscribeBtn.style.display = "block"
+        subscribeBtn.style.display = "block";
       }, 2000);
     })
     .catch((error) => console.error("Error!", error.message));
@@ -348,7 +365,7 @@ standardPlanForm.addEventListener("submit", (e) => {
 // Standard plan form
 
 const scriptURLFive =
-  "https://script.google.com/macros/s/AKfycbxVoK53l3koSHLzC5K6loggIiC0OCfde1CQYw-ZOQnltIbHYPRGTO6DqO6U1SUKYqxZ/exec";
+  "https://script.google.com/macros/s/AKfycbyJc8Tem_-7_AnJjaDNRJaoMzQzRe4pr77ePEf-e8bqbWJj2jQ2CeJm3uhls2JNQKjd/exec";
 
 const premiumPlanForm = document.getElementById("premium-plan-form");
 premiumPlanForm.addEventListener("submit", (e) => {
@@ -357,18 +374,23 @@ premiumPlanForm.addEventListener("submit", (e) => {
   const success = document.querySelector("#success-premium-plan");
   const subscribeBtn = document.querySelector(".subscribe-btn-premium-plan");
   e.preventDefault();
+  const now = new Date();
+  let current = now.toISOString();
+  current = current.split("").slice(0, 16).join("");
+  let input = document.getElementById("date-time-premium-plan");
+  input.setAttribute("value", current);
   subscribeBtn.classList.add("button-loading");
-  if(!emailValidation(email.value, failure)){
+  if (!emailValidation(email.value, failure)) {
     subscribeBtn.classList.remove("button-loading");
     return false;
-  } 
+  }
   fetch(scriptURLFive, { method: "POST", body: new FormData(premiumPlanForm) })
     .then((response) => {
       console.log("Success!", response);
       failure.style.display = "none";
       failure.innerText = "";
       success.style.display = "block";
-      subscribeBtn.style.display = "none"
+      subscribeBtn.style.display = "none";
       subscribeBtn.classList.remove("button-loading");
       clearFields();
       setTimeout(() => {
@@ -377,12 +399,11 @@ premiumPlanForm.addEventListener("submit", (e) => {
         success.style.display = "none";
       }, 1000);
       setTimeout(() => {
-        subscribeBtn.style.display = "block"
+        subscribeBtn.style.display = "block";
       }, 2000);
     })
     .catch((error) => console.error("Error!", error.message));
 });
-
 
 // Pop ups
 

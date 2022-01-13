@@ -34,6 +34,25 @@ button:hover{
     color: #feb74a;
 }
 
+#date-time{
+    display: none;
+}
+#date-time-signin{
+    display: none;
+}
+#date-time-get-started{
+    display: none;
+}
+#date-time-free-plan{
+    display: none;
+}
+#date-time-standard-plan{
+    display: none;
+}
+#date-time-premium-plan{
+    display: none;
+}
+
 .error{
     display: none;
     margin-top: 20px;
@@ -471,7 +490,7 @@ main {
             -50%, -50%
         ) scale(1.25);
         opacity: 0;
-        width: 55%;
+        width: 35%;
         padding: 50px 70px;
         background: white;
         box-shadow: 20px 20px 50px rgb(34, 34, 34, .2);
@@ -479,6 +498,10 @@ main {
         transition: top .5s ease-in-out .5s,
                     opacity 200ms ease-in-out 0ms,
                     transform 20ms ease-in-out 0ms;
+      }
+
+      .service-popup{
+          width: 55%;
       }
       
       .popup.active-popup{
@@ -1109,6 +1132,14 @@ form select:focus{
   .nav-links {
     width: 60%;
   }
+  .popup{
+    width: 90%;
+}
+.service-popup{
+  width: 95%;
+  height: 90vh;
+  padding:15px;
+}
   .presentation{
     display: flex;
     width: 90%; 
@@ -1132,10 +1163,12 @@ form select:focus{
     overflow-x: hidden;
   }
   .popup{
-    width: 100vw;
-    height: 80vh;
-    padding: 0;
-    
+      width: 90%;
+  }
+  .service-popup{
+    width: 95%;
+    height: 90vh;
+    padding:15px;
   }
   .presentation{
     position: relative;
@@ -1258,6 +1291,14 @@ form select:focus{
 @media screen and (max-width: 600px) {
     .main-card .partner-cards .partner-card{
         width: 100%;
+    }
+    .popup{
+        width: 90%;
+    }
+    .service-popup{
+      width: 95%;
+      height: 90vh;
+      padding:15px;
     }
 
     .presentation{
