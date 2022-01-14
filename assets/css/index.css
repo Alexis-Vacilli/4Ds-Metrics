@@ -145,17 +145,6 @@ li{
 body {
   font-family: "Poppins", sans-serif;
 }
-
-.header{
-  min-height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(#222222, #22222279), url(../images/metrics.png);
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-
 nav {
   position: -webkit-sticky;
   position: sticky;
@@ -226,40 +215,31 @@ nav {
 
 /* Home section */
 
-main {
-  min-height: 87vh;
-  /* background: url("../images/pattern.png") no-repeat left top,
-    linear-gradient(var(--lighter-bg-color), var(--lighter-bg-color));
-  background-position: bottom; */
-}
-
-.presentation{
-    display: flex;
-    width: 90%;
-    margin: auto;
-    min-height: 80vh;
-    align-items: center;
-    text-align: center;
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(#222222, #22222279), url(../images/metrics.png);
+    background-position: center;
+    background-size: cover;
     position: relative;
-}
+  }
 
-.introduction{
-    position: absolute;
-    top: 35%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.intro-text h1{
-    font-size: 44px;
-    font-weight: 700;
-    margin: 0 auto;
+.presentation-text{
     text-align: center;
-    background: linear-gradient(to right, var(--secondary-font-color), var(--lighter-bg-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--secondary-font-color);
+    padding-top: 180px;
+}
+.presentation-text h1{
+    font-size: 50px;
+}
+
+.presentation-text p{
+    font-size: 22px;
+    
+}
+
+.presentation-btn{
+    margin: 70px auto 0;
 }
 
 
@@ -1015,6 +995,36 @@ form select:focus{
     border-color: #feb74a;
 }
 
+.success{
+    display: none;
+    width: 48.5%;
+    border: 1px solid #4BB543;
+    color: #4BB543;
+    background-color: #4bb5432c;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+.success i{
+    float: right;
+    margin-top: 5px;
+}
+
+.failure{
+    display: none;
+    width: 48.5%;
+    border: 1px solid #a82e2e;
+    color: #a82e2e;
+    background-color: #a82e2e22;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+.failure i{
+    float: right;
+    margin-top: 5px;
+}
+
 
 
 /* Footer */
@@ -1333,7 +1343,7 @@ form select:focus{
 }
 #contact-col{
     position: absolute;
-    left: 15rem;
+    left: 10rem;
 }
 }
 
