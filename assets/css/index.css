@@ -1261,7 +1261,7 @@ form select:focus {
     }
 
     .nav-links li {
-        opacity: 0;
+        opacity: 1;
     }
 
     .burger {
@@ -1533,5 +1533,8 @@ form select:focus {
 
     .popup .form ul{
         padding: 0;
+    }
+    .popup .form li{
+        font-size: 13.5px;
     }
 }
