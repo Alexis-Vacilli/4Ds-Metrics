@@ -221,7 +221,7 @@
     color: rgba(0, 0, 0, .8);
 }
 
-.mySlides{
+/* .mySlides{
     width: 70%;
     height: 70%;
     position: relative;
@@ -234,7 +234,7 @@
     box-shadow: 9px 10px 5px -15px #222;
     overflow: scroll;
 
-}
+} */
 
 .mySlides .text-paragraph{
     text-align: justify;
