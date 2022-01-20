@@ -1,3 +1,23 @@
+// Page preloader
+
+const loader = document.querySelector(".loader");
+const pageContainer = document.querySelector(".page-content");
+const loaderContainer = document.querySelector(".loader-container");
+
+const init = () => {
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    loader.style.display = "none";
+    loaderContainer.style.minHeight = "0vh";
+    pageContainer.style.display = "block";
+    setTimeout(() => {
+      pageContainer.style.opacity = "1";
+    }, 50);
+  }, 4000);
+}
+
+init();
+
 // Global varibles
 const failure = document.querySelector("#failure");
 const success = document.querySelector("#success");

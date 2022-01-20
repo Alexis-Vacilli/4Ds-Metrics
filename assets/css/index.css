@@ -157,6 +157,58 @@ body {
     overflow-x: hidden;
 }
 
+.page-content{
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+.loader-container{
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.loader {
+    height: 50px;
+    transform-origin: bottom center;
+    animation: rotate 3s linear infinite;
+}
+.square {
+    display: inline-block;
+    background-color: #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: grow 1.5s linear infinite;
+    margin: -10px;
+}
+
+.square:nth-child(2) {
+    background-color: #feb74a;
+    animation-delay: .75s;
+
+}
+
+
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow{
+   50% {
+       transform: scale(1);
+   } 
+}
+
 nav {
     position: -webkit-sticky;
     position: sticky;
