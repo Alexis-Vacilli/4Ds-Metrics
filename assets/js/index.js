@@ -5,6 +5,38 @@ const back = document.getElementById("back");
 const cards = document.querySelectorAll(".card");
 const readMoreBtn = document.querySelector(".read-more-button");
 const text = document.querySelector(".text-paragraph")
+const prev_btn = document.querySelector(".prev");
+const next_btn = document.querySelector(".next");
+
+let section = 1;
+
+const availableSteps = () => {
+  if (section === 1) {
+    document.querySelector(".back").style.display = "none";
+    document.querySelector(".finish").style.display = "none";
+  } else if (section === 3) {
+    document.querySelector(".forward").style.display = "none";
+    document.querySelector(".finish").style.display = "inline";
+    prev_btn.style.display = "none";
+    next_btn.style.display = "none";
+  } else {
+    document.querySelector(".finish").style.display = "none";
+    document.querySelector(".back").style.display = "inline";
+    document.querySelector(".forward").style.display = "inline";
+    prev_btn.style.display = "block";
+    next_btn.style.display = "block";
+  }
+}
+next_btn.addEventListener("click", () => {
+  document.querySelector(`.text-${section}`).style.display = "none";
+  document.querySelector(`.more-text-${section}`).style.display = "block";
+})
+prev_btn.addEventListener("click", () => {
+  document.querySelector(`.text-${section}`).style.display = "block";
+  document.querySelector(`.more-text-${section}`).style.display = "none";
+})
+
+availableSteps();
 
 
 // Navigating to topics
@@ -18,13 +50,13 @@ back.onclick = () => {
 };
 
 // Cards
-cards.forEach( el => {
+cards.forEach(el => {
   el.addEventListener("click", () => {
     document.getElementById("component-one").style.display = "none";
     document.getElementById("component-two").style.display = "none";
     document.querySelector(".slideshow-container").style.display = "block";
   })
-} )
+})
 
 // Slider
 
@@ -32,6 +64,8 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
+  section += n;
+  availableSteps();
   showSlides((slideIndex += n));
 }
 
@@ -63,9 +97,11 @@ function showSlides(n) {
 
 readMoreBtn.addEventListener("click", () => {
   text.classList.toggle('show-more');
-  if(readMoreBtn.innerText === "Read more"){
+  if (readMoreBtn.innerText === "Read more") {
     readMoreBtn.innerText = "Read less";
   } else {
     readMoreBtn.innerText = "Read more"
   }
 })
+
+
