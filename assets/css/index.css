@@ -1340,6 +1340,10 @@ form select:focus {
         left: 30px;
     }
 
+    .form-container button{
+        width: 100%;
+    }
+
     /* About section */
     .about-container {
         width: 80%;

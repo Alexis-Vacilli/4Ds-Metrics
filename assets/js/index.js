@@ -255,46 +255,46 @@ signInForm.addEventListener("submit", (e) => {
 
 // Get started
 
-const scriptURLSix =
-  "https://script.google.com/macros/s/AKfycbyvHdv3bwB7DjPZ5vhKG-h0PKT_PctJLqtH0KMUl6DgCSYKEWeLJPOrChm8dDOt941_/exec";
+// const scriptURLSix =
+//   "https://script.google.com/macros/s/AKfycbyvHdv3bwB7DjPZ5vhKG-h0PKT_PctJLqtH0KMUl6DgCSYKEWeLJPOrChm8dDOt941_/exec";
 
-const getStartedForm = document.getElementById("get-started-form");
-getStartedForm.addEventListener("submit", (e) => {
-  const email = document.querySelector("#email-get-started");
-  const failure = document.querySelector("#error-get-started");
-  const success = document.querySelector("#success-get-started");
-  const subscribeBtn = document.querySelector(".subscribe-btn-get-started");
-  e.preventDefault();
-  const now = new Date();
-  let current = now.toISOString();
-  current = current.split("").slice(0, 16).join("");
-  let input = document.getElementById("date-time-get-started");
-  input.setAttribute("value", current);
-  subscribeBtn.classList.add("button-loading");
-  if (!emailValidation(email.value, failure)) {
-    subscribeBtn.classList.remove("button-loading");
-    return false;
-  }
-  fetch(scriptURLSix, { method: "POST", body: new FormData(getStartedForm) })
-    .then((response) => {
-      console.log("Success!", response);
-      failure.style.display = "none";
-      failure.innerText = "";
-      success.style.display = "block";
-      subscribeBtn.style.display = "none";
-      subscribeBtn.classList.remove("button-loading");
-      clearFields();
-      setTimeout(() => {
-        removeActive();
-        removeBlur();
-        success.style.display = "none";
-      }, 1000);
-      setTimeout(() => {
-        subscribeBtn.style.display = "block";
-      }, 2000);
-    })
-    .catch((error) => console.error("Error!", error.message));
-});
+// const getStartedForm = document.getElementById("get-started-form");
+// getStartedForm.addEventListener("submit", (e) => {
+//   const email = document.querySelector("#email-get-started");
+//   const failure = document.querySelector("#error-get-started");
+//   const success = document.querySelector("#success-get-started");
+//   const subscribeBtn = document.querySelector(".subscribe-btn-get-started");
+//   e.preventDefault();
+//   const now = new Date();
+//   let current = now.toISOString();
+//   current = current.split("").slice(0, 16).join("");
+//   let input = document.getElementById("date-time-get-started");
+//   input.setAttribute("value", current);
+//   subscribeBtn.classList.add("button-loading");
+//   if (!emailValidation(email.value, failure)) {
+//     subscribeBtn.classList.remove("button-loading");
+//     return false;
+//   }
+//   fetch(scriptURLSix, { method: "POST", body: new FormData(getStartedForm) })
+//     .then((response) => {
+//       console.log("Success!", response);
+//       failure.style.display = "none";
+//       failure.innerText = "";
+//       success.style.display = "block";
+//       subscribeBtn.style.display = "none";
+//       subscribeBtn.classList.remove("button-loading");
+//       clearFields();
+//       setTimeout(() => {
+//         removeActive();
+//         removeBlur();
+//         success.style.display = "none";
+//       }, 1000);
+//       setTimeout(() => {
+//         subscribeBtn.style.display = "block";
+//       }, 2000);
+//     })
+//     .catch((error) => console.error("Error!", error.message));
+// });
 
 // Free plan form
 const scriptURLThree =
