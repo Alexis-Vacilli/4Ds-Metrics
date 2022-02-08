@@ -1437,6 +1437,15 @@ form select:focus {
     body {
         overflow-x: hidden;
     }
+    .popup-content{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .form-title{
+        width: 92%;
+        font-size: 10px;
+    }
 
     .success{
         width: 100%;
@@ -1476,6 +1485,13 @@ form select:focus {
     }
     .copyrights {
         font-size: 9px;
+    }
+    .form-content{
+       margin-top: 60px;
+       border: 1px solid rgba(34, 34, 34, 0.303);
+       padding-left: 1.5rem;
+       border-radius: 5px;
+       
     }
 }
 
@@ -1551,6 +1567,14 @@ form select:focus {
         margin-bottom: 30px;
     }
 
+    .form-content{
+        margin-top: 60px;
+        border: 1px solid rgba(34, 34, 34, 0.303);
+        padding-left: 1.5rem;
+        border-radius: 5px;
+        
+     }
+
     @keyframes navLinkFade {
         from {
             opacity: 0;
@@ -1594,4 +1618,11 @@ form select:focus {
     .popup .form li{
         font-size: 13.5px;
     }
+    .form-content{
+        margin-top: 60px;
+        border: 1px solid rgba(34, 34, 34, 0.303);
+        padding-left: 1.5rem;
+        border-radius: 5px;
+        
+     }
 }
