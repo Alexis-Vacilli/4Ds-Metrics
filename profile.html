@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6c84b701ee.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="file" class="my_file">
+    </div>
+    <style>
+       body{
+          margin: 0;
+          padding: 0;
+          background: #222; 
+       } 
+       .wrapper{
+           height: 300px;
+           width: 300px;
+           position: relative;
+           border: 5px solid #fff;
+           border-radius: 50%;
+           background: url(./assets/images/profile.webp);
+           background-size: cover;
+           margin: 100px auto;
+           overflow: hidden;
+       }
+       .my_file{
+           position: absolute;
+           bottom: 0;
+           outline: none;
+           color: transparent;
+           width: 100%;
+           box-sizing: border-box;
+           padding: 15px 120px;
+           cursor: pointer;
+           transition: .5s;
+           background: rgba(0, 0, 0, .5);
+           opacity: 0;
+       }
+       .my_file::-webkit-file-upload-button{
+           visibility: hidden;
+       }
+       .my_file::before{
+           content: "\f030";
+           font-family: fontAwesome;
+           font-size: 35px;
+           color: #fff;
+           display: inline-block;
+           -webkit-user-select: none;
+       }
+       .my_file::after{
+           content: "Update";
+           font-family: "arial";
+           font-weight: bold;
+           color: #fff;
+           display: block;
+           top: 50px;
+           font-size: 14px;
+           position: absolute;
+       }
+       .my_file:hover{
+           opacity: 1;
+       }
+    </style>
+</body>
+</html>

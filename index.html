@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6c84b701ee.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>Edit profile</title>
 </head>
+
 <body>
     <div class="page-container">
         <div class="container">
@@ -19,83 +22,69 @@
                 <h1><span>My Profile <i class="fas fa-chevron-right" aria-setsize="small"></i></span> Edit Profile</h1>
             </div>
             <div class="form-container">
-                <div class="profile">
-                    <div class="profile-picture"></div>
+                <div class="wrapper">
+                    <input type="file" class="my_file">
                 </div>
                 <form action="">
                     <div>
                         <span>
                             <label for="">Company Name</label>
-                            <input type="text" placeholder="Company Name">
+                            <input type="text"  value="4Ds Metrics">
                             <i class="fas fa-pen"></i>
                         </span>
                         <span>
                             <label for="">Company TIN</label>
-                            <input type="text" placeholder="Company TIN">
+                            <input type="text" value="12345567">
                             <i class="fas fa-pen"></i>
                         </span>
                         <span>
                             <label for="">Company Email</label>
-                            <input type="text" placeholder="Company Email">
+                            <input type="text" value="metrics@gmail.com">
                             <i class="fas fa-pen"></i>
                         </span>
                         <span>
                             <label for="">Company Adress</label>
-                            <input type="text" placeholder="Company Address">
+                            <input type="text" value="Kigali, Rwanda">
                             <i class="fas fa-pen"></i>
                         </span>
                         <span class="full-width">
                             <label for="">Institution Type</label>
                             <select name="" id="">
+                                <option value="">Student</option>
                                 <option value="">Start Up</option>
-                                <option value="">Start Up</option>
-                                <option value="">Start Up</option>
+                                <option value="">Company</option>
                             </select>
                         </span>
                     </div>
                     <div>
                         <span>
                             <label for="">First Name</label>
-                            <input type="text" placeholder="First Name">
+                            <input type="text" value="John">
                             <i class="fas fa-pen"></i>
                         </span>
                         <span>
                             <label for="">Last Name</label>
-                            <input type="text" placeholder="Last Name">
+                            <input type="text" value="Doe">
                             <i class="fas fa-pen"></i>
                         </span>
                         <span>
                             <label for="">Email</label>
-                            <input type="text" placeholder="alexisvacilli1@gmail.com">
+                            <input type="text" value="john@gmail.com">
                             <i class="fas fa-pen"></i>
                         </span>
                         <span>
                             <label for="">Adress</label>
-                            <input type="text" placeholder="Address">
+                            <input type="text" value="Kigali, Rwanda">
                             <i class="fas fa-pen"></i>
                         </span>
                         <span class="full-width">
                             <button>Save</button>
                         </span>
-                        <style>
-                            .full-width{
-                                grid-column: 1/3;
-                                width: 100%;
-                            }
-                            .full-width button{
-                                width: 100%;
-                                padding: 10px;
-                                border: none;
-                                color: #fff;
-                                background-color: #000;
-                                font-weight: bold;
-                                border-radius: 3px;
-                            }
-                        </style>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </body>
+
 </html>
