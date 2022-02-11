@@ -1484,9 +1484,18 @@ form select:focus {
     .popup {
         width: 90%;
     }
-    /* .popup .form h1 {
-        display: none;
-    } */
+    .popup .form h1 {
+        font-size: 25px;
+    }
+    .popup .form p{
+        font-size: 13px;
+    }
+    .popup .form .content h4{
+        font-size: 15px;
+    }
+    .popup .form .content li{
+        font-size: 13px;
+    }
     .service-popup {
         width: 95%;
         height: 95vh;
@@ -1545,6 +1554,18 @@ form select:focus {
         height: 45vh;
     }
 
+    .popup .form h1 {
+        font-size: 25px;
+    }
+    .popup .form p{
+        font-size: 13px;
+    }
+    .popup .form .content h4{
+        font-size: 15px;
+    }
+    .popup .form .content li{
+        font-size: 13px;
+    }
 
     /* About-section */
 
