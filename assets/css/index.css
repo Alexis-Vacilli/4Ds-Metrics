@@ -613,16 +613,17 @@ nav {
 .popup .form h1 {
     text-align: center;
     margin: 10px 0;
+    font-size: 25px;
     
     
 }
 
 .popup .form p {
-   margin-bottom: 7px;
+   margin-bottom: 10px;
 }
 
 .popup .form h4 {
-    
+    margin-bottom: 10px; 
 }
 
 .popup .form ul {
@@ -631,8 +632,21 @@ nav {
 
 }
 
+.popup .form li::before{
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-weight: 900;
+    content: "\f058";
+    color: #222;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
 .popup .form li {
-    list-style-type: circle;
+    /* list-style-type: circle; */
+    margin-bottom: 10px;
     
 }
 
@@ -1503,7 +1517,7 @@ form select:focus {
     .service-popup {
         width: 95%;
         height: 95vh;
-        padding: 0 15px;
+        padding: 0 5px;
     }
 
     .form-container{
@@ -1524,13 +1538,17 @@ form select:focus {
     .copyrights {
         font-size: 9px;
     }
+    .popup .close-btn{
+        top: 30px;
+    }
     .form-content{
-       margin-top: 60px;
+        margin-top: 100px;
        border: 1px solid rgba(34, 34, 34, 0.303);
        padding-left: 1.5rem;
        border-radius: 5px;
        
     }
+
 }
 
 @media screen and (max-width: 400px) {
