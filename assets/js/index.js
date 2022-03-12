@@ -215,6 +215,7 @@ const scriptURLTwo =
   "https://script.google.com/macros/s/AKfycbzPgn5nbBm_5plZoN5bnmIs9exNP3VpkQsH5ULuvw_Y42BQIA9N2dy2IRwK10CuOayU/exec";
 
 const signInForm = document.getElementById("sign-in-form");
+console.log(signInForm)
 
 signInForm.addEventListener("submit", (e) => {
   const email = document.querySelector("#email-signin");
@@ -468,6 +469,7 @@ signIn.addEventListener("click", () => {
 Array.from(serviceCard).forEach((el) => {
   el.addEventListener("click", (e) => {
     const id = e.target.id;
+    console.log(id)
     document.querySelector(".page-content").style.filter = "blur(10px)";
     document.querySelector(`#${id}-popup`).classList.add("active-popup");
   });
